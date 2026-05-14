@@ -1,0 +1,389 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /** Space for fixed Navbar — use on <main> (replaces pt-16) */
+  .pt-page-nav {
+    padding-top: var(--header-offset);
+  }
+
+  /** Navbar + extra breathing room (replaces pt-28 under fixed nav) */
+  .pt-page-nav-loose {
+    padding-top: calc(var(--header-offset) + 3rem);
+  }
+}
+
+/* Crisha Marketing — design tokens + shadcn bridge (dark-first) */
+@layer base {
+  .theme {
+    --font-heading: var(--font-bricolage);
+    --font-sans: var(--font-instrument);
+  }
+
+  :root {
+    /* Fixed navbar (h-16) + iPhone/Android notch safe area */
+    --header-offset: calc(4rem + env(safe-area-inset-top, 0px));
+
+    --bg-primary: #060810;
+    --bg-secondary: #0d1120;
+    --bg-card: #0f1629;
+    --navy: #0d1b4b;
+    --blue: #2563eb;
+    --blue-light: #3b82f6;
+    --blue-glow: rgba(37, 99, 235, 0.15);
+    --white: #ffffff;
+    --gray: #6b7280;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(37, 99, 235, 0.4);
+
+    --background: var(--bg-primary);
+    --foreground: var(--white);
+    --card: var(--bg-card);
+    --card-foreground: var(--white);
+    --popover: var(--bg-secondary);
+    --popover-foreground: var(--white);
+    --primary: var(--blue);
+    --primary-foreground: var(--white);
+    --secondary: var(--bg-secondary);
+    --secondary-foreground: var(--white);
+    --muted: rgba(255, 255, 255, 0.06);
+    --muted-foreground: rgba(255, 255, 255, 0.45);
+    --accent: rgba(37, 99, 235, 0.12);
+    --accent-foreground: var(--white);
+    --destructive: oklch(0.577 0.245 27.325);
+    --input: var(--border);
+    --ring: var(--blue-light);
+    --radius: 1rem;
+    --chart-1: var(--blue);
+    --chart-2: var(--blue-light);
+    --chart-3: var(--navy);
+    --chart-4: oklch(0.556 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: var(--bg-secondary);
+    --sidebar-foreground: var(--white);
+    --sidebar-primary: var(--blue);
+    --sidebar-primary-foreground: var(--white);
+    --sidebar-accent: var(--muted);
+    --sidebar-accent-foreground: var(--white);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
+  }
+
+  .dark {
+    --background: var(--bg-primary);
+    --foreground: var(--white);
+    --card: var(--bg-card);
+    --card-foreground: var(--white);
+    --popover: var(--bg-secondary);
+    --popover-foreground: var(--white);
+    --primary: var(--blue);
+    --primary-foreground: var(--white);
+    --secondary: var(--bg-secondary);
+    --secondary-foreground: var(--white);
+    --muted: rgba(255, 255, 255, 0.06);
+    --muted-foreground: rgba(255, 255, 255, 0.45);
+    --accent: rgba(37, 99, 235, 0.12);
+    --accent-foreground: var(--white);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: rgba(255, 255, 255, 0.08);
+    --input: rgba(255, 255, 255, 0.12);
+    --ring: var(--blue-light);
+    --sidebar: var(--bg-secondary);
+    --sidebar-foreground: var(--white);
+    --sidebar-primary: var(--blue);
+    --sidebar-primary-foreground: var(--white);
+    --sidebar-accent: rgba(255, 255, 255, 0.06);
+    --sidebar-accent-foreground: var(--white);
+    --sidebar-border: rgba(255, 255, 255, 0.08);
+    --sidebar-ring: var(--blue-light);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    color-scheme: dark;
+    /* Faster taps & no stray double-tap zoom on interactive UI (pinch-zoom still works). */
+    touch-action: manipulation;
+  }
+
+  body {
+    @apply bg-[var(--bg-primary)] font-sans text-base antialiased;
+    color: rgba(255, 255, 255, 0.6);
+    overflow-x: clip;
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
+  }
+
+  /**
+   * iOS Safari zooms focused inputs smaller than ~16px; keeps Android soft keyboards usable too.
+   * Desktop keeps visual size from Tailwind utilities (inherits 16px base here below lg).
+   */
+  @media (max-width: 1023px) {
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):not([type="hidden"]),
+    textarea,
+    select {
+      font-size: max(16px, 1rem);
+    }
+  }
+
+  button,
+  [role="button"],
+  a[href] {
+    -webkit-tap-highlight-color: rgba(37, 99, 235, 0.15);
+  }
+
+  h1 {
+    @apply font-heading text-5xl font-extrabold leading-tight text-white sm:text-6xl md:text-7xl lg:text-8xl;
+  }
+
+  h2 {
+    @apply font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl;
+  }
+
+  h3 {
+    @apply font-heading text-2xl font-bold text-white sm:text-3xl;
+  }
+}
+
+/* Hero grain — subtle noise overlay */
+@layer components {
+  .heading-accent {
+    @apply text-[var(--blue)] italic;
+  }
+
+  .hero-grain {
+    position: relative;
+  }
+
+  .hero-grain::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    opacity: 0.22;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    animation: hero-grain-drift 10s ease-in-out infinite;
+  }
+
+  .hero-bg-grid {
+    background-color: var(--bg-primary);
+    background-image: radial-gradient(
+        ellipse 120% 90% at 50% 100%,
+        rgba(37, 99, 235, 0.12),
+        transparent 55%
+      ),
+      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: auto, 52px 52px, 52px 52px;
+    background-position: center, -1px -1px, -1px -1px;
+  }
+}
+
+@keyframes hero-grain-drift {
+  0%,
+  100% {
+    opacity: 0.16;
+  }
+  50% {
+    opacity: 0.28;
+  }
+}
+
+/* Stats section — logo ticker */
+@keyframes stats-ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.stats-ticker-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.stats-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: stats-ticker 30s linear infinite;
+}
+
+/* Testimonials — dual marquee */
+@keyframes testimonial-marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes testimonial-marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.testimonials-marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+}
+
+.testimonial-marquee-row-left {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: testimonial-marquee-left 35s linear infinite;
+}
+
+.testimonial-marquee-row-left:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-marquee-row-right {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: testimonial-marquee-right 35s linear infinite;
+}
+
+.testimonial-marquee-row-right:hover {
+  animation-play-state: paused;
+}
+
+/* Hero diagonal beam — sweep in first 40% of cycle, then long pause */
+@keyframes beamMove {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.4;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1.5;
+  }
+  55% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(200vw) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes beamMove2 {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  40% {
+    transform: translateX(200vw) skewX(-20deg);
+    opacity: 0;
+  }
+  41% {
+    opacity: 0;
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(-100%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+/* Hero beam — same sweep, opposite diagonal (right → left) */
+@keyframes beamMoveMirror {
+  0% {
+    transform: translateX(calc(100vw + 100%)) skewX(20deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.4;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1.5;
+  }
+  55% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(calc(-200vw - 100%)) skewX(20deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-beam-layer,
+  .hero-beam-layer * {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  .stats-ticker-track,
+  .testimonial-marquee-row-left,
+  .testimonial-marquee-row-right {
+    animation: none !important;
+  }
+}

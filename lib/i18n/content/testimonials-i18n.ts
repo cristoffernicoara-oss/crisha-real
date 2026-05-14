@@ -1,0 +1,226 @@
+import type { Locale } from "@/lib/i18n/types";
+
+export type TestimonialItem = {
+  id: number;
+  name: string;
+  role: string;
+  company: string;
+  avatar: string;
+  stars: number;
+  text: string;
+  service: string;
+  result: string;
+};
+
+const SV: TestimonialItem[] = [
+  {
+    id: 1,
+    name: "Andreea M.",
+    role: "Ägare",
+    company: "FashionUp",
+    avatar: "AM",
+    stars: 5,
+    text: "Innan Crisha hade vi en ROAS på 1,4× och visste inte var problemet låg. På 4 månader kom vi upp till 3,8× med samma produkt och samma budget. Skillnaden var kampanjstrukturen och retargetingen.",
+    service: "Meta Ads",
+    result: "ROAS 1,4× → 3,8×",
+  },
+  {
+    id: 2,
+    name: "Dr. Bogdan T.",
+    role: "Chef",
+    company: "DentalMed Klinik",
+    avatar: "BT",
+    stars: 5,
+    text: "Vi spenderade 1 500 kr/mån på Google Ads och fick 10 irrelevanta samtal. Crisha löste problemet första månaden. Nu får vi 34 samtal och 89% är kvalificerade patienter.",
+    service: "Google Ads",
+    result: "10 → 34 leads/mån",
+  },
+  {
+    id: 3,
+    name: "Mihai C.",
+    role: "Grundare",
+    company: "Craft Brewers Conference",
+    avatar: "MC",
+    stars: 5,
+    text: "400€ i TikTok Ads-budget, 280 000 personer nådda på 6 veckor och beställningarna ökade med 641%. Visste inte att TikTok kunde vara så effektivt med en liten budget.",
+    service: "TikTok Ads",
+    result: "280K räckvidd · +641% beställningar",
+  },
+  {
+    id: 4,
+    name: "Liviu Nicoara",
+    role: "Ägare",
+    company: "Casa Nostra",
+    avatar: "LN",
+    stars: 5,
+    text: "Den tidigare sajten höll inte måttet på mobilen. Nu hittar gästerna menyn och dagens lunch direkt, och vi ser tydligt fler cateringförfrågningar. Rätt investering för en restaurang som lever av både drop-in och beställningar.",
+    service: "Webbdesign",
+    result: "1,0% → 2,9% målinteraktion",
+  },
+  {
+    id: 5,
+    name: "Ioana P.",
+    role: "Marknadschef",
+    company: "BioNatura",
+    avatar: "IP",
+    stars: 5,
+    text: "Jag testade 3 byråer innan Crisha. Den stora skillnaden: transparensen. Jag ser allt som händer i kontot, får rapport varje måndag och vet exakt vart pengarna går.",
+    service: "Meta Ads",
+    result: "Full transparens, alltid",
+  },
+  {
+    id: 6,
+    name: "Radu S.",
+    role: "VD",
+    company: "TechGadgets.se",
+    avatar: "RS",
+    stars: 5,
+    text: "Google Shopping var ett kaos: vi spenderade på irrelevanta sökord utan att veta om det. Crisha byggde om allt från grunden. CPA sjönk med 52% under de första 2 månaderna.",
+    service: "Google Ads",
+    result: "-52% CPA på 2 månader",
+  },
+  {
+    id: 7,
+    name: "Maria D.",
+    role: "Medgrundare",
+    company: "Atelier Handmade",
+    avatar: "MD",
+    stars: 5,
+    text: "Jag var skeptisk till TikTok, det verkade vara för ungdomar. Crisha övertygade mig med data. Nu kommer 60% av mina onlinebeställningar från TikTok, till en kostnad 3× lägre än Meta.",
+    service: "TikTok Ads",
+    result: "60% beställningar från TikTok",
+  },
+  {
+    id: 8,
+    name: "George B.",
+    role: "Direktör",
+    company: "ImobPrime",
+    avatar: "GB",
+    stars: 5,
+    text: "Den nya webbplatsen förändrade helt hur kunder uppfattar oss. Vi får fler offertförfrågningar, leadskvaliteten är bättre och stängningsgraden ökade med 28%.",
+    service: "Webbdesign",
+    result: "+28% stängningsgrad",
+  },
+  {
+    id: 9,
+    name: "Cristina L.",
+    role: "Ägare",
+    company: "Sweet Bakery",
+    avatar: "CL",
+    stars: 5,
+    text: "Vi började med 300€/mån i Meta Ads. Nu är vi på 2 000€/mån för att det fungerar. Crisha skalade budgeten gradvis utan att tappa effektiviteten. ROAS har legat konstant på 4,2× hela vägen.",
+    service: "Meta Ads",
+    result: "ROAS 4,2× konstant",
+  },
+];
+
+const EN: TestimonialItem[] = [
+  {
+    id: 1,
+    name: "Andreea M.",
+    role: "Owner",
+    company: "FashionUp",
+    avatar: "AM",
+    stars: 5,
+    text: "Before Crisha we were at 1.4× ROAS and didn’t know where the problem was. In 4 months we reached 3.8× with the same product and budget. The difference was campaign structure and retargeting.",
+    service: "Meta Ads",
+    result: "ROAS 1.4× → 3.8×",
+  },
+  {
+    id: 2,
+    name: "Dr. Bogdan T.",
+    role: "Lead dentist",
+    company: "DentalMed Klinik",
+    avatar: "BT",
+    stars: 5,
+    text: "We spent 1,500 SEK/mo on Google Ads and got 10 irrelevant calls. Crisha fixed it in the first month. Now we get 34 calls and 89% are qualified patients.",
+    service: "Google Ads",
+    result: "10 → 34 leads/mo",
+  },
+  {
+    id: 3,
+    name: "Mihai C.",
+    role: "Founder",
+    company: "Craft Brewers Conference",
+    avatar: "MC",
+    stars: 5,
+    text: "€400 in TikTok ad spend, 280,000 people reached in 6 weeks, and orders up 641%. I didn’t know TikTok could work that well on a small budget.",
+    service: "TikTok Ads",
+    result: "280K reach · +641% orders",
+  },
+  {
+    id: 4,
+    name: "Liviu Nicoara",
+    role: "Owner",
+    company: "Casa Nostra",
+    avatar: "LN",
+    stars: 5,
+    text: "Our old site wasn’t good enough on mobile. Now guests find the menu and today’s lunch instantly, and we clearly get more catering enquiries. The right move for a venue that lives on walk-ins and bookings.",
+    service: "Web design",
+    result: "1.0% → 2.9% goal interactions",
+  },
+  {
+    id: 5,
+    name: "Ioana P.",
+    role: "Marketing lead",
+    company: "BioNatura",
+    avatar: "IP",
+    stars: 5,
+    text: "I tried 3 agencies before Crisha. The big difference is transparency. I see everything in the account, get a report every Monday, and know exactly where the money goes.",
+    service: "Meta Ads",
+    result: "Full transparency, always",
+  },
+  {
+    id: 6,
+    name: "Radu S.",
+    role: "CEO",
+    company: "TechGadgets.se",
+    avatar: "RS",
+    stars: 5,
+    text: "Google Shopping was chaos: we burned budget on irrelevant keywords without knowing it. Crisha rebuilt everything from scratch. CPA dropped 52% in the first 2 months.",
+    service: "Google Ads",
+    result: "−52% CPA in 2 months",
+  },
+  {
+    id: 7,
+    name: "Maria D.",
+    role: "Co-founder",
+    company: "Atelier Handmade",
+    avatar: "MD",
+    stars: 5,
+    text: "I was sceptical about TikTok, it felt ‘too young’. Crisha convinced me with data. Now 60% of my online orders come from TikTok at 3× lower cost than Meta.",
+    service: "TikTok Ads",
+    result: "60% of orders from TikTok",
+  },
+  {
+    id: 8,
+    name: "George B.",
+    role: "Director",
+    company: "ImobPrime",
+    avatar: "GB",
+    stars: 5,
+    text: "The new website completely changed how clients see us. More quote requests, better lead quality, and close rate up 28%.",
+    service: "Web design",
+    result: "+28% close rate",
+  },
+  {
+    id: 9,
+    name: "Cristina L.",
+    role: "Owner",
+    company: "Sweet Bakery",
+    avatar: "CL",
+    stars: 5,
+    text: "We started at €300/mo on Meta Ads. Now we’re at €2,000/mo because it works. Crisha scaled spend gradually without losing efficiency. ROAS stayed steady at 4.2× throughout.",
+    service: "Meta Ads",
+    result: "ROAS 4.2× steady",
+  },
+];
+
+export function getTestimonials(locale: Locale): TestimonialItem[] {
+  return locale === "en" ? EN : SV;
+}
+
+export const PLATFORM_PILLS = {
+  sv: ["Google ★ 4,9", "Facebook ★ 4,8", "Trustpilot ★ 5,0"],
+  en: ["Google ★ 4.9", "Facebook ★ 4.8", "Trustpilot ★ 5.0"],
+} as const;
