@@ -1,16 +1,20 @@
 "use client";
 
+import { useForm, ValidationError } from "@formspree/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle, Clock, Loader2, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { useState, type FormEvent } from "react";
 
+import { FormDeliverToNote } from "@/components/forms/FormDeliverToNote";
+import { FormspreeMissingNotice } from "@/components/forms/FormspreeMissingNotice";
 import {
   CONTACT_BUDGET_VALUES,
   CONTACT_HEAR_VALUES,
   CONTACT_SERVICE_VALUES,
 } from "@/lib/i18n/content/contact-options";
+import { FORMSPREE_SUBJECT, getFormspreeFormId } from "@/lib/formspree";
 import { useLocale } from "@/lib/i18n/locale-context";
 import { CONTACT } from "@/lib/constants";
 import { ROUTES } from "@/lib/routes";
@@ -42,9 +46,9 @@ function validateEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 }
 
-export default function ContactMain() {
+function ContactMainForm({ formId, inView }: { formId: string; inView: boolean }) {
   const { t } = useLocale();
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0 });
+  const [formspreeState, formspreeSubmit] = useForm(formId);
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -56,8 +60,6 @@ export default function ContactMain() {
     message: "",
     hearAbout: "",
   });
-  const [isLoading, setIsLoading] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const setField = (key: keyof typeof form, value: string) => {
@@ -79,14 +81,211 @@ export default function ContactMain() {
     return Object.keys(next).length === 0;
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!runValidation()) return;
-    setIsLoading(true);
-    await new Promise((r) => setTimeout(r, 1800));
-    setIsLoading(false);
-    setIsSuccess(true);
+    formspreeSubmit(e);
   };
+
+  const submitting = formspreeState.submitting;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+      className="rounded-[24px] border border-[rgba(255,255,255,0.08)] bg-[#0F1629] p-6 md:p-10"
+    >
+      <AnimatePresence mode="wait">
+        {formspreeState.succeeded ? (
+          <motion.div
+            key="success"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="px-2 py-6 text-center md:py-10"
+          >
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ type: "spring", stiffness: 200, damping: 18 }}
+              className="mx-auto mb-6 flex size-[72px] items-center justify-center rounded-full border border-[rgba(34,197,94,0.2)] bg-[rgba(34,197,94,0.1)]"
+            >
+              <CheckCircle className="size-9 text-[#22C55E]" strokeWidth={2} aria-hidden />
+            </motion.div>
+            <h3 className="mb-3 font-heading text-[22px] font-bold text-white">{t("contactMain.successTitle")}</h3>
+            <p className="text-[15px] font-normal text-[rgba(255,255,255,0.5)]">{t("contactMain.successP1")}</p>
+            <p className="mt-2 text-[13px] font-normal text-[rgba(255,255,255,0.3)]">{t("contactMain.successP2")}</p>
+            <Link
+              href={ROUTES.fallstudier}
+              className="mt-6 inline-block rounded-full border border-[rgba(255,255,255,0.12)] bg-transparent px-6 py-3 text-sm font-medium text-white no-underline transition-colors hover:border-[rgba(37,99,235,0.4)] hover:text-[#93C5FD]"
+            >
+              {t("contactMain.successCta")}
+            </Link>
+            <p className="mt-4 text-center text-xs text-[rgba(255,255,255,0.2)]">{t("contactMain.privacy")}</p>
+          </motion.div>
+        ) : (
+          <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <h2 className="mb-1.5 font-heading text-2xl font-bold text-white">{t("contactMain.formTitle")}</h2>
+            <p className="mb-7 text-sm font-normal text-[rgba(255,255,255,0.4)]">{t("contactMain.formLead")}</p>
+
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+              <input type="hidden" name="_subject" value={FORMSPREE_SUBJECT.contactFull} />
+              <ValidationError errors={formspreeState.errors} className="mb-2 rounded-lg bg-[rgba(239,68,68,0.08)] px-3 py-2 text-sm text-[#FCA5A5]" />
+
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <div>
+                  <input
+                    type="text"
+                    name="firstName"
+                    placeholder={t("contactMain.fnPh")}
+                    value={form.firstName}
+                    onChange={(e) => setField("firstName", e.target.value)}
+                    className={cn(inputClass, errors.firstName && inputErrorClass)}
+                    aria-invalid={!!errors.firstName}
+                  />
+                  {errors.firstName ? <p className="mt-1 text-xs text-[#EF4444]">{errors.firstName}</p> : null}
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    name="lastName"
+                    placeholder={t("contactMain.lnPh")}
+                    value={form.lastName}
+                    onChange={(e) => setField("lastName", e.target.value)}
+                    className={cn(inputClass, errors.lastName && inputErrorClass)}
+                  />
+                  {errors.lastName ? <p className="mt-1 text-xs text-[#EF4444]">{errors.lastName}</p> : null}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder={t("contactCta.emailPh")}
+                    value={form.email}
+                    onChange={(e) => setField("email", e.target.value)}
+                    className={cn(inputClass, errors.email && inputErrorClass)}
+                  />
+                  {errors.email ? <p className="mt-1 text-xs text-[#EF4444]">{errors.email}</p> : null}
+                </div>
+                <div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Telefon *"
+                    value={form.phone}
+                    onChange={(e) => setField("phone", e.target.value)}
+                    className={cn(inputClass, errors.phone && inputErrorClass)}
+                  />
+                  {errors.phone ? <p className="mt-1 text-xs text-[#EF4444]">{errors.phone}</p> : null}
+                </div>
+              </div>
+
+              <input
+                type="text"
+                name="company"
+                placeholder={t("contactMain.companyPh")}
+                value={form.company}
+                onChange={(e) => setField("company", e.target.value)}
+                className={inputClass}
+              />
+
+              <div>
+                <select
+                  name="service"
+                  value={form.service}
+                  onChange={(e) => setField("service", e.target.value)}
+                  className={cn(selectFieldClass, errors.service && inputErrorClass)}
+                  style={{ backgroundImage: selectChevronBg }}
+                >
+                  <option value="" disabled>
+                    {t("contactCta.servicePh")}
+                  </option>
+                  {CONTACT_SERVICE_VALUES.map((v) => (
+                    <option key={v} value={v} className="bg-[#0F1629]">
+                      {t(`contactMain.service.${slugToCamelKey(v)}`)}
+                    </option>
+                  ))}
+                </select>
+                {errors.service ? <p className="mt-1 text-xs text-[#EF4444]">{errors.service}</p> : null}
+              </div>
+
+              <div>
+                <select
+                  name="budget"
+                  value={form.budget}
+                  onChange={(e) => setField("budget", e.target.value)}
+                  className={cn(selectFieldClass, errors.budget && inputErrorClass)}
+                  style={{ backgroundImage: selectChevronBg }}
+                >
+                  <option value="" disabled>
+                    {t("contactMain.budgetPh")}
+                  </option>
+                  {CONTACT_BUDGET_VALUES.map((v) => (
+                    <option key={v} value={v} className="bg-[#0F1629]">
+                      {t(`contactMain.budget.${v}`)}
+                    </option>
+                  ))}
+                </select>
+                {errors.budget ? <p className="mt-1 text-xs text-[#EF4444]">{errors.budget}</p> : null}
+              </div>
+
+              <textarea
+                name="message"
+                rows={4}
+                placeholder={t("contactMain.msgPh")}
+                value={form.message}
+                onChange={(e) => setField("message", e.target.value)}
+                className={cn(inputClass, "min-h-[100px] resize-none")}
+              />
+
+              <select
+                name="hearAbout"
+                value={form.hearAbout}
+                onChange={(e) => setField("hearAbout", e.target.value)}
+                className={selectFieldClass}
+                style={{ backgroundImage: selectChevronBg }}
+              >
+                <option value="">{t("contactMain.hearPh")}</option>
+                {CONTACT_HEAR_VALUES.map((v) => (
+                  <option key={v} value={v} className="bg-[#0F1629]">
+                    {t(`contactMain.hear.${v}`)}
+                  </option>
+                ))}
+              </select>
+
+              <button
+                type="submit"
+                disabled={submitting}
+                className="mt-1 flex w-full items-center justify-center gap-2 rounded-xl border-0 bg-[#2563EB] py-4 text-[15px] font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-[#1D4ED8] hover:shadow-[0_12px_32px_rgba(37,99,235,0.3)] disabled:cursor-not-allowed disabled:opacity-70"
+              >
+                {submitting ? (
+                  <>
+                    <Loader2 className="size-5 animate-spin" aria-hidden />
+                    {t("contactMain.sending")}
+                  </>
+                ) : (
+                  t("contactMain.submit")
+                )}
+              </button>
+
+              <p className="mt-3 text-center text-xs text-[rgba(255,255,255,0.2)]">{t("contactMain.privacy")}</p>
+              <FormDeliverToNote hint={t("contactMain.formDeliverHint")} className="mt-2" />
+            </form>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+}
+
+export default function ContactMain() {
+  const { t } = useLocale();
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0 });
+  const formId = getFormspreeFormId();
 
   return (
     <section ref={ref} className="bg-[#060810] px-[5%] pb-20 pt-12 md:px-[6%] md:pb-[120px] md:pt-[60px]">
@@ -183,184 +382,18 @@ export default function ContactMain() {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-          className="rounded-[24px] border border-[rgba(255,255,255,0.08)] bg-[#0F1629] p-6 md:p-10"
-        >
-          <AnimatePresence mode="wait">
-            {isSuccess ? (
-              <motion.div
-                key="success"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="px-2 py-6 text-center md:py-10"
-              >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 18 }}
-                  className="mx-auto mb-6 flex size-[72px] items-center justify-center rounded-full border border-[rgba(34,197,94,0.2)] bg-[rgba(34,197,94,0.1)]"
-                >
-                  <CheckCircle className="size-9 text-[#22C55E]" strokeWidth={2} aria-hidden />
-                </motion.div>
-                <h3 className="mb-3 font-heading text-[22px] font-bold text-white">{t("contactMain.successTitle")}</h3>
-                <p className="text-[15px] font-normal text-[rgba(255,255,255,0.5)]">{t("contactMain.successP1")}</p>
-                <p className="mt-2 text-[13px] font-normal text-[rgba(255,255,255,0.3)]">
-                  {t("contactMain.successP2")}
-                </p>
-                <Link
-                  href={ROUTES.fallstudier}
-                  className="mt-6 inline-block rounded-full border border-[rgba(255,255,255,0.12)] bg-transparent px-6 py-3 text-sm font-medium text-white no-underline transition-colors hover:border-[rgba(37,99,235,0.4)] hover:text-[#93C5FD]"
-                >
-                  {t("contactMain.successCta")}
-                </Link>
-                <p className="mt-4 text-center text-xs text-[rgba(255,255,255,0.2)]">{t("contactMain.privacy")}</p>
-              </motion.div>
-            ) : (
-              <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                <h2 className="mb-1.5 font-heading text-2xl font-bold text-white">{t("contactMain.formTitle")}</h2>
-                <p className="mb-7 text-sm font-normal text-[rgba(255,255,255,0.4)]">{t("contactMain.formLead")}</p>
-
-                <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                    <div>
-                      <input
-                        type="text"
-                        placeholder={t("contactMain.fnPh")}
-                        value={form.firstName}
-                        onChange={(e) => setField("firstName", e.target.value)}
-                        className={cn(inputClass, errors.firstName && inputErrorClass)}
-                        aria-invalid={!!errors.firstName}
-                      />
-                      {errors.firstName ? <p className="mt-1 text-xs text-[#EF4444]">{errors.firstName}</p> : null}
-                    </div>
-                    <div>
-                      <input
-                        type="text"
-                        placeholder={t("contactMain.lnPh")}
-                        value={form.lastName}
-                        onChange={(e) => setField("lastName", e.target.value)}
-                        className={cn(inputClass, errors.lastName && inputErrorClass)}
-                      />
-                      {errors.lastName ? <p className="mt-1 text-xs text-[#EF4444]">{errors.lastName}</p> : null}
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                    <div>
-                      <input
-                        type="email"
-                        placeholder={t("contactCta.emailPh")}
-                        value={form.email}
-                        onChange={(e) => setField("email", e.target.value)}
-                        className={cn(inputClass, errors.email && inputErrorClass)}
-                      />
-                      {errors.email ? <p className="mt-1 text-xs text-[#EF4444]">{errors.email}</p> : null}
-                    </div>
-                    <div>
-                      <input
-                        type="tel"
-                        placeholder="Telefon *"
-                        value={form.phone}
-                        onChange={(e) => setField("phone", e.target.value)}
-                        className={cn(inputClass, errors.phone && inputErrorClass)}
-                      />
-                      {errors.phone ? <p className="mt-1 text-xs text-[#EF4444]">{errors.phone}</p> : null}
-                    </div>
-                  </div>
-
-                  <input
-                    type="text"
-                    placeholder={t("contactMain.companyPh")}
-                    value={form.company}
-                    onChange={(e) => setField("company", e.target.value)}
-                    className={inputClass}
-                  />
-
-                  <div>
-                    <select
-                      value={form.service}
-                      onChange={(e) => setField("service", e.target.value)}
-                      className={cn(selectFieldClass, errors.service && inputErrorClass)}
-                      style={{ backgroundImage: selectChevronBg }}
-                    >
-                      <option value="" disabled>
-                        {t("contactCta.servicePh")}
-                      </option>
-                      {CONTACT_SERVICE_VALUES.map((v) => (
-                        <option key={v} value={v} className="bg-[#0F1629]">
-                          {t(`contactMain.service.${slugToCamelKey(v)}`)}
-                        </option>
-                      ))}
-                    </select>
-                    {errors.service ? <p className="mt-1 text-xs text-[#EF4444]">{errors.service}</p> : null}
-                  </div>
-
-                  <div>
-                    <select
-                      value={form.budget}
-                      onChange={(e) => setField("budget", e.target.value)}
-                      className={cn(selectFieldClass, errors.budget && inputErrorClass)}
-                      style={{ backgroundImage: selectChevronBg }}
-                    >
-                      <option value="" disabled>
-                        {t("contactMain.budgetPh")}
-                      </option>
-                      {CONTACT_BUDGET_VALUES.map((v) => (
-                        <option key={v} value={v} className="bg-[#0F1629]">
-                          {t(`contactMain.budget.${v}`)}
-                        </option>
-                      ))}
-                    </select>
-                    {errors.budget ? <p className="mt-1 text-xs text-[#EF4444]">{errors.budget}</p> : null}
-                  </div>
-
-                  <textarea
-                    rows={4}
-                    placeholder={t("contactMain.msgPh")}
-                    value={form.message}
-                    onChange={(e) => setField("message", e.target.value)}
-                    className={cn(inputClass, "min-h-[100px] resize-none")}
-                  />
-
-                  <select
-                    value={form.hearAbout}
-                    onChange={(e) => setField("hearAbout", e.target.value)}
-                    className={selectFieldClass}
-                    style={{ backgroundImage: selectChevronBg }}
-                  >
-                    <option value="">{t("contactMain.hearPh")}</option>
-                    {CONTACT_HEAR_VALUES.map((v) => (
-                      <option key={v} value={v} className="bg-[#0F1629]">
-                        {t(`contactMain.hear.${v}`)}
-                      </option>
-                    ))}
-                  </select>
-
-                  <button
-                    type="submit"
-                    disabled={isLoading}
-                    className="mt-1 flex w-full items-center justify-center gap-2 rounded-xl border-0 bg-[#2563EB] py-4 text-[15px] font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-[#1D4ED8] hover:shadow-[0_12px_32px_rgba(37,99,235,0.3)] disabled:cursor-not-allowed disabled:opacity-70"
-                  >
-                    {isLoading ? (
-                      <>
-                        <Loader2 className="size-5 animate-spin" aria-hidden />
-                        {t("contactMain.sending")}
-                      </>
-                    ) : (
-                      t("contactMain.submit")
-                    )}
-                  </button>
-
-                  <p className="mt-3 text-center text-xs text-[rgba(255,255,255,0.2)]">{t("contactMain.privacy")}</p>
-                </form>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.div>
+        {formId ? (
+          <ContactMainForm formId={formId} inView={inView} />
+        ) : (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+            className="rounded-[24px] border border-[rgba(255,255,255,0.08)] bg-[#0F1629] p-6 md:p-10"
+          >
+            <FormspreeMissingNotice />
+          </motion.div>
+        )}
       </div>
     </section>
   );

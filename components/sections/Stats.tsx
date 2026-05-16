@@ -82,10 +82,10 @@ export default function Stats() {
       sublabel: t("stats.s2b"),
     },
     {
-      end: 1,
+      end: 50,
       decimals: 0,
       prefix: "€",
-      suffix: "M+",
+      suffix: "k",
       label: t("stats.s3"),
       sublabel: t("stats.s3b"),
     },

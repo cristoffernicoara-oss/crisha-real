@@ -155,7 +155,7 @@ export default function WhyUs() {
 
               <div className="text-left">
                 {[
-                  { icon: "📊", label: t("whyUs.rowSpend"), value: "1M€+" },
+                  { icon: "📊", label: t("whyUs.rowSpend"), value: "€50k" },
                   { icon: "🎯", label: t("whyUs.rowBrands"), value: "40+" },
                   { icon: "⚡", label: t("whyUs.rowTime"), value: "48h" },
                 ].map((row) => (

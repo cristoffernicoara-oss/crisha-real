@@ -92,7 +92,7 @@ const heroSv: MetaHeroUi = {
   stats: [
     { v: "4,8×", l: "Snitt ROAS" },
     { v: "-42%", l: "Lägre CPA" },
-    { v: "1M€+", l: "Hanterat annonspengar" },
+    { v: "€50k", l: "Hanterat annonspengar" },
     { v: "48h", l: "Kampanjer live" },
   ],
   floatBadge: "+34% vs förra månaden",
@@ -116,7 +116,7 @@ const heroEn: MetaHeroUi = {
   stats: [
     { v: "4.8×", l: "Avg. ROAS" },
     { v: "−42%", l: "Lower CPA" },
-    { v: "€1M+", l: "Ad spend managed" },
+    { v: "€50k", l: "Ad spend managed" },
     { v: "48h", l: "Campaigns live" },
   ],
   floatBadge: "+34% vs last month",

@@ -190,6 +190,8 @@ export const svTree = {
     sending: "Skickar...",
     submit: "Skicka & begär revision →",
     privacy: "🔒 Dina uppgifter är konfidentiella och delas inte med tredje part.",
+    formDeliverHint:
+      "Meddelanden går till {email}. I Formspree: verifiera Notifications/Workflow för samma adress (och tillåten domän).",
     optMeta: "Meta Ads (Facebook & Instagram)",
     optGoogle: "Google Ads (Search & Shopping)",
     optTiktok: "TikTok Ads & UGC",
@@ -234,6 +236,8 @@ export const svTree = {
     sending: "Skickar...",
     submit: "Skicka & boka revision →",
     privacy: "🔒 Dina uppgifter behandlas konfidentiellt och delas inte med tredje part.",
+    formDeliverHint:
+      "Leverans till {email}. Bekräfta att Formspree skickar notifieringar till samma inbox och godkänn domänen crisha.se.",
     errFn: "Förnamn krävs.",
     errLn: "Efternamn krävs.",
     errEmail: "E-post krävs.",
@@ -553,6 +557,8 @@ export const enTree = {
     sending: "Sending…",
     submit: "Send & request audit →",
     privacy: "🔒 Your details are confidential and never shared with third parties.",
+    formDeliverHint:
+      "Deliveries go to {email}. In Formspree, confirm Notifications/Workflow targets the same address and allow the production domain.",
     optMeta: "Meta Ads (Facebook & Instagram)",
     optGoogle: "Google Ads (Search & Shopping)",
     optTiktok: "TikTok Ads & UGC",
@@ -597,6 +603,8 @@ export const enTree = {
     sending: "Sending…",
     submit: "Send & book audit →",
     privacy: "🔒 Your details are confidential and never shared with third parties.",
+    formDeliverHint:
+      "Delivered to {email}. Confirm Formspree sends notifications there and approve the crisha.se domain.",
     errFn: "First name is required.",
     errLn: "Last name is required.",
     errEmail: "Email is required.",

@@ -1,14 +1,14 @@
 import type { Locale } from "@/lib/i18n/types";
 
 const STATS_SV = [
-  { prefix: "€", end: 1, decimals: 0, suffix: "M+", label: "Hanterad ad spend (ca/år)" },
+  { prefix: "€", end: 50, decimals: 0, suffix: "k", label: "Hanterad ad spend (ca/år)" },
   { prefix: "", end: 40, decimals: 0, suffix: "+", label: "Levererade projekt" },
   { prefix: "", end: 4.8, decimals: 1, suffix: "×", label: "Snitt-ROAS i portföljen" },
   { prefix: "", end: 98, decimals: 0, suffix: "%", label: "Nöjda kunder (förnyar)" },
 ] as const;
 
 const STATS_EN = [
-  { prefix: "€", end: 1, decimals: 0, suffix: "M+", label: "Ad spend managed (approx./year)" },
+  { prefix: "€", end: 50, decimals: 0, suffix: "k", label: "Ad spend managed (approx./year)" },
   { prefix: "", end: 40, decimals: 0, suffix: "+", label: "Projects delivered" },
   { prefix: "", end: 4.8, decimals: 1, suffix: "×", label: "Average portfolio ROAS" },
   { prefix: "", end: 98, decimals: 0, suffix: "%", label: "Happy clients (renew)" },

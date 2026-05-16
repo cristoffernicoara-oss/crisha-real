@@ -111,7 +111,7 @@ export const HERO_COPY = {
 export const STATS = [
   { value: 40, suffix: "+", label: "Företag vi samarbetat med" },
   { value: 4.8, suffix: "×", label: "Genomsnittlig ROAS i portföljen", decimals: 1 },
-  { value: 1, suffix: "M+ €", label: "Hanterade annonsbudgetar (cirka), per år" },
+  { value: 50, suffix: "k €", label: "Hanterade annonsbudgetar (cirka), per år" },
   { value: 98, suffix: "%", label: "Kunder som förnyar" },
 ] as const;
 
