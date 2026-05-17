@@ -191,7 +191,9 @@ export const svTree = {
     submit: "Skicka & begär revision →",
     privacy: "🔒 Dina uppgifter är konfidentiella och delas inte med tredje part.",
     formDeliverHint:
-      "Meddelanden går till {email}. I Formspree: verifiera Notifications/Workflow för samma adress (och tillåten domän).",
+      "Meddelanden skickas till {email}. Avsändare och domän sätts via Resend (RESEND_FROM / domänverifiering).",
+    submitFailed:
+      "Meddelandet kunde inte skickas. Försök igen om en liten stund eller mejla oss direkt.",
     optMeta: "Meta Ads (Facebook & Instagram)",
     optGoogle: "Google Ads (Search & Shopping)",
     optTiktok: "TikTok Ads & UGC",
@@ -237,7 +239,9 @@ export const svTree = {
     submit: "Skicka & boka revision →",
     privacy: "🔒 Dina uppgifter behandlas konfidentiellt och delas inte med tredje part.",
     formDeliverHint:
-      "Leverans till {email}. Bekräfta att Formspree skickar notifieringar till samma inbox och godkänn domänen crisha.se.",
+      "Leverans till {email} via sajten och Resend. Kontrollera att RESEND_FROM använder en verifierad avsändare.",
+    submitFailed:
+      "Meddelandet kunde inte skickas. Försök igen om en liten stund eller mejla oss direkt.",
     errFn: "Förnamn krävs.",
     errLn: "Efternamn krävs.",
     errEmail: "E-post krävs.",
@@ -558,7 +562,9 @@ export const enTree = {
     submit: "Send & request audit →",
     privacy: "🔒 Your details are confidential and never shared with third parties.",
     formDeliverHint:
-      "Deliveries go to {email}. In Formspree, confirm Notifications/Workflow targets the same address and allow the production domain.",
+      "Deliveries go to {email}; sending is powered by Resend (verify RESEND_FROM and your domain there).",
+    submitFailed:
+      "We couldn’t send your message. Please try again shortly or email us directly.",
     optMeta: "Meta Ads (Facebook & Instagram)",
     optGoogle: "Google Ads (Search & Shopping)",
     optTiktok: "TikTok Ads & UGC",
@@ -604,7 +610,9 @@ export const enTree = {
     submit: "Send & book audit →",
     privacy: "🔒 Your details are confidential and never shared with third parties.",
     formDeliverHint:
-      "Delivered to {email}. Confirm Formspree sends notifications there and approve the crisha.se domain.",
+      "Delivered to {email} via the site and Resend. Ensure RESEND_FROM uses a verified sender.",
+    submitFailed:
+      "We couldn’t send your message. Please try again shortly or email us directly.",
     errFn: "First name is required.",
     errLn: "Last name is required.",
     errEmail: "Email is required.",

@@ -1,16 +1,15 @@
 "use client";
 
-import { useForm, ValidationError } from "@formspree/react";
 import { motion } from "framer-motion";
 import { Clock, Shield, TrendingUp } from "lucide-react";
 import { useEffect, useState, type FormEvent } from "react";
 import { useInView } from "react-intersection-observer";
 
+import { ContactMailMissingNotice } from "@/components/forms/ContactMailMissingNotice";
 import { FormDeliverToNote } from "@/components/forms/FormDeliverToNote";
-import { FormspreeMissingNotice } from "@/components/forms/FormspreeMissingNotice";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
-import { FORMSPREE_SUBJECT, getFormspreeFormId } from "@/lib/formspree";
+import { fetchContactMailReady, submitContactMail } from "@/lib/client/submit-contact-mail";
 import { useLocale } from "@/lib/i18n/locale-context";
 import { cn } from "@/lib/utils";
 
@@ -44,17 +43,18 @@ export type ContactCTAProps = {
 };
 
 function ContactCTAForm({
-  formId,
   inView,
   defaultService,
   t,
 }: {
-  formId: string;
   inView: boolean;
   defaultService?: string;
   t: ReturnType<typeof useLocale>["t"];
 }) {
-  const [formspreeState, formspreeSubmit] = useForm(formId);
+  const [succeeded, setSucceeded] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -69,17 +69,31 @@ function ContactCTAForm({
     }
   }, [defaultService]);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     const el = e.currentTarget;
     if (!el.reportValidity()) {
       e.preventDefault();
       return;
     }
     e.preventDefault();
-    formspreeSubmit(e);
+    setSubmitError(null);
+    setSubmitting(true);
+    const result = await submitContactMail(
+      "contactCta",
+      {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        service: formData.service,
+        message: formData.message,
+      },
+      honeypot
+    );
+    setSubmitting(false);
+    if (result.ok) setSucceeded(true);
+    else setSubmitError(t("contactCta.submitFailed"));
   };
 
-  const submitting = formspreeState.submitting;
 
   return (
     <motion.div
@@ -88,7 +102,7 @@ function ContactCTAForm({
       transition={{ duration: 0.55, ease: "easeOut", delay: 0.2 }}
       className="scroll-mt-24"
     >
-      {formspreeState.succeeded ? (
+      {succeeded ? (
         <div className="flex flex-col items-center py-8 text-center">
           <span className="text-5xl text-[#22C55E]" aria-hidden>
             ✓
@@ -98,9 +112,22 @@ function ContactCTAForm({
           <p className="mt-2 text-sm text-[rgba(255,255,255,0.35)]">{t("contactCta.successP2")}</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-          <input type="hidden" name="_subject" value={FORMSPREE_SUBJECT.contactCta} />
-          <ValidationError errors={formspreeState.errors} className="rounded-lg bg-[rgba(239,68,68,0.08)] px-3 py-2 text-sm text-[#FCA5A5]" />
+        <form onSubmit={handleSubmit} className="relative flex flex-col gap-3">
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+            className="pointer-events-none absolute left-[-9999px] h-px w-px opacity-0"
+          />
+          {submitError ? (
+            <div className="rounded-lg bg-[rgba(239,68,68,0.08)] px-3 py-2 text-sm text-[#FCA5A5]" role="alert">
+              {submitError}
+            </div>
+          ) : null}
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <input
               required
@@ -194,7 +221,13 @@ export default function ContactCTA({
     { icon: TrendingUp, key: "b3", text: t("contactCta.b3") },
   ] as const;
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0 });
-  const formId = getFormspreeFormId();
+  const [mailReady, setMailReady] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    fetchContactMailReady().then(setMailReady);
+  }, []);
+
+  const showSkeleton = mailReady === null;
   return (
     <section
       id={anchorId}
@@ -272,17 +305,12 @@ export default function ContactCTA({
               transition={{ duration: 0.55, ease: "easeOut", delay: 0.2 }}
               className="scroll-mt-24"
             >
-              {formId ? (
-                <ContactCTAForm formId={formId} inView={inView} defaultService={defaultService} t={t} />
+              {showSkeleton ? (
+                <div className="min-h-[340px] animate-pulse rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[#0d1528]/90" aria-hidden />
+              ) : mailReady ? (
+                <ContactCTAForm inView={inView} defaultService={defaultService} t={t} />
               ) : (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-                  transition={{ duration: 0.55, ease: "easeOut", delay: 0.2 }}
-                  className="scroll-mt-24"
-                >
-                  <FormspreeMissingNotice />
-                </motion.div>
+                <ContactMailMissingNotice />
               )}
             </motion.div>
           </div>
