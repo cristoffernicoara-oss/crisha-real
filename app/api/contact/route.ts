@@ -6,7 +6,7 @@ import { CONTACT_MAIL_SUBJECT_MAP, type ContactMailSource } from "@/lib/contact-
 export const runtime = "nodejs";
 
 /** Form notifications go here (temporary; footer/contact still uses CONTACT.email). */
-const MAIL_TO_INBOX = "cristoffer.nicoara@hotmail.com";
+const MAIL_TO_INBOX = "cristoffer.nicoara@hotmail.se";
 
 /** From-header i Resend — alltid Crisha Marketing <info@crisha.se> (Verifiera domän/adress i Resend). */
 const RESEND_MAIL_FROM = "Crisha Marketing <info@crisha.se>";
