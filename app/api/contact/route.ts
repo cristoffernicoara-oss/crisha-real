@@ -8,11 +8,8 @@ export const runtime = "nodejs";
 /** Form notifications go here (temporary; footer/contact still uses CONTACT.email). */
 const MAIL_TO_INBOX = "cristoffer.nicoara@hotmail.com";
 
-const RESEND_FROM_FALLBACK = "onboarding@resend.dev";
-
-function resolvedResendFrom(): string {
-  return process.env.RESEND_FROM?.trim() || RESEND_FROM_FALLBACK;
-}
+/** From-header i Resend — alltid Crisha Marketing <info@crisha.se> (Verifiera domän/adress i Resend). */
+const RESEND_MAIL_FROM = "Crisha Marketing <info@crisha.se>";
 
 function escapeHtml(s: string): string {
   return s
@@ -68,7 +65,7 @@ export async function GET() {
 
 export async function POST(req: Request) {
   const apiKey = process.env.RESEND_API_KEY?.trim();
-  const from = resolvedResendFrom();
+  const from = RESEND_MAIL_FROM;
   if (!apiKey) {
     return NextResponse.json({ ok: false, code: "MAIL_NOT_CONFIGURED" }, { status: 503 });
   }
