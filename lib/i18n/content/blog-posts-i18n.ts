@@ -10,10 +10,10 @@ export type BlogPostPreview = {
 const BLOG_POSTS_SV: BlogPostPreview[] = [
   {
     slug: "meta-ads-2026-slutboosta-inlagg",
-    title: "Meta Ads 2026: Därför räcker det inte längre att \"boosta\" inlägg",
+    title: "Meta Ads byrå Sverige: Därför räcker det inte att \"boosta\" inlägg 2026",
     excerpt:
-      "Det finns ett misstag vi ser om och om igen när vi gör gratis revisioner för nya kunder: hela annonsbudgeten läggs på boostade inlägg. Inga kampanjstrukturer. Ingen retargeting.",
-    date: "18/05-2026",
+      "Som Meta Ads-byrå i Sverige ser vi ett misstag om och om igen i gratis revisioner: hela budgeten på boost utan struktur eller spårning som mäter försäljning.",
+    date: "2026-05-18",
   },
   {
     slug: "roas-modekund-meta",
@@ -41,10 +41,10 @@ const BLOG_POSTS_SV: BlogPostPreview[] = [
 const BLOG_POSTS_EN: BlogPostPreview[] = [
   {
     slug: "meta-ads-2026-slutboosta-inlagg",
-    title: "Meta Ads in 2026: Why boosting posts is no longer enough",
+    title: "Meta Ads agency Sweden: Why boosting posts is not enough in 2026",
     excerpt:
-      "We keep seeing one mistake during free audits: the entire ad budget goes to boosted posts. No campaign structure. No retargeting. No tracking that actually measures revenue.",
-    date: "18 May 2026",
+      "As a Meta Ads agency in Sweden we see the same trap in audits: budgets burned on boosted posts instead of structured campaigns and tracking that proves sales.",
+    date: "2026-05-18",
   },
   {
     slug: "roas-modekund-meta",
