@@ -6,7 +6,6 @@ import { useInView } from "react-intersection-observer";
 import { useEffect, useState, type FormEvent } from "react";
 
 import { ContactMailMissingNotice } from "@/components/forms/ContactMailMissingNotice";
-import { FormDeliverToNote } from "@/components/forms/FormDeliverToNote";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { consumeCariereApplyPosition } from "@/lib/cariere-apply";
 import { fetchContactMailReady, submitContactMail } from "@/lib/client/submit-contact-mail";
@@ -22,9 +21,6 @@ const POSITION_OPTIONS = [
   "Praktik: data och strategi",
   "Annan roll (beskriv nedan)",
 ] as const;
-
-const CAREERS_FORM_DELIVER_HINT =
-  "Ansökningar levereras till {email} via sajten och Resend (avsändaren måste vara verifierad i Resend).";
 
 const inputClass =
   "w-full rounded-[10px] border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] px-4 py-3 text-sm font-normal text-white outline-none transition-all duration-200 placeholder:text-[rgba(255,255,255,0.2)] focus:border-[rgba(37,99,235,0.5)] focus:bg-[rgba(37,99,235,0.03)] focus:shadow-[0_0_0_3px_rgba(37,99,235,0.08)]";
@@ -277,7 +273,6 @@ function CariereFormFields({ inView }: { inView: boolean }) {
                 "Skicka ansökan →"
               )}
             </button>
-            <FormDeliverToNote hint={CAREERS_FORM_DELIVER_HINT} className="mt-2" />
           </motion.form>
         )}
       </AnimatePresence>

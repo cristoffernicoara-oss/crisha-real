@@ -14,17 +14,19 @@ export function ContactMailMissingNotice({ className }: { className?: string }) 
     >
       <p className="font-semibold">Formuläret kan inte skicka e-post än</p>
       <p className="mt-2 text-xs leading-relaxed text-amber-100/75">
-        Sätt hemliga variablerna{" "}
-        <code className="rounded bg-black/25 px-1 font-mono text-[11px] text-amber-50">RESEND_API_KEY</code> och{" "}
+        Sätt <code className="rounded bg-black/25 px-1 font-mono text-[11px] text-amber-50">RESEND_API_KEY</code>{" "}
+        i <span className="font-mono text-[11px]">.env.local</span> eller i Vercel (se{" "}
+        <span className="font-mono text-[11px]">.env.example</span>). Utan{" "}
         <code className="rounded bg-black/25 px-1 font-mono text-[11px] text-amber-50">RESEND_FROM</code>{" "}
-        (se <span className="font-mono text-[11px]">.env.example</span>). Via Resend skickas meddelanden till{" "}
+        används <code className="rounded bg-black/25 px-1 font-mono text-[11px] text-amber-50">onboarding@resend.dev</code>
+        till vidare som avsändare. Publik kontakt är fortfarande{" "}
         <a
           href={`mailto:${CONTACT.email}`}
           className="font-medium text-amber-100 underline underline-offset-2 hover:text-white"
         >
           {CONTACT.email}
         </a>
-        ; verifiera avsändardomänen i Resend innan produktion.
+        .
       </p>
     </div>
   );

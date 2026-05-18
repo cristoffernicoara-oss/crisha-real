@@ -190,8 +190,6 @@ export const svTree = {
     sending: "Skickar...",
     submit: "Skicka & begär revision →",
     privacy: "🔒 Dina uppgifter är konfidentiella och delas inte med tredje part.",
-    formDeliverHint:
-      "Meddelanden skickas till {email}. Avsändare och domän sätts via Resend (RESEND_FROM / domänverifiering).",
     submitFailed:
       "Meddelandet kunde inte skickas. Försök igen om en liten stund eller mejla oss direkt.",
     optMeta: "Meta Ads (Facebook & Instagram)",
@@ -238,8 +236,6 @@ export const svTree = {
     sending: "Skickar...",
     submit: "Skicka & boka revision →",
     privacy: "🔒 Dina uppgifter behandlas konfidentiellt och delas inte med tredje part.",
-    formDeliverHint:
-      "Leverans till {email} via sajten och Resend. Kontrollera att RESEND_FROM använder en verifierad avsändare.",
     submitFailed:
       "Meddelandet kunde inte skickas. Försök igen om en liten stund eller mejla oss direkt.",
     errFn: "Förnamn krävs.",
@@ -561,8 +557,6 @@ export const enTree = {
     sending: "Sending…",
     submit: "Send & request audit →",
     privacy: "🔒 Your details are confidential and never shared with third parties.",
-    formDeliverHint:
-      "Deliveries go to {email}; sending is powered by Resend (verify RESEND_FROM and your domain there).",
     submitFailed:
       "We couldn’t send your message. Please try again shortly or email us directly.",
     optMeta: "Meta Ads (Facebook & Instagram)",
@@ -609,8 +603,6 @@ export const enTree = {
     sending: "Sending…",
     submit: "Send & book audit →",
     privacy: "🔒 Your details are confidential and never shared with third parties.",
-    formDeliverHint:
-      "Delivered to {email} via the site and Resend. Ensure RESEND_FROM uses a verified sender.",
     submitFailed:
       "We couldn’t send your message. Please try again shortly or email us directly.",
     errFn: "First name is required.",

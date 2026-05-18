@@ -490,7 +490,124 @@ const roasModeEn: BlogArticleBody = {
   ],
 };
 
+const metaBoost2026Sv: BlogArticleBody = {
+  sections: [
+    {
+      heading: 'När "boosta" blir ett svart hål',
+      paragraphs: [
+        'Det finns ett misstag vi ser om och om igen när vi gör gratis revisioner för nya kunder: hela annonsbudgeten läggs på boostade inlägg. Inga kampanjstrukturer. Ingen retargeting. Ingen spårning som faktiskt mäter försäljning.',
+        "Resultatet? En ROAS på 1,1–1,6× och en känsla av att Meta Ads inte fungerar för dem.",
+        "Det fungerar. Men inte såhär.",
+      ],
+    },
+    {
+      heading: "Vad som faktiskt har förändrats på Meta 2026",
+      paragraphs: [
+        "Metas algoritm har blivit dramatiskt bättre på att hitta köpvilliga användare, men bara om du ger den rätt signaler att jobba med. Advantage+ Shopping Campaigns, bred targeting och AI-driven budgetoptimering är inte buzzwords längre. De är grundförutsättningar för lönsam annonsering.",
+        "Det innebär att den gamla logiken med snäv målgrupp, manuella placeringar och mikrooptimerade intressen i många fall faktiskt skadar dina resultat. Algoritmen behöver utrymme att lära sig, och du behöver ge den det.",
+        "Men frihet åt algoritmen betyder inte att du lämnar ratten. Det betyder att du lägger energin på rätt saker: creatives, erbjudanden och konverteringsspårning.",
+      ],
+    },
+    {
+      heading: "Misstag 1: Ingen full-funnel-struktur",
+      paragraphs: [
+        "Det första och vanligaste misstaget är att det saknas en full-funnel-struktur. De flesta annonsörer kör bara mot kalla målgrupper och hoppas att det räcker. Det gör det sällan. En lönsam Meta-struktur arbetar på tre nivåer samtidigt: bred räckvidd mot nya ögon, ett mellanlager som bearbetar engagerade användare som inte konverterat ännu, och ett bottenplan med retargeting mot varma leads och övergivna varukorgar. Utan de två sista nivåerna lämnar du pengar på bordet varje dag.",
+      ],
+    },
+    {
+      heading: "Misstag 2: Creatives som inte sticker ut",
+      paragraphs: [
+        "Det andra misstaget handlar om creatives som inte sticker ut. Meta är ett flöde och din annons konkurrerar med vänners inlägg, nyheter och kattvideos. En snygg produktbild räcker sällan, du behöver content som stoppar scrollandet inom de första sekunderna. Det vi ser fungerar bäst just nu är UGC-liknande videos, before/after-format och direkta testimonials från riktiga kunder. Polerat och professionellt är inte synonymt med effektivt.",
+      ],
+    },
+    {
+      heading: "Misstag 3: Felaktig eller saknad konverteringsspårning",
+      paragraphs: [
+        "Det tredje misstaget är det allvarligaste: felaktig eller saknad konverteringsspårning. Om Meta inte får tillbaka rätt konverteringssignaler, om din pixel mäter klick på varukorgen när den borde mäta genomförda köp, optimerar algoritmen mot fel mål. Resultatet är massor av aktivitet i kontot men ingen försäljning. Conversions API är idag ett krav, inte ett plus. Cookierestriktioner och iOS-förändringar har gjort pixeln ensam otillräcklig.",
+      ],
+    },
+    {
+      heading: "Vad du bör fokusera på under resten av 2026",
+      paragraphs: [
+        "Konkret gör du så här:",
+      ],
+      bullets: [
+        "Ge algoritmen rätt konverteringssignaler: sätt upp Conversions API korrekt, verifiera din domän och se till att dina köphändelser har hög matchningskvalitet.",
+        "Testa creatives systematiskt: skapa minst tre till fem varianter per annonsgrupp och låt data avgöra istället för magkänsla. Byt ut de sämst presterande varannan till var tredje vecka.",
+        "Bygg upp dina retargeting-segment: vem har besökt din sajt de senaste 30 dagarna? Vilka har lagt produkter i varukorgen utan att köpa? De förtjänar ett annat budskap än en helt ny besökare.",
+        "Utvärdera ROAS på rätt nivå — titta inte bara på enskilda annonser utan på kampanjstrukturen som helhet. En kampanj högt upp i tratten med lägre ROAS kan ändå vara lönsam om den matar retargetingen med kvalificerade leads.",
+      ],
+    },
+  ],
+  summaryHeading: "Vad kan du förvänta dig?",
+  summary:
+    "Hos Crisha jobbar vi med den här strukturen för alla våra kunder, oavsett budget. Det är därför vår genomsnittliga portfölj-ROAS ligger på 4,8× mot branschsnittet på 2,1×. Det handlar inte om magi, det handlar om rätt setup, rätt creatives och rätt optimering vecka efter vecka.",
+  closingParagraphs: [
+    "Är du nyfiken på hur ditt konto faktiskt presterar? Vi erbjuder en gratis revision utan förpliktelser där vi går igenom din nuvarande struktur och berättar ärligt vad som fungerar och vad som kostar dig pengar i onödan.",
+    "Boka din gratis revision på crisha.se/kontakt",
+    "Crisha Marketing är en digital marknadsföringsbyrå grundad i Malmö. Vi hjälper svenska och europeiska varumärken växa lönsamt med Meta Ads, Google Ads, TikTok Ads och webbdesign.",
+  ],
+};
+
+const metaBoost2026En: BlogArticleBody = {
+  sections: [
+    {
+      heading: 'When boosting becomes a budget black hole',
+      paragraphs: [
+        "We keep seeing one mistake during free audits: the entire budget goes into boosted posts — no campaign structure, no retargeting, no tracking tied to revenue.",
+        "The outcome? ROAS lands around 1.1×–1.6× and it feels like Meta Ads “doesn’t work”.",
+        "It works. Just not built this way.",
+      ],
+    },
+    {
+      heading: "What actually changed on Meta in 2026",
+      paragraphs: [
+        "Meta has become far better at finding buyers, but only if it gets the right optimisation signals to learn from. Advantage+ shopping, broad targeting, and AI-assisted budget pacing are table stakes — not buzzwords.",
+        "That usually means overly narrow targeting, manual placement micromanagement, and hyper-specific interest stacking now hurt performance. The system needs learning room and you supply it.",
+        "Giving Meta freedom is not handing over the steering wheel entirely. Spend your energy where it moves results: creatives, offers, and conversion tracking.",
+      ],
+    },
+    {
+      heading: "Mistake #1 — No full-funnel structure",
+      paragraphs: [
+        "Common pattern: spend only on cold audiences and hope that is enough. It rarely is. A profitable Meta stack works three layers at once: broad reach for new eyes, a mid-funnel layer for engaged users who have not bought yet, and retargeting for warm leads and abandoned carts. Skip the last two and you leave money on the table daily.",
+      ],
+    },
+    {
+      heading: "Mistake #2 — Creatives that never stop the scroll",
+      paragraphs: [
+        "Your ad competes with friends, news, and cat videos. A polished packshot often is not enough. What we see working now: UGC-style video, before/after formats, and direct customer testimonials. Polished does not equal effective.",
+      ],
+    },
+    {
+      heading: "Mistake #3 — Broken or missing conversion tracking",
+      paragraphs: [
+        "If Meta never receives the right conversion signals — for example the pixel optimises for add-to-cart clicks instead of completed purchases — the algorithm chases the wrong goal. You get activity but not sales. Conversions API is mandatory now, not nice-to-have. Cookie limits and iOS changes made pixel-only setups insufficient.",
+      ],
+    },
+    {
+      heading: "Where to focus for the rest of 2026",
+      paragraphs: ["Put the work here:"],
+      bullets: [
+        "Feed the algorithm clean purchase signals: implement Conversions API properly, verify your domain, and improve event match quality.",
+        "Test creatives systematically — run at least three to five variants per ad set, let data decide, and refresh the worst performers every two to three weeks.",
+        "Build retargeting segments: who visited in the last 30 days? Who abandoned cart? They deserve different messaging than a cold prospect.",
+        "Judge ROAS at structure level, not ad-by-ad only. A colder-audience campaign with lower ROAS can still be profitable if it feeds high-quality retargeting pools.",
+      ],
+    },
+  ],
+  summaryHeading: "What you can expect",
+  summary:
+    "We run this structure for every client, regardless of budget — which is why our portfolio ROAS averages 4.8× versus industry averages around 2.1×. It is not magic: it is the right setup, strong creative, and relentless weekly optimisation.",
+  closingParagraphs: [
+    "Curious how your account really performs? Book a free, no-strings audit and we will be honest about what works and what silently burns budget.",
+    "Request it at crisha.se/kontakt",
+    "Crisha Marketing is a digital marketing agency founded in Malmö. We help Swedish and European brands grow profitably with Meta Ads, Google Ads, TikTok Ads, and web design.",
+  ],
+};
+
 const BODIES: Record<string, { sv: BlogArticleBody; en: BlogArticleBody }> = {
+  "meta-ads-2026-slutboosta-inlagg": { sv: metaBoost2026Sv, en: metaBoost2026En },
   "tiktok-ads-sverige": { sv: tiktokSv, en: tiktokEn },
   "google-ads-budget": { sv: googleAdsSv, en: googleAdsEn },
   "roas-modekund-meta": { sv: roasModeSv, en: roasModeEn },

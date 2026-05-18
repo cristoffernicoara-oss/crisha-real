@@ -6,7 +6,6 @@ import { useEffect, useState, type FormEvent } from "react";
 import { useInView } from "react-intersection-observer";
 
 import { ContactMailMissingNotice } from "@/components/forms/ContactMailMissingNotice";
-import { FormDeliverToNote } from "@/components/forms/FormDeliverToNote";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { fetchContactMailReady, submitContactMail } from "@/lib/client/submit-contact-mail";
@@ -197,7 +196,6 @@ function ContactCTAForm({
             {submitting ? t("contactCta.sending") : t("contactCta.submit")}
           </Button>
           <p className="text-center text-xs text-[rgba(255,255,255,0.2)]">{t("contactCta.privacy")}</p>
-          <FormDeliverToNote hint={t("contactCta.formDeliverHint")} className="mt-2" />
         </form>
       )}
     </motion.div>

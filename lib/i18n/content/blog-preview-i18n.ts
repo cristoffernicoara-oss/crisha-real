@@ -15,6 +15,18 @@ export type BlogPreviewPost = {
 
 const SV: BlogPreviewPost[] = [
   {
+    id: 4,
+    tag: "Meta Ads",
+    tagColor: "#2563EB",
+    brandMark: "facebook",
+    title: "Meta Ads 2026: Därför räcker det inte längre att \"boosta\" inlägg",
+    excerpt:
+      "Vi ser samma fel i gratis revisioner: hela budgeten på boost och ingen riktig struktur. Så ger du Meta rätta signaler 2026.",
+    date: "18/05-2026",
+    readTime: "8 min läsning",
+    slug: "meta-ads-2026-slutboosta-inlagg",
+  },
+  {
     id: 1,
     tag: "Meta Ads",
     tagColor: "#2563EB",
@@ -53,6 +65,18 @@ const SV: BlogPreviewPost[] = [
 ];
 
 const EN: BlogPreviewPost[] = [
+  {
+    id: 4,
+    tag: "Meta Ads",
+    tagColor: "#2563EB",
+    brandMark: "facebook",
+    title: "Meta Ads in 2026: Why boosting posts is no longer enough",
+    excerpt:
+      "Same pattern in audits: boosted posts eat the budget without real structure. Here's how to give Meta the signals it needs.",
+    date: "18 May 2026",
+    readTime: "8 min read",
+    slug: "meta-ads-2026-slutboosta-inlagg",
+  },
   {
     id: 1,
     tag: "Meta Ads",

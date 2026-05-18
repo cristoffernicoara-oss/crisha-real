@@ -1,10 +1,18 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-import { CONTACT } from "@/lib/constants";
 import { CONTACT_MAIL_SUBJECT_MAP, type ContactMailSource } from "@/lib/contact-mail";
 
 export const runtime = "nodejs";
+
+/** Form notifications go here (temporary; footer/contact still uses CONTACT.email). */
+const MAIL_TO_INBOX = "cristoffer.nicoara@hotmail.com";
+
+const RESEND_FROM_FALLBACK = "onboarding@resend.dev";
+
+function resolvedResendFrom(): string {
+  return process.env.RESEND_FROM?.trim() || RESEND_FROM_FALLBACK;
+}
 
 function escapeHtml(s: string): string {
   return s
@@ -54,14 +62,14 @@ function validateFields(source: ContactMailSource, fields: Record<string, string
 }
 
 export async function GET() {
-  const ready = !!(process.env.RESEND_API_KEY?.trim() && process.env.RESEND_FROM?.trim());
+  const ready = !!process.env.RESEND_API_KEY?.trim();
   return NextResponse.json({ ready });
 }
 
 export async function POST(req: Request) {
   const apiKey = process.env.RESEND_API_KEY?.trim();
-  const from = process.env.RESEND_FROM?.trim();
-  if (!apiKey || !from) {
+  const from = resolvedResendFrom();
+  if (!apiKey) {
     return NextResponse.json({ ok: false, code: "MAIL_NOT_CONFIGURED" }, { status: 503 });
   }
 
@@ -121,7 +129,7 @@ export async function POST(req: Request) {
   const resend = new Resend(apiKey);
   const { error } = await resend.emails.send({
     from,
-    to: [CONTACT.email],
+    to: [MAIL_TO_INBOX],
     ...(replyTo ? { replyTo: [replyTo] } : {}),
     subject,
     html,

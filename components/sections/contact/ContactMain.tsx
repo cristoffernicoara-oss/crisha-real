@@ -7,7 +7,6 @@ import { useInView } from "react-intersection-observer";
 import { useEffect, useState, type FormEvent } from "react";
 
 import { ContactMailMissingNotice } from "@/components/forms/ContactMailMissingNotice";
-import { FormDeliverToNote } from "@/components/forms/FormDeliverToNote";
 import {
   CONTACT_BUDGET_VALUES,
   CONTACT_HEAR_VALUES,
@@ -305,7 +304,6 @@ function ContactMainForm({ inView }: { inView: boolean }) {
               </button>
 
               <p className="mt-3 text-center text-xs text-[rgba(255,255,255,0.2)]">{t("contactMain.privacy")}</p>
-              <FormDeliverToNote hint={t("contactMain.formDeliverHint")} className="mt-2" />
             </form>
           </motion.div>
         )}
