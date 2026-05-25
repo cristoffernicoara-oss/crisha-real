@@ -17,6 +17,7 @@ const CTA_SERVICE_OPTIONS = [
   { value: "google-ads", labelKey: "contactCta.optGoogle" as const },
   { value: "tiktok-ads", labelKey: "contactCta.optTiktok" as const },
   { value: "webbdesign", labelKey: "contactCta.optWeb" as const },
+  { value: "full-funnel", labelKey: "contactCta.optFullFunnel" as const },
   { value: "complet", labelKey: "contactCta.optBundle" as const },
   { value: "osaker", labelKey: "contactCta.optUnsure" as const },
 ] as const;

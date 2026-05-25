@@ -34,6 +34,7 @@ const serviceLinks = [
   { label: "Google Ads", href: ROUTES.tjansterGoogleAds },
   { label: "TikTok Ads", href: ROUTES.tjansterTiktokAds },
   { labelKey: "footer.webDesign" as const, href: ROUTES.tjansterWebbdesign },
+  { labelKey: "footer.fullFunnel" as const, href: ROUTES.tjansterFullFunnel },
   { labelKey: "footer.careers" as const, href: ROUTES.karriar },
 ] as const;
 

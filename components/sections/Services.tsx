@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Layers, type LucideIcon } from "lucide-react";
+import { Layers, Star, type LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 
@@ -49,6 +49,11 @@ const SERVICE_LAYOUT: Record<
     icon: Layers,
     gridLg: "lg:col-start-7 lg:col-end-13 lg:row-start-2",
     accent: "#8B5CF6",
+  },
+  "full-funnel": {
+    icon: Star,
+    gridLg: "lg:col-start-1 lg:col-end-13 lg:row-start-3",
+    accent: "#06B6D4",
   },
 };
 

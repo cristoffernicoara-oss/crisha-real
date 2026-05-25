@@ -15,6 +15,42 @@ export type BlogPreviewPost = {
 
 const SV: BlogPreviewPost[] = [
   {
+    id: 7,
+    tag: "Design",
+    tagColor: "#0F766E",
+    brandMark: "webdesign",
+    title: "Grafisk profil 2026: vad ska egentligen ingå i manualen?",
+    excerpt:
+      "Logotyp, färger och typsnitt är grunden, men en hållbar grafisk profil innehåller också bildspråk, ikoner och tydliga regler. Vi packar upp manualen steg för steg.",
+    date: "2026-05-20",
+    readTime: "8 min läsning",
+    slug: "grafisk-profil-vad-ska-inga-i-manualen",
+  },
+  {
+    id: 6,
+    tag: "Sociala medier",
+    tagColor: "#E11D48",
+    brandMark: "tiktok",
+    title: "Reels eller TikTok 2026: var ska företaget lägga tiden?",
+    excerpt:
+      "Reels och TikTok lovar båda snabb räckvidd, men de belönar olika beteenden och publiker. Vi går igenom skillnaderna och ger ett ramverk för var ni ska lägga krafterna.",
+    date: "2026-05-20",
+    readTime: "10 min läsning",
+    slug: "reels-eller-tiktok-2026-var-ska-foretaget-lagga-tiden",
+  },
+  {
+    id: 5,
+    tag: "SEO",
+    tagColor: "#10B981",
+    brandMark: "google",
+    title: "Google AI Finance i Europa: så påverkas SEO och content",
+    excerpt:
+      "Google AI Finance har nyligen lanserats i Europa, och det är en av de största förändringarna i sökresultaten på länge. Så här påverkar det SEO, content och din strategi.",
+    date: "2026-05-20",
+    readTime: "6 min läsning",
+    slug: "google-ai-finance-europa-seo-content",
+  },
+  {
     id: 4,
     tag: "Meta Ads",
     tagColor: "#2563EB",
@@ -65,6 +101,42 @@ const SV: BlogPreviewPost[] = [
 ];
 
 const EN: BlogPreviewPost[] = [
+  {
+    id: 7,
+    tag: "Design",
+    tagColor: "#0F766E",
+    brandMark: "webdesign",
+    title: "Brand design system 2026: what should actually go in the manual?",
+    excerpt:
+      "Logo, colours, and fonts are the foundation, but a durable visual identity also covers imagery, icons, and clear rules. We unpack the manual step by step.",
+    date: "2026-05-20",
+    readTime: "8 min read",
+    slug: "grafisk-profil-vad-ska-inga-i-manualen",
+  },
+  {
+    id: 6,
+    tag: "Social media",
+    tagColor: "#E11D48",
+    brandMark: "tiktok",
+    title: "Reels or TikTok in 2026: where should your company spend its time?",
+    excerpt:
+      "Both Reels and TikTok promise reach fast, but they reward different behaviours and audiences. Here is a practical framework for where to focus.",
+    date: "2026-05-20",
+    readTime: "10 min read",
+    slug: "reels-eller-tiktok-2026-var-ska-foretaget-lagga-tiden",
+  },
+  {
+    id: 5,
+    tag: "SEO",
+    tagColor: "#10B981",
+    brandMark: "google",
+    title: "Google AI Finance in Europe: how SEO and content are affected",
+    excerpt:
+      "Google AI Finance recently launched in Europe, one of the biggest shifts in search in a long time. Here is what it means for SEO, content, and your strategy.",
+    date: "2026-05-20",
+    readTime: "6 min read",
+    slug: "google-ai-finance-europa-seo-content",
+  },
   {
     id: 4,
     tag: "Meta Ads",

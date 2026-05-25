@@ -9,6 +9,27 @@ export type BlogPostPreview = {
 
 const BLOG_POSTS_SV: BlogPostPreview[] = [
   {
+    slug: "grafisk-profil-vad-ska-inga-i-manualen",
+    title: "Grafisk profil 2026: vad ska egentligen ingå i manualen?",
+    excerpt:
+      "En grafisk profil är mer än en logotyp i hörnet av hemsidan. Här går vi igenom vad en komplett manual ska innehålla, från färger och typsnitt till bildspråk och tydliga användningsregler.",
+    date: "2026-05-20",
+  },
+  {
+    slug: "reels-eller-tiktok-2026-var-ska-foretaget-lagga-tiden",
+    title: "Reels eller TikTok 2026: var ska företaget lägga tiden?",
+    excerpt:
+      "Instagram Reels och TikTok tävlar om samma sekunder av användarnas uppmärksamhet. Så här skiljer sig plattformarna 2026 i algoritm, målgrupp och format, och hur du väljer var ni satsar tid och budget.",
+    date: "2026-05-20",
+  },
+  {
+    slug: "google-ai-finance-europa-seo-content",
+    title: "Google AI Finance i Europa: så påverkas SEO och content",
+    excerpt:
+      "Google AI Finance har nyligen lanserats i Europa, och det är en av de största förändringarna i sökresultaten på länge. Så här påverkar det företag som jobbar med SEO och content marketing, och vad du kan göra redan nu.",
+    date: "2026-05-20",
+  },
+  {
     slug: "meta-ads-2026-slutboosta-inlagg",
     title: "Meta Ads byrå Sverige: Därför räcker det inte att \"boosta\" inlägg 2026",
     excerpt:
@@ -39,6 +60,27 @@ const BLOG_POSTS_SV: BlogPostPreview[] = [
 ];
 
 const BLOG_POSTS_EN: BlogPostPreview[] = [
+  {
+    slug: "grafisk-profil-vad-ska-inga-i-manualen",
+    title: "Brand design system 2026: what should actually go in the manual?",
+    excerpt:
+      "A graphic profile is more than a logo in the corner of your site. Here is what a complete brand manual should cover: from colours and type to imagery rules and clear do’s and don’ts.",
+    date: "2026-05-20",
+  },
+  {
+    slug: "reels-eller-tiktok-2026-var-ska-foretaget-lagga-tiden",
+    title: "Reels or TikTok in 2026: where should your company spend its time?",
+    excerpt:
+      "Instagram Reels and TikTok compete for the same seconds of attention. Here is how the platforms differ in 2026: algorithm, audience, and formats, and how to choose where to invest time and budget.",
+    date: "2026-05-20",
+  },
+  {
+    slug: "google-ai-finance-europa-seo-content",
+    title: "Google AI Finance in Europe: how SEO and content are affected",
+    excerpt:
+      "Google AI Finance recently launched in Europe, one of the biggest shifts in search results in a long time. Here is what it means for SEO and content marketing, and what to do about it.",
+    date: "2026-05-20",
+  },
   {
     slug: "meta-ads-2026-slutboosta-inlagg",
     title: "Meta Ads agency Sweden: Why boosting posts is not enough in 2026",

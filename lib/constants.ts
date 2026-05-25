@@ -94,6 +94,19 @@ export const SERVICES = [
       "Mätning och attribuering",
     ],
   },
+  {
+    slug: "full-funnel",
+    title: "Full funnel",
+    shortDescription:
+      "En sammanhängande kundresa från första klick till löpande köp: Meta, Google, TikTok och webb i samma kedja.",
+    longDescription:
+      "Vi kopplar ihop medvetenhet, övervägande och konvertering i en genomtänkt funnel. Samma spårning, tydliga steg i köpresan och optimering över kanaler så annonser, landningssidor och uppföljning jobbar mot samma mål i stället för i varsin silo.",
+    highlights: [
+      "Funnelstruktur (TOF/MOF/BOF) och budskap som följer kunden i varje steg",
+      "Konsekvent tracking och attribuering över Meta, Google, TikTok och webb",
+      "Kontinuerlig test av landningssidor, erbjudanden och kreativt för lägre CPA",
+    ],
+  },
 ] as const;
 
 export type ServiceSlug = (typeof SERVICES)[number]["slug"];

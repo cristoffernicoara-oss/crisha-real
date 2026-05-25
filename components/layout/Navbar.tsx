@@ -2,7 +2,7 @@
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Layers, Menu, X, type LucideIcon } from "lucide-react";
+import { ChevronDown, Layers, Menu, Star, X, type LucideIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -18,7 +18,7 @@ type NavServiceItem =
   | { name: string; href: string; color: string; brand: ServiceBrand }
   | { name: string; href: string; color: string; icon: LucideIcon };
 
-/** Desktop + mobile: four core services only. */
+/** Desktop + mobile: tjänster i dropdown (ordning = meny ordning). */
 const navServices: NavServiceItem[] = [
   {
     name: "Meta Ads",
@@ -43,6 +43,12 @@ const navServices: NavServiceItem[] = [
     href: ROUTES.tjansterWebbdesign,
     icon: Layers,
     color: "#8B5CF6",
+  },
+  {
+    name: "Full funnel",
+    href: ROUTES.tjansterFullFunnel,
+    icon: Star,
+    color: "#06B6D4",
   },
 ];
 
@@ -246,7 +252,11 @@ function Navbar() {
                               )}
                             </span>
                             <span className="font-heading text-[14px] font-semibold text-white">
-                              {s.href === ROUTES.tjansterWebbdesign ? t("nav.serviceWebDesign") : s.name}
+                              {s.href === ROUTES.tjansterWebbdesign
+                                ? t("nav.serviceWebDesign")
+                                : s.href === ROUTES.tjansterFullFunnel
+                                  ? t("nav.serviceFullFunnel")
+                                  : s.name}
                             </span>
                           </Link>
                         );
@@ -341,7 +351,11 @@ function Navbar() {
                         )}
                       </span>
                       <span className="font-heading text-[14px] font-semibold text-white">
-                        {s.href === ROUTES.tjansterWebbdesign ? t("nav.serviceWebDesign") : s.name}
+                        {s.href === ROUTES.tjansterWebbdesign
+                          ? t("nav.serviceWebDesign")
+                          : s.href === ROUTES.tjansterFullFunnel
+                            ? t("nav.serviceFullFunnel")
+                            : s.name}
                       </span>
                     </Link>
                   );

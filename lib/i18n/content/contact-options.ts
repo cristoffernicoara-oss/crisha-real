@@ -4,6 +4,7 @@ export const CONTACT_SERVICE_VALUES = [
   "google-ads",
   "tiktok-ads",
   "webbdesign",
+  "full-funnel",
   "complet",
   "osaker",
 ] as const;

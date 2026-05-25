@@ -17,6 +17,7 @@ export const svTree = {
     mobileMenuDesc: "Tjänster, sidor och kontakt för Crisha Marketing",
     mobileServices: "TJÄNSTER",
     serviceWebDesign: "Webbdesign",
+    serviceFullFunnel: "Full funnel",
   },
   footer: {
     tagline:
@@ -33,6 +34,7 @@ export const svTree = {
     blog: "Blogg",
     contact: "Kontakt",
     webDesign: "Webbdesign",
+    fullFunnel: "Full funnel",
     careers: "Karriär",
     whatsappCristoffer: "💬 WhatsApp · Cristoffer",
     whatsappShang: "💬 WhatsApp · Shang",
@@ -163,6 +165,9 @@ export const svTree = {
     h2b: "frontlinjen.",
     viewAll: "Se alla artiklar →",
     readMore: "Läs mer",
+    carouselPrev: "Föregående artiklar",
+    carouselNext: "Nästa artiklar",
+    carouselRegion: "Senaste artiklar",
   },
   homeFaq: {
     label: "VANLIGA FRÅGOR",
@@ -196,6 +201,7 @@ export const svTree = {
     optGoogle: "Google Ads (Search & Shopping)",
     optTiktok: "TikTok Ads & UGC",
     optWeb: "Webbdesign & landningssida",
+    optFullFunnel: "Full funnel (hela köpresan)",
     optBundle: "Flera tjänster (komplett paket)",
     optUnsure: "Vet inte ännu, vill diskutera",
   },
@@ -251,6 +257,7 @@ export const svTree = {
       googleAds: "Google Ads (sök & shopping)",
       tiktokAds: "TikTok Ads & UGC",
       webbdesign: "Webbdesign & landningssida",
+      fullFunnel: "Full funnel (hela köpresan)",
       complet: "Flera tjänster (helhetslösning)",
       osaker: "Vet inte ännu, vill prata med er",
     },
@@ -384,6 +391,7 @@ export const enTree = {
     mobileMenuDesc: "Services, pages, and contact for Crisha Marketing",
     mobileServices: "SERVICES",
     serviceWebDesign: "Web design",
+    serviceFullFunnel: "Full funnel",
   },
   footer: {
     tagline:
@@ -400,6 +408,7 @@ export const enTree = {
     blog: "Blog",
     contact: "Contact",
     webDesign: "Web design",
+    fullFunnel: "Full funnel",
     careers: "Careers",
     whatsappCristoffer: "💬 WhatsApp · Cristoffer",
     whatsappShang: "💬 WhatsApp · Shang",
@@ -530,6 +539,9 @@ export const enTree = {
     h2b: "the front line.",
     viewAll: "View all articles →",
     readMore: "Read more",
+    carouselPrev: "Previous articles",
+    carouselNext: "Next articles",
+    carouselRegion: "Latest articles",
   },
   homeFaq: {
     label: "FAQ",
@@ -563,6 +575,7 @@ export const enTree = {
     optGoogle: "Google Ads (Search & Shopping)",
     optTiktok: "TikTok Ads & UGC",
     optWeb: "Web design & landing page",
+    optFullFunnel: "Full funnel (end to end journey)",
     optBundle: "Multiple services (full package)",
     optUnsure: "Not sure yet, happy to chat",
   },
@@ -618,6 +631,7 @@ export const enTree = {
       googleAds: "Google Ads (Search & Shopping)",
       tiktokAds: "TikTok Ads & UGC",
       webbdesign: "Web design & landing page",
+      fullFunnel: "Full funnel (end to end journey)",
       complet: "Multiple services (full solution)",
       osaker: "Not sure yet, open to chat",
     },

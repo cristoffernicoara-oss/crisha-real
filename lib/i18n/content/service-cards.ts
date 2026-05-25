@@ -46,6 +46,15 @@ const SV: LocalisedServiceCard[] = [
     tags: ["Landningssida", "CRO", "Mobile-First", "PageSpeed 95+", "Next.js / Webflow"],
     metricPill: "+180% konvertering",
   },
+  {
+    slug: "full-funnel",
+    title: "Full funnel",
+    tagline: "Från första klick till återköp, samma spår över alla kanaler.",
+    description:
+      "Vi bygger en genomskinlig funnel där Meta, Google, TikTok och din webb förstärker varandra: rätt budskap i rätt steg, gemensamma KPI:er och optimering som gäller hela resan, inte enskilda kampanjer i isolation.",
+    tags: ["TOF/MOF/BOF", "Attribuering", "CRO & landningssida", "Kreativ testning", "CRM / pixel"],
+    metricPill: "Hela köpresan",
+  },
 ];
 
 const EN: LocalisedServiceCard[] = [
@@ -84,6 +93,15 @@ const EN: LocalisedServiceCard[] = [
       "Landing pages and marketing sites optimised for CRO, PageSpeed 95+, mobile-first, and tightly integrated with your ad campaigns. Typical conversion uplift +180% vs. old sites.",
     tags: ["Landing page", "CRO", "Mobile-first", "PageSpeed 95+", "Next.js / Webflow"],
     metricPill: "+180% conversion",
+  },
+  {
+    slug: "full-funnel",
+    title: "Full funnel",
+    tagline: "From first click to repeat purchase, one thread across every channel.",
+    description:
+      "We build a clear funnel where Meta, Google, TikTok, and your site reinforce each other: the right message at each stage, shared KPIs, and optimisation for the whole journey, not isolated one-off campaigns.",
+    tags: ["TOF/MOF/BOF", "Attribution", "CRO & landing pages", "Creative testing", "CRM / pixel"],
+    metricPill: "End to end journey",
   },
 ];
 

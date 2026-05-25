@@ -7,6 +7,7 @@ export const ROUTES = {
   tjansterGoogleAds: "/tjanster/google-ads",
   tjansterTiktokAds: "/tjanster/tiktok-ads",
   tjansterWebbdesign: "/tjanster/webbdesign",
+  tjansterFullFunnel: "/tjanster/full-funnel",
   fallstudier: "/fallstudier",
   blogg: "/blogg",
   kontakt: "/kontakt",

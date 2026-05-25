@@ -6,10 +6,19 @@ import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { SERVICES } from "@/lib/constants";
 
+/** Slugs med egen sida under `app/tjanster/<slug>/` — ska inte dubbelbyggas av `[slug]`. */
+const DEDICATED_SERVICE_SLUGS = new Set([
+  "meta-ads",
+  "google-ads",
+  "tiktok-ads",
+  "webbdesign",
+  "full-funnel",
+]);
+
 type Props = { params: { slug: string } };
 
 export function generateStaticParams() {
-  return SERVICES.map((s) => ({ slug: s.slug }));
+  return SERVICES.filter((s) => !DEDICATED_SERVICE_SLUGS.has(s.slug)).map((s) => ({ slug: s.slug }));
 }
 
 export function generateMetadata({ params }: Props): Metadata {

@@ -606,8 +606,690 @@ const metaBoost2026En: BlogArticleBody = {
   ],
 };
 
+const googleAiFinanceSv: BlogArticleBody = {
+  sections: [
+    {
+      heading: "Inledning",
+      paragraphs: [
+        "Google AI Finance har nyligen lanserats i Europa, och det är en av de största förändringarna i sökresultaten på länge. Men vad innebär det egentligen för företag som arbetar med SEO och content marketing? I det här inlägget går vi igenom vad Google AI Finance är, hur det påverkar sökresultaten och vad du behöver göra för att anpassa din strategi.",
+        "Den digitala världen förändras snabbt, och med introduktionen av sökresultat som styrs av AI står vi inför ett nytt kapitel i hur vi konsumerar information på nätet.",
+      ],
+    },
+    {
+      heading: "Vad är då egentligen Google AI Finance?",
+      paragraphs: [
+        "Google AI Finance är en ny funktion i Googles sökmotor som använder generativ AI för att ge direkta svar på användarnas frågor direkt i sökresultatet. Istället för att bara visa en lista med länkar, sammanställer AI:n information från flera olika källor och presenterar ett sammanfattat svar.",
+        "Detta innebär att användaren ofta får svar på sin fråga utan att ens behöva klicka sig vidare till en webbplats. För SEO specialister och innehållsskapare innebär detta en stor utmaning, men också nya möjligheter.",
+        "Målet med AI Finance är att göra sökprocessen snabbare och mer effektiv för användaren, genom att leverera relevanta svar på komplexa frågor på ett lättförståeligt sätt.",
+      ],
+    },
+    {
+      heading: "Hur påverkar det sökresultaten (SERP)?",
+      paragraphs: [
+        "Införandet av svar från AI i sökresultaten (Search Engine Results Pages, SERP) förändrar dynamiken totalt. Tidigare var målet att synas så högt upp som möjligt i den organiska listan. Nu tillkommer en ny dimension där svar som genereras av AI tar upp en stor del av det synliga utrymmet innan användaren scrollar.",
+        "Detta innebär att den traditionella organiska listan trycks ner, vilket kan leda till en minskning av den organiska trafiken för vissa typer av sökningar.",
+        "Samtidigt ger det en möjlighet för webbplatser att bli källhänvisade i svaret från AI, vilket kan driva högkvalitativ trafik från användare som vill fördjupa sig i ämnet.",
+      ],
+    },
+    {
+      heading: "Vad innebär det för SEO och content marketing?",
+      paragraphs: [
+        "För att lyckas i den nya eran med AI behöver vi tänka om kring hur vi skapar och optimerar innehåll. Det handlar inte längre bara om att ranka för specifika sökord, utan om att bli den auktoritativa källan som AI:n väljer att hämta information från.\n\nHär är några av de viktigaste områdena att fokusera på:",
+        "Genom att skapa innehåll som verkligen löser användarens problem och ger ett mervärde, ökar chanserna att synas både i de traditionella sökresultaten och i svaren från AI.",
+        "Det är viktigare än någonsin att förstå användarens resa och vilka frågor de faktiskt ställer under sökprocessen.",
+      ],
+      bullets: ["Sökintention", "Användarupplevelse", "Auktoritet och expertis", "Faktisk relevans"],
+    },
+    {
+      heading: "Vilket content kommer ranka?",
+      paragraphs: [
+        "Det content som kommer att prestera bäst i framtiden är det som är:",
+        "Det räcker inte längre med att bara skriva \"bra\" texter. Innehållet måste ha ett tydligt syfte och leverera ett konkret värde för att kunna konkurrera i det nya söklandskapet.",
+      ],
+      bullets: [
+        "Djupt och insiktsfullt: innehåll som går bortom det ytliga och erbjuder unika perspektiv, data eller expertis som en AI inte enkelt kan återskapa.",
+        "Strukturerat och lättläst: tydliga rubriker, listor och logisk struktur underlättar för både användare och AI modeller.",
+        "Användarfokuserat: innehåll som direkt adresserar användarens frågor och behov, snarare än att bara sälja en produkt eller tjänst.",
+        "Auktoritativt och trovärdigt: innehåll som stöds av källor, expertutlåtanden och en tydlig avsändare med hög trovärdighet (EEAT).",
+      ],
+    },
+    {
+      heading: "Sökintentionens betydelse när AI formar sökningen",
+      paragraphs: [
+        "Att förstå varför en användare söker är avgörande. Google AI Finance är särskilt bra på att hantera informationssökningar, det vill säga när användaren vill lära sig något.",
+        "Genom att anpassa ditt innehåll efter vilken typ av sökning det rör sig om kan du bättre möta användarens behov och öka dina chanser till synlighet.",
+      ],
+      bullets: [
+        "Informationssökningar: här dominerar ofta svar från AI. Ditt innehåll behöver vara den bästa källan för dessa svar för att bli citerat.",
+        "Transaktionella sökningar: när användaren är redo att köpa. Tydliga produktbeskrivningar och en smidig köpresa är fortfarande avgörande.",
+        "Navigationssökningar: när användaren letar efter en specifik webbplats. Där är varumärkeskännedom och teknisk SEO fortfarande centralt.",
+      ],
+    },
+    {
+      heading: "Hur bör innehållsstrategin anpassas?",
+      paragraphs: [
+        "För att hänga med i utvecklingen bör du se över din nuvarande innehållsstrategi.",
+        "Det handlar om att bygga en långsiktig relation med din målgrupp genom att vara den mest pålitliga källan till information inom din nisch.",
+      ],
+      bullets: [
+        "Fokusera på djupgående innehåll: guider, whitepapers och artiklar som verkligen går på djupet i ett ämne.",
+        "Skapa innehåll som svarar på specifika frågor: använd verktyg för att hitta vilka frågor din målgrupp ställer och besvara dem utförligt.",
+        "Bygg auktoritet (EEAT): arbeta aktivt med att stärka ditt varumärkes expertis, erfarenhet, auktoritet och trovärdighet.",
+      ],
+    },
+    {
+      heading: "Kvalitet före kvantitet",
+      paragraphs: [
+        "Kvalitet går före kvantitet. Det är bättre att ha färre, men mer högkvalitativa artiklar, än en stor mängd tunt innehåll.",
+      ],
+    },
+    {
+      heading: "Vad innebär det här för sajter i Sverige?",
+      paragraphs: [
+        "Även om Google AI Finance rullas ut brett finns det lokala aspekter att ta hänsyn till. Språkliga nyanser och kulturella skillnader påverkar hur AI:n tolkar och presenterar information.",
+        "Svenska företag har en fördel i att kunna skapa innehåll som är specifikt anpassat för den svenska marknaden och den svenska användaren. Genom att fokusera på lokalt relevant innehåll kan man behålla en stark position trots den globala konkurrensen.",
+        "Det är också viktigt att hålla koll på hur de lokala sökresultaten i Sverige förändras över tid i takt med att AI tekniken förfinas för det svenska språket.",
+      ],
+    },
+    {
+      heading: "Vad gör du för att förbereda dig?",
+      paragraphs: [
+        "Här är några konkreta steg du kan ta redan idag för att förbereda din webbplats för Google AI Finance:",
+        "Genom att vara proaktiv och anpassningsbar kan du vända den här förändringen till en konkurrensfördel.",
+      ],
+      bullets: [
+        "Analysera befintligt innehåll: vilka sidor presterar bra idag och hur kan de optimeras för att bli ännu mer relevanta för svar från AI?",
+        "Fokusera på användarfrågor: identifiera de vanligaste frågorna din målgrupp har och skapa innehåll som ger tydliga och informativa svar.",
+        "Optimera för EEAT: se till att din webbplats utstrålar expertis och trovärdighet genom att lyfta fram författare, referenser och kundcase.",
+        "Håll dig uppdaterad: följ utvecklingen inom AI och SEO noga för att snabbt kunna anpassa din strategi när nya förändringar sker.",
+      ],
+    },
+    {
+      heading: "En framåtblick",
+      paragraphs: [
+        "Google AI Finance är bara början på en större transformation av hur vi söker och hittar information. Som marknadsförare och SEO specialister måste vi vara beredda på att ständigt lära oss nytt och våga testa nya metoder.",
+        "Det viktigaste att komma ihåg är att i centrum för all sökoptimering står fortfarande användaren. Om du fokuserar på att skapa det bästa möjliga värdet för dina besökare kommer du att stå stadigt oavsett vilka tekniska förändringar som sker.",
+        "Framtiden för SEO handlar om att kombinera teknisk expertis med en djup förståelse för mänskligt beteende och behov.",
+      ],
+    },
+  ],
+  summaryHeading: "Vill du ha hjälp med SEO och content?",
+  summary:
+    "Crisha Marketing hjälper dig navigera i det nya söklandskapet och se till att din digitala närvaro är optimerad för framtidens sökresultat och tydlig för både människor och AI.",
+  closingParagraphs: [
+    "Vill du prata om hur vi kan hjälpa ditt företag att växa med modern SEO och content marketing? Kontakta oss via crisha.se/kontakt.",
+    "Crisha Marketing är en digital marknadsföringsbyrå med bas i Malmö. Vi arbetar med svenska och internationella varumärken inom bland annat betald media, webb och organisk synlighet.",
+  ],
+};
+
+const googleAiFinanceEn: BlogArticleBody = {
+  sections: [
+    {
+      heading: "Introduction",
+      paragraphs: [
+        "Google AI Finance recently launched in Europe, marking one of the biggest changes to search results in a long time. What does that actually mean for teams working on SEO and content marketing? In this article we explain what Google AI Finance is, how it affects search results, and what you should do to adapt your strategy.",
+        "The digital world moves fast, and with AI driven answers in search we are entering a new chapter in how people consume information online.",
+      ],
+    },
+    {
+      heading: "What is Google AI Finance?",
+      paragraphs: [
+        "Google AI Finance is a new search experience that uses generative AI to answer questions directly on the results page. Instead of only showing a list of links, the system compiles information from multiple sources and presents a summarised answer.",
+        "Users often get answers without clicking through to a website. For SEO specialists and content teams that is both a challenge and an opportunity.",
+        "The goal is to make search faster and more efficient by delivering relevant answers to complex questions in a clear way.",
+      ],
+    },
+    {
+      heading: "How does it affect the SERPs?",
+      paragraphs: [
+        "AI answers on Search Engine Results Pages change the whole dynamic. Organic rankings still matter, but AI generated modules can take a large share of the visible space above the fold.",
+        "That can push the traditional organic list down and reduce organic traffic for some query types.",
+        "At the same time, sites can be cited inside the AI answer, which can send highly qualified traffic from people who want to go deeper.",
+      ],
+    },
+    {
+      heading: "What it means for SEO and content marketing",
+      paragraphs: [
+        "To succeed in the new AI era we need to rethink how we create and optimise content. It is not only about ranking for keywords, but about becoming the authoritative source the model prefers to cite.\n\nFocus areas:",
+        "Content that truly solves problems and adds value has a better chance of showing up both in classic results and in AI answers.",
+        "Understanding the customer journey and the questions people ask along the way matters more than ever.",
+      ],
+      bullets: ["Search intent", "User experience", "Authority and expertise", "Factual relevance"],
+    },
+    {
+      heading: "Which content will perform best?",
+      paragraphs: [
+        "Future proof content tends to be:",
+        "Writing “nice” copy is no longer enough. Every asset needs a clear purpose and tangible value to stay competitive.",
+      ],
+      bullets: [
+        "Deep and insightful: unique perspectives, data, or expertise that is hard for AI to replicate on the fly.",
+        "Structured and readable: clear headings and lists help users and models parse your page.",
+        "User first: answers real questions and needs instead of only pushing a product.",
+        "Authoritative: backed by sources, expert input, and a credible sender (EEAT).",
+      ],
+    },
+    {
+      heading: "Why search intent matters in AI driven search",
+      paragraphs: [
+        "Understanding why someone searches is critical. Google AI Finance is especially strong for informational queries where people want to learn.",
+        "Tailoring content to the query type helps you meet user needs and protect visibility.",
+      ],
+      bullets: [
+        "Informational queries: AI answers may dominate; your content should be the best possible source to be cited.",
+        "Transactional queries: when someone is ready to buy, crisp product pages and a smooth path to purchase still win.",
+        "Navigational queries: when people look for a specific site, brand strength and technical SEO remain central.",
+      ],
+    },
+    {
+      heading: "How to adapt your content strategy",
+      paragraphs: [
+        "Review your current playbook with these moves in mind:",
+        "The aim is a long term relationship with your audience by becoming the most reliable source in your niche.",
+      ],
+      bullets: [
+        "Invest in depth: guides, whitepapers, and long form pieces that cover a topic thoroughly.",
+        "Answer specific questions: use research to capture the questions your audience asks and answer them completely.",
+        "Build EEAT: actively strengthen expertise, experience, authority, and trust.",
+      ],
+    },
+    {
+      heading: "Quality over quantity",
+      paragraphs: [
+        "Quality beats quantity. A smaller set of outstanding articles beats a large volume of thin content.",
+      ],
+    },
+    {
+      heading: "What this means for Swedish websites",
+      paragraphs: [
+        "Even though Google AI Finance rolls out broadly, local nuances matter. Language and culture change how models interpret and present information.",
+        "Swedish companies can win by publishing content tailored to the Swedish market and reader.",
+        "Keep monitoring how local Swedish SERPs evolve as language models improve for Swedish queries.",
+      ],
+    },
+    {
+      heading: "Practical next steps",
+      paragraphs: [
+        "Concrete steps you can take today:",
+        "Staying proactive turns this shift into an advantage instead of a threat.",
+      ],
+      bullets: [
+        "Audit existing content: see what already performs and how to make it even more useful for AI answers.",
+        "Map audience questions: build content that answers them clearly and completely.",
+        "Optimise for EEAT: highlight authors, citations, and proof.",
+        "Stay current: follow AI and SEO developments so you can adapt quickly.",
+      ],
+    },
+    {
+      heading: "Looking ahead",
+      paragraphs: [
+        "Google AI Finance is just the beginning of a larger shift in how we search. Marketers and SEO teams need to keep learning and experimenting.",
+        "The user is still at the centre: if you focus on delivering the best possible value, you stay resilient as the tech stack changes.",
+        "The future of SEO combines technical excellence with a deep understanding of behaviour and needs.",
+      ],
+    },
+  ],
+  summaryHeading: "Want help with SEO and content?",
+  summary:
+    "Crisha Marketing helps you navigate the new search landscape and keep your digital presence strong for both people and AI driven experiences.",
+  closingParagraphs: [
+    "Want to discuss how we can help your company grow with modern SEO and content marketing? Reach us at crisha.se/kontakt.",
+    "Crisha Marketing is a digital growth agency based in Malmö, working with Swedish and international brands across paid media, websites, and organic visibility.",
+  ],
+};
+
+const reelsTiktok2026Sv: BlogArticleBody = {
+  sections: [
+    {
+      heading: "Inledning",
+      paragraphs: [
+        "Kampen om korta videor är i full gång. Instagram Reels och TikTok vill båda behålla användarna i flödet men gör det med olika kultur, algoritm och förväntningar på innehåll. Har ni begränsad tid blir frågan snabbt konkret: ska ni lägga kreativ kraft på Reels, TikTok eller en tydlig mix?",
+        "Här jämför vi plattformarna som de ser ut 2026: målgrupper, hur algoritmerna belönar innehåll, vilka format som bär, och hur ni steg för steg kan välja var ni börjar, utan att fastna i perfektion på papperet.",
+      ],
+    },
+    {
+      heading: "Snabbresumé: Skillnaden mellan Reels och TikTok 2026",
+      paragraphs: [
+        "Sammantaget handlar skillnaden om tre skiljelinjer: vilken typ av upptäckt som styr flödet, vilken ton och estetik som vinner, och hur snabbt ni kan bygga organisk räckvidd utan betald budget.",
+      ],
+      bullets: [
+        "Plattformslogik: TikTok bygger på For You flödet där nya konton kan få viral spridning när videon får högt engagemang och tittare tittar klart. Reels lever inom Instagram där relation till följare, varumärkesprofil och koppling till Stories, DM och profilen ofta betyder mer.",
+        "Ton och format: TikTok belönar ofta råare, snabba klipp med tydlig berättarröst; Reels kan bära högre produktionskänsla och smidigare koppling till katalog, butik och befintlig community.",
+        "Algoritmfokus: båda systemen jagar engagemang, men TikTok har historiskt varit stark på att lyfta innehåll från ännu okända konton när signalerna är tydliga, medan Reels många gånger förstärker varumärken som redan har en stabil närvaro i Meta universumet.",
+      ],
+    },
+    {
+      heading: "Demografi och målgrupper",
+      paragraphs: [
+        "Demografin flyttar sig hela tiden, men mönstret är tydligt: Gen Z och yngre millennials lever ofta tyngre i TikToks kultur medan Reels och övriga Meta produkter tecknar en bredare årspann där även millennials och äldre generationer tillbringar mer tid i flöden, inte minst när köp, bekvämlighet och varumärkestillit styrs via Instagram.",
+        "Det betyder inte att TikTok bara är för unga eller att Reels bara är för B2C inom mode. Det betyder att ni måste följa var er faktiska målgrupp lever sitt digitala liv, vilket fråga ni vill äga, och vilket språk ni måste tala för att bli trovärdiga, inte vilken plattform som råkar vara hetast i media just nu.",
+      ],
+    },
+    {
+      heading: "Hur ser algoritmerna ut och vad premieras?",
+      paragraphs: [
+        "På TikTok handlar FYP om att matcha rätt klipp mot rätt tittare i nästa sekund. Signalerna som syns utåt är bland annat completion rate, återspel, kommentarer och delningar, allt som visar att videon håller kvar intresset. Därför vinner ofta stark öppning (första sekunderna), tydlig hook och en berättelse som känns äkta.",
+        "Reelsalgoritmen tar hänsyn till er relation till kontot, hur starkt snittengagemanget varit historiskt och hur innehållet kopplas till resten av profilen. Bra Reels kan fortfarande lyfta nya följare, men kraften förstärks när ni har tydlig erbjudande eller köpstruktur i profil, highlights och DM flöden så att nyfikenhet faktiskt kan bli förtroende och sedan handling.",
+      ],
+    },
+    {
+      heading: "Osäker på vilken kanal som passar er?",
+      paragraphs: [
+        "Om ni står mellan TikTok och Reels är nästa steg ofta ett strategisamtal: vilken målgrupp ska ni äga om tolv månader, och vilka interna resurser finns för att producera innehåll och svara i kommentarsfält med jämna mellanrum? På Crisha Marketing hjälper vi er prioritera utifrån affärsmål, spårning, och vad organisationen faktiskt orkar hålla vid liv, inte bara utifrån rådande trender.",
+        "Boka gärna ett kostnadsfritt strategisamtal via crisha.se/kontakt. Då går vi igenom er nuläge inom organiska kanaler och betalmedia och föreslår en konkret väg som matchar er tempo och er budget.",
+      ],
+    },
+    {
+      heading: "Innehållstrender och vad som fungerar",
+      paragraphs: [
+        "Utbildning som underhåller edutainment fortsätter växa: korta förklaringar, tydliga tips och bakom kulisserna som faktiskt lär något. Autenticitet slår ofta högpolerad studio när rösten känns mänsklig och tydlig.",
+        "De första tre sekunderna är fortsatt allt: utan hook tappar ni tittare innan algoritmen hunnit samla positiva signaler. Jobba därför med tydlig fråga, oväntad vinkel eller en konkret löfte om vad tittaren får ut av klippet, inte sloganropar som låter reklam från första ruta.",
+      ],
+    },
+    {
+      heading: "Fördelar för företag på TikTok",
+      paragraphs: ["När TikTok är rätt kan ni dra nytta av följande krafter:"],
+      bullets: [
+        "Stor organisk spridning när formatet träffar, virala toppar är fortfarande möjliga utan att varje klipp behöver media bakom sig.",
+        "Autenticitet: rå video, UGCliknande känsla och snabba iterationer som bygger förtroende.",
+        "Social commerce: TikTok Shop och länkade flöden kan korta köpvägen när ni säljer produkter som passar impulsköp och tydlig demonstration.",
+      ],
+    },
+    {
+      heading: "Fördelar för företag på Instagram (Reels)",
+      paragraphs: ["Reels blir extra kraftfullt när ni redan behöver en samlad yta för varumärket:"],
+      bullets: [
+        "Förtroende: kunder som redan följer er eller söker fram varumärket kan mötas av konsekvent ton i flöde, Reels och Stories.",
+        "Shopping: produktetiketter, guides och länkar i bio gör det lätt att gå från inspiration till köp.",
+        "Helhetsupplevelse: samma kontohantering för kundservice i DM, community i Stories och kampanjer i Reels minskar friktion jämfört med att starta från noll på ännu en plattform.",
+      ],
+    },
+    {
+      heading: "Så bestämmer ni var ni ska lägga er tid, steg för steg",
+      paragraphs: ["Arbeta er igenom listan i ordning; den tvingar er att välja utifrån data, mål och kapacitet snarare än känsla."],
+      bullets: [
+        "1. Definiera målgruppen: var finns de, hur tänker de om er kategori, och vilket språk (bokstavligt och kulturellt) förväntas?",
+        "2. Sätt mål och KPI:er: ska kortfilmer driva kännedom, leads, rekrytering, eller direkt försäljning? Olika mål styr olika plattformsprioritering.",
+        "3. Analysera resurser: vem filmar, klipper, svarar i kommentarer och uppdaterar varje vecka? En kanal utan svarsdisciplin tappar halva värdet.",
+        "4. Testa och utvärdera: kör minst åtta till tolv veckor med tydlig hypotes per vecka, mät sparade ljud, delningar, profile views och faktiska konverteringar beroende på er setup.",
+      ],
+    },
+    {
+      heading: "Vanliga misstag att undvika",
+      paragraphs: [
+        "Många team börjar starkt men faller tillbaka i gamla vanor. Här är det vi oftast varnar för när vi granskar svenska konton 2026.",
+      ],
+      bullets: [
+        "Att ladda upp samma råfil med tydlig vattenstämpel från den andra plattformen, algoritmer och publiken tolkar det som lat kopiering.",
+        "Att vara för saljigt i varje klipp utan att först ge värde eller underhållning; båda plattformarna straffar låg completion rate.",
+        "Att ignorera kommentarer och DM; social bevis och konversation är ofta det som lyfter truster och skapar nästa klick.",
+        "Att ignorera trender helt, ni behöver inte haka på varje meme, men missa inte format som faktiskt matchar er röst.",
+      ],
+    },
+    {
+      heading: "FAQ: Vanliga frågor om Reels och TikTok",
+      paragraphs: [
+        "Kan vi publicera samma video på båda plattformarna? Ja, men anpassa: klipp om till vertikal 9:16, skriv om copy till respektive tonalitet, ta bort vattenstämplar och uppdatera hook för publik som inte känner igen ert varumärke ännu.",
+        "Hur ofta behöver vi lägga ut något? Konsistens slår volym: börja med ett schema ni klarar av (till exempel tre tydliga klipp per vecka) och öka när ni ser vilka format som bär.",
+        "Måste vi använda TikTok Shop? Nej, men om ni säljer fysiska produkter som visar sig bra på video kan det vara värt testet. Tjänstebolag fokuserar ofta på leads, bokningar och trovärdighetsskapande case först.",
+        "Var börjar vi om vi har noll följare? TikTok kan ge snabbare kall start på räckvidd om ni träffar rätt budskap, medan Reels stöttar när ni redan har e-postlistor, kunder eller events som driver folk till er profil på Instagram.",
+      ],
+    },
+    {
+      heading: "Sammanfattning: Vad gör ni nu?",
+      paragraphs: [
+        "Vänta inte på den perfekta strategin. Börja med definition av målgrupp och mål, välj en huvudkanal utifrån data och resurser, och kör små experiment varje vecka. Just små, snabba iterationer är vad som skiljer team som lär sig från de som fastnar i planeringsmöten.",
+        "När ni ser vilket innehåll folk faktiskt tittar färdigt på och hur det kopplar till försäljning eller leads kan ni skala, lägga till den andra plattformen eller förstärka med betalda kampanjer, inte tvärtom.",
+      ],
+    },
+  ],
+  summaryHeading: "Vill ni ha hjälp att sätta kanalval och kreativ rytm?",
+  summary:
+    "Crisha Marketing hjälper svenska och internationella varumärken att koppla ihop organisk social video med betald media, landningssidor och mätning så att tajt innehåll också kan visas i siffror.",
+  closingParagraphs: [
+    "Boka ett kostnadsfritt strategisamtal på crisha.se/kontakt så går vi igenom var er publik finns, vad ni bör testa först och hur vi kan stötta er med strategi, produktion och kampanjer.",
+    "Crisha Marketing är en digital marknadsföringsbyrå i Malmö med fokus på Meta Ads, TikTok Ads, Google Ads och webbplatser som konverterar.",
+  ],
+};
+
+const reelsTiktok2026En: BlogArticleBody = {
+  sections: [
+    {
+      heading: "Introduction",
+      paragraphs: [
+        "Short form video is a pitched battle for attention. Instagram Reels and TikTok both want viewers to stay in the feed, yet they do it with different culture, ranking signals, and expectations. When time is scarce the question becomes practical: Reels, TikTok, or a deliberate mix?",
+        "This article compares the platforms as they behave in 2026, audiences, how algorithms reward creative, which formats carry, and a step by step way to choose a starting point without waiting for a perfect plan.",
+      ],
+    },
+    {
+      heading: "Quick recap: Reels vs TikTok in 2026",
+      paragraphs: [
+        "Three lines separate the platforms: what kind of discovery powers the feed, what tone wins, and how quickly you can build organic reach before paying for distribution.",
+      ],
+      bullets: [
+        "Platform logic: TikTok’s For You feed can scale unknown accounts when creative earns strong completion, replays, and reactions. Reels lives inside Instagram, where follower relationships, brand cues, and connections to Stories and DMs still matter a lot.",
+        "Tone and format: TikTok often rewards rougher, fast clips with a clear voice; Reels can carry slightly higher polish and tighter links to catalogues, shops, and existing community.",
+        "Algorithm focus: both chase engagement, but TikTok historically surfaces fresh voices faster when signals are loud, whereas Reels frequently amplifies brands that already maintain steadier Meta footprints.",
+      ],
+    },
+    {
+      heading: "Demographics and audiences",
+      paragraphs: [
+        "Demographics keep shifting, yet the pattern holds: Gen Z leans heavily into TikTok culture, while Reels captures a broader age span on Meta, including millennials and older cohorts who discover brands through Instagram, messaging, and saved posts.",
+        "That does not mean TikTok is “only Gen Z” or Reels is “only consumer goods”. It means you follow where your buyers actually spend time, which questions you need to own, and which voice feels credible for your category.",
+      ],
+    },
+    {
+      heading: "How the algorithms behave",
+      paragraphs: [
+        "On TikTok, For You is about matching the next best clip to the viewer. Visible signals include watch through, rewatches, comments, and shares, anything proving the video held attention. That is why hooks in the first seconds matter so much.",
+        "Reels ranking weighs your relationship with the account, historical engagement quality, and how the clip fits the rest of your profile. Great Reels can still attract new followers, but the upside compounds when profile, shopping surfaces, and DMs turn curiosity into trust and action.",
+      ],
+    },
+    {
+      heading: "Not sure which channel fits you?",
+      paragraphs: [
+        "If you are torn between TikTok and Reels, start with strategy: which audience must you win in twelve months, and which internal capacity exists to produce clips and moderate comments every week? At Crisha Marketing we prioritise around commercial goals, tracking, and what the team can sustain, not just hype cycles.",
+        "Book a free strategy session at crisha.se/kontakt and we will review your organic and paid baseline with a concrete plan that fits your pace and budget.",
+      ],
+    },
+    {
+      heading: "Content trends that still work",
+      paragraphs: [
+        "Edutainment keeps growing: short explanations, candid behind the scenes, and tips that teach something while entertaining. Authenticity usually beats glossy studio shots when the voice feels human.",
+        "The first three seconds still decide everything. Lead with a sharp question, a bold promise, or a pattern interrupt, avoid opening like a TV spot unless brand codes truly require it.",
+      ],
+    },
+    {
+      heading: "Why TikTok can be the right bet",
+      paragraphs: ["When TikTok matches your offer you can leverage:"],
+      bullets: [
+        "Broad organic spikes when creative hits, viral moments still happen without media behind every clip.",
+        "Authentic, UGC style storytelling that builds trust quickly.",
+        "Social commerce: shops in the app or tight commerce journeys when products demo well on camera.",
+      ],
+    },
+    {
+      heading: "Why Instagram Reels still matters",
+      paragraphs: ["Reels shines when Instagram is already your brand home:"],
+      bullets: [
+        "Trust: followers or people searching your name get a consistent voice across feed, Reels, and Stories.",
+        "Shopping surfaces: tags, guides, and bio links shorten the path from inspiration to checkout.",
+        "Full funnel familiarity: one inbox for DMs, one place for community drops, less operational overhead than standing up a brand new ecosystem.",
+      ],
+    },
+    {
+      heading: "Choose where to invest, step by step",
+      paragraphs: ["Work the list in order so decisions follow goals and capacity instead of gut feel alone."],
+      bullets: [
+        "1. Define the audience: where they spend time, how they talk about your category, and what tone feels native.",
+        "2. Set goals and KPIs: awareness vs leads vs commerce, each goal nudges a different platform priority.",
+        "3. Audit resources: who films, edits, and replies weekly? A silent channel wastes half the opportunity.",
+        "4. Test and evaluate: run at least eight to twelve weeks of crisp hypotheses, tracking saves, shares, profile visits, and real conversions based on your tracking setup.",
+      ],
+    },
+    {
+      heading: "Mistakes teams should avoid",
+      paragraphs: ["These are the slip-ups we see most often when auditing Nordic accounts in 2026."],
+      bullets: [
+        "Uploading the same file with the other platform’s watermark, signals laziness to both algorithms and viewers.",
+        "Selling in every clip without delivering value or entertainment first, completion rates tank.",
+        "Ignoring comments and DMs, social proof lives in those conversations.",
+        "Skipping trends entirely, you do not need every meme, but ignoring formats that match your voice hurts discovery.",
+      ],
+    },
+    {
+      heading: "FAQ: Reels and TikTok",
+      paragraphs: [
+        "Can we reuse one clip everywhere? Yes, but adapt: native 9:16, rewrite captions, remove watermarks, and tailor hooks for cold audiences.",
+        "How often should we post? Consistency beats volume, start with a rhythm you can keep (for example three thoughtful clips weekly) and scale once patterns emerge.",
+        "Do we need TikTok Shop? Not always, product led brands experiment sooner; service brands often start with proof, cases, and lead capture.",
+        "Where do we start with zero followers? TikTok can surface cold reach faster when creative resonates; Reels helps when you already drive traffic to your Instagram through customers, events, or other channels.",
+      ],
+    },
+    {
+      heading: "Summary: What should you do now?",
+      paragraphs: [
+        "Do not wait for the perfect strategy. Lock audience and goals, pick a primary channel based on evidence and capacity, and ship small experiments weekly, that is what separates learning teams from endless planning.",
+        "Once you know what people actually watch through and how it connects to revenue or leads, scale, add the second platform, or amplify with paid media.",
+      ],
+    },
+  ],
+  summaryHeading: "Want help choosing channels and creative cadence?",
+  summary:
+    "Crisha Marketing helps brands connect organic social video with paid media, landing pages, and measurement so strong creative also shows up in the numbers.",
+  closingParagraphs: [
+    "Book a free strategy call at crisha.se/kontakt and we will map where your audience lives, what to test first, and how we can support strategy, production, and campaigns.",
+    "Crisha Marketing is a Malmö-based growth agency focused on Meta Ads, TikTok Ads, Google Ads, and websites built to convert.",
+  ],
+};
+
+const grafiskProfilManualSv: BlogArticleBody = {
+  sections: [
+    {
+      heading: "Inledning",
+      paragraphs: [
+        "När man säger \"vi behöver en ny grafisk profil\" menar många bara en uppdaterad logotyp. Men en riktigt användbar profil är ett helt ekosystem: färger som fungerar i tryck och på skärm, typsnitt som håller i längden och ett bildspråk som känns igen på Instagram lika väl som på er landningssida. Manualen är verktyget som gör att hela teamet, och externa partners, kan jobba likadant.",
+      ],
+    },
+    {
+      heading: "Varför är en grafisk profil så viktig?",
+      paragraphs: [
+        "Konsekvent användning bygger igenkänning: kunden ska känna ert varumärke innan de hunnit läsa rubriken. Det ger också ett mer professionellt intryck än om varje avdelning väljer egna typsnitt och nyanser av blått.",
+        "En tydlig profil minskar friktion i produceringen. När reglerna finns dokumenterade slipper ni diskutera samma frågor i varje kampanj, och leverantörer får färdkodade svar om exempelvis CMYK mot RGB.",
+      ],
+    },
+    {
+      heading: "Vad ska ingå i en grafisk profil?",
+      paragraphs: [
+        "Som minimum bör manualen täcka följande byggstenar. Exakt djup varierar med bransch, men checklistan fungerar för både B2B och consumer brands.",
+      ],
+      bullets: [
+        "Logotyp",
+        "Färgpalett",
+        "Typsnitt",
+        "Bildspråk",
+        "Grafiska element",
+      ],
+    },
+    {
+      heading: "Logotypen, hjärtat i din profil",
+      paragraphs: [
+        "Logotypen är ofta det mest synliga bäraren av ert varumärke. Manualen ska därför visa inte bara hur den ser ut, utan hur den får (och inte får) användas.",
+      ],
+      bullets: [
+        "Olika versioner: fullfärg, svartvit, negativ, ev. symbolmonogram för små ytor.",
+        "Placering och frizon: hur mycket luft som krävs runt märket så att det inte känns instängt eller utdraget.",
+        "Vad som inte är tillåtet: exempel på förvrängning, nya proportioner, fel färger eller egna skuggor som bryter mot varumärkets formspråk.",
+      ],
+    },
+    {
+      heading: "Färgpalett, mer än bara snygga färger",
+      paragraphs: [
+        "Färger styr känsla och igenkänning men måste också fungera tekniskt. Dokumentera därför färgerna i de format som era kanaler faktiskt använder.",
+      ],
+      bullets: [
+        "Primärfärger: de nyanser som alltid ska dominera.",
+        "Sekundärfärger: stödfärger för kampanjer, badges eller bakgrunder.",
+        "Färgkoder: ange minst HEX och RGB för digitalt, CMYK för tryck, och Pantone där det är relevant för profiltryck och mässmaterial.",
+      ],
+    },
+    {
+      heading: "Behöver du hjälp med den grafiska profilen?",
+      paragraphs: [
+        "Behöver du hjälp med din grafiska profil? På Crisha Marketing hjälper vi er ta fram riktlinjer och material som speglar ert varumärke, från webb och landningssidor till betalda kampanjer, så att samma story håller hela vägen ut till kunden.",
+        "Boka kontakt via crisha.se/kontakt eller läs mer om våra tjänster under webbdesign och varumärkesnära uppdrag i ert befintliga upplägg.",
+      ],
+    },
+    {
+      heading: "Typsnitt, rösten i din visuella kommunikation",
+      paragraphs: [
+        "Typsnitt bär ton och personlighet lika mycket som copy. Utan tydliga regler blir kontrasten mellan rubriker och brödtext ojämn och svårläst.",
+      ],
+      bullets: [
+        "Huvudtypsnitt: oftast det som bär rubriker och kan vara mer uttrycksfullt.",
+        "Komplementtypsnitt: för brödtext och längre sammanhang, prioritera läsbarhet på mobil.",
+        "Hierarki: rekommenderade storlekar, radavstånd, fetstil kontra kapitäler, gärna med exempelbilder för H1, H2, bröd och knappar.",
+      ],
+    },
+    {
+      heading: "Bildspråk, skapa rätt känsla",
+      paragraphs: [
+        "Ett enhetligt bildspråk gör att era fotografier och illustrationer känns som en del av samma familj, även när de kommer från olika källor.",
+      ],
+      bullets: [
+        "Bildstil: till exempel naturligt ljus, minimalistiskt studio, människor i verkliga miljöer eller abstrakta texturer, välj vad som stödjer er positioning.",
+        "Filter och redigering: om ni använder färgton eller kornighet ska det beskrivas så att det går att efterlikna.",
+        "Rättigheter: var ni får material ifrån (egen produktion, bildbyrå, AI genererade bilder med korrekt licens) och hur ni krediterar.",
+      ],
+    },
+    {
+      heading: "Grafiska element, pricken över i:et",
+      paragraphs: [
+        "Ikoner, mönster och illustrationer kan ge igenkänning om de återkommer konsekvent, men bli distraherande om allt får variera fritt.",
+      ],
+      bullets: [
+        "Ikoner: en linjestil eller fylld stil som matchar logotypens geometri.",
+        "Mönster: upprepningar som fungerar i bakgrunder eller kantlinjer utan att tävla med budskapet.",
+        "Illustrationer: tydlig spelregel för när ni använder 2D, 3D eller fotomontage, och hur de kombineras med fotografi.",
+      ],
+    },
+    {
+      heading: "Hur skapar man en grafisk manual?",
+      paragraphs: [
+        "Börja med att samla allt i ett dokument eller en digital brandportal som är lätt att söka i. Dela upp tydliga kapitel: riktlinjer först, exempel och felkällor därefter. Gör PDF som trycksäker referens och uppdatera samma innehåll online så marknad, HR och byråer alltid ser samma version.",
+        "Säkerställ att någon äger frågan internt: vem godkänner avvikelser, hur ofta revideras manualen, och hur nya medarbetare introduceras till den.",
+      ],
+    },
+    {
+      heading: "Sammanfattning",
+      paragraphs: [
+        "En grafisk profil är en investering i tydlighet och tempo: den minskar onödiga diskussioner, höjer kvaliteten i varje touchpoint och skyddar varumärket när fler kanaler än någonsin konkurrerar om uppmärksamheten. Ju mer ni samlar i manualen, desto lättare blir det att leverera konsekvent design år efter år.",
+        "Ämnen i artikeln: grafisk profil, design, varumärke, marknadsföring, branding.",
+      ],
+    },
+  ],
+  summaryHeading: "Ska vi ta er grafiska profil hela vägen ut i kampanjerna?",
+  summary:
+    "Crisha Marketing kopplar samman webbdesign, landningssidor och betald media så att er visuella identitet inte bara finns i en PDF, utan syns och märks där affären faktiskt sker.",
+  closingParagraphs: [
+    "Kontakta oss på crisha.se/kontakt om ni vill ha hjälp att strukturera manualen, uppdatera material eller säkerställa att annonser och sajter följer samma linje.",
+    "Vi utgår från Malmö och arbetar med företag i Sverige och internationellt inom performance marketing och konverterande webb.",
+  ],
+};
+
+const grafiskProfilManualEn: BlogArticleBody = {
+  sections: [
+    {
+      heading: "Introduction",
+      paragraphs: [
+        "When teams say “we need a new visual identity”, many people picture a refreshed logo. A useful brand system is broader: colours that work on screen and in print, type that scales, and imagery that feels consistent on Instagram as well as on your landing pages. The manual is what lets marketing, sales, and agencies execute the same story.",
+      ],
+    },
+    {
+      heading: "Why a visual identity system matters",
+      paragraphs: [
+        "Consistency builds recognition, people should feel your brand before they finish reading the headline. It also signals professionalism compared to every team picking its own fonts or “almost the same” blue.",
+        "Clear guidelines reduce friction: fewer ad hoc debates each campaign, and suppliers get definitive answers about RGB vs CMYK, spacing, and logo usage.",
+      ],
+    },
+    {
+      heading: "What belongs in the graphic profile?",
+      paragraphs: [
+        "At minimum the manual should cover these pillars. Depth varies by industry, but the checklist works for both B2B and consumer brands.",
+      ],
+      bullets: ["Logo", "Colour palette", "Typography", "Imagery", "Graphic elements"],
+    },
+    {
+      heading: "The logo, the core of the system",
+      paragraphs: [
+        "The logo is the most visible carrier of your brand. The manual must show not only what it looks like, but how it may (and may not) be applied.",
+      ],
+      bullets: [
+        "Variants: full colour, monochrome, reversed, optional symbol for small placements.",
+        "Positioning and clear space: minimum padding so the mark never feels cramped or stretched.",
+        "Misuse examples: skewing, wrong proportions, off brand colours, drop shadows that break your visual rules.",
+      ],
+    },
+    {
+      heading: "Colour, more than pretty swatches",
+      paragraphs: [
+        "Colours drive emotion and recall, but they must work technically. Document the formats your channels actually ship with.",
+      ],
+      bullets: [
+        "Primary colours: the hues that should dominate most touchpoints.",
+        "Secondary colours: supporting tones for campaigns, badges, or backgrounds.",
+        "Codes: include HEX/RGB for digital, CMYK for print, Pantone where profile printing and trade show merch matter.",
+      ],
+    },
+    {
+      heading: "Need help building the identity?",
+      paragraphs: [
+        "Need help with your graphic profile? Crisha Marketing helps you codify guidelines and production assets that reflect your brand, from websites and landing pages to paid social and search, so the same story reaches customers end to end.",
+        "Reach out via crisha.se/kontakt or review how web and brand collateral fit your current retainer.",
+      ],
+    },
+    {
+      heading: "Typography, the voice of your layout",
+      paragraphs: [
+        "Type carries tone as much as copy. Without rules, headline and body contrast becomes uneven and hard to read, especially on mobile.",
+      ],
+      bullets: [
+        "Primary typeface: typically for headlines and expressive moments.",
+        "Secondary typeface: for body copy; prioritise legibility at small sizes.",
+        "Hierarchy: recommended scales, line spacing, bold vs uppercase, ideally with samples for H1, H2, body, and buttons.",
+      ],
+    },
+    {
+      heading: "Imagery, crafting the right feeling",
+      paragraphs: [
+        "A unified image style makes photography and illustration feel like one family even when sources differ.",
+      ],
+      bullets: [
+        "Style direction: e.g. natural light, minimal studio, people in real environments, abstract textures, whatever reinforces positioning.",
+        "Editing rules: if you use a colour grade or grain, describe it so it can be replicated.",
+        "Rights: where assets may come from (in house, stock, licensed AI imagery) and how to credit partners.",
+      ],
+    },
+    {
+      heading: "Graphic elements, the finishing layer",
+      paragraphs: [
+        "Icons, patterns, and illustrations add recognition when repeated, yet become noise if everyone improvises.",
+      ],
+      bullets: [
+        "Icons: outline vs filled styles aligned with logo geometry.",
+        "Patterns: repeatable motifs for backgrounds or borders without fighting the message.",
+        "Illustrations: when to use 2D, 3D, or photo composites, and how they pair with photography.",
+      ],
+    },
+    {
+      heading: "How to build the manual in practice",
+      paragraphs: [
+        "Gather everything in a single source of truth, PDF for print vendors plus a searchable online brand hub. Structure guidelines first, examples and anti patterns second. Keep web and PDF versions synced so agencies always reference the latest rules.",
+        "Assign an owner: who approves deviations, how often you revise, and how new hires onboard to the system.",
+      ],
+    },
+    {
+      heading: "Summary",
+      paragraphs: [
+        "A graphic profile is an investment in clarity and speed: it reduces repetitive debates, raises quality across touchpoints, and protects the brand while more channels compete for attention than ever.",
+        "Topics covered: brand design, design, branding, marketing, corporate identity.",
+      ],
+    },
+  ],
+  summaryHeading: "Ready to roll the identity into campaigns?",
+  summary:
+    "Crisha Marketing connects web design, landing pages, and paid media so your visual system shows up where revenue is won, not only in a PDF.",
+  closingParagraphs: [
+    "Contact us at crisha.se/kontakt if you want help structuring the manual, refreshing assets, or keeping ads and sites aligned.",
+    "We are based in Malmö and work with Swedish and international brands on performance marketing and high converting websites.",
+  ],
+};
 
 const BODIES: Record<string, { sv: BlogArticleBody; en: BlogArticleBody }> = {
+  "grafisk-profil-vad-ska-inga-i-manualen": { sv: grafiskProfilManualSv, en: grafiskProfilManualEn },
+  "reels-eller-tiktok-2026-var-ska-foretaget-lagga-tiden": { sv: reelsTiktok2026Sv, en: reelsTiktok2026En },
+  "google-ai-finance-europa-seo-content": { sv: googleAiFinanceSv, en: googleAiFinanceEn },
   "meta-ads-2026-slutboosta-inlagg": { sv: metaBoost2026Sv, en: metaBoost2026En },
   "tiktok-ads-sverige": { sv: tiktokSv, en: tiktokEn },
   "google-ads-budget": { sv: googleAdsSv, en: googleAdsEn },

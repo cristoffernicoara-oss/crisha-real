@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { Layers } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-export type ServiceBrand = "facebook" | "google" | "tiktok";
+export type ServiceBrand = "facebook" | "google" | "tiktok" | "webdesign";
 
 type Props = {
   brand: ServiceBrand;
@@ -62,6 +63,11 @@ export function ServiceBrandMark({ brand, className }: Props) {
             aria-hidden
           />
         </span>
+      );
+    case "webdesign":
+      /* Same Layers icon + accent as `webbdesign` in `components/sections/Services.tsx` */
+      return (
+        <Layers className={common} strokeWidth={2} style={{ color: "#8B5CF6" }} aria-hidden />
       );
     default:
       return null;

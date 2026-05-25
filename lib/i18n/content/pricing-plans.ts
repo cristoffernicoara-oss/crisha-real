@@ -12,6 +12,10 @@ export type PricingPlan = {
   cta: string;
   features: string[];
   notIncluded: string[];
+  /** Rubrik på kortets baksida (flip) */
+  flipTitle: string;
+  /** Kort punkter på baksidan */
+  flipBullets: string[];
 };
 
 const PLANS_SV: PricingPlan[] = [
@@ -35,6 +39,12 @@ const PLANS_SV: PricingPlan[] = [
       "Rekommenderad annonsbudget: 5 000–10 000 kr/mån",
     ],
     notIncluded: ["Dedikerad account manager", "Veckorapporter", "Landningssida ingår"],
+    flipTitle: "Vad du får med Starter",
+    flipBullets: [
+      "En tydlig start med en plattform i taget – bygg bevis innan du breddar till fler kanaler.",
+      "Löpande optimering och månadsrapport så du ser trender, inte bara enstaka bra eller dåliga dagar.",
+      "Gratis startrevision: vi sätter fokus där budget och potential ger mest för ditt företag.",
+    ],
   },
   {
     id: "growth",
@@ -58,6 +68,12 @@ const PLANS_SV: PricingPlan[] = [
       "Rekommenderad annonsbudget: 20 000–50 000 kr/mån",
     ],
     notIncluded: [],
+    flipTitle: "Vad du får med Growth",
+    flipBullets: [
+      "Meta, Google och TikTok i ett gemensamt upplägg – skalning och budgetfördelning hänger ihop.",
+      "Dedikerad account manager, veckodata och strategisamtal när marknaden svänger.",
+      "Optimerad landningssida och live-dashboard: trafik, kostnad och konvertering i samma vy.",
+    ],
   },
   {
     id: "enterprise",
@@ -73,7 +89,7 @@ const PLANS_SV: PricingPlan[] = [
     features: [
       "Alla annonsplattformar",
       "Webbdesign + branding ingår",
-      "Dedikerad full-funnel strategi",
+      "Dedikerad full funnel strategi",
       "Team exklusivt för dig",
       "Dagliga rapporter + live dashboard",
       "Garanterat SLA i avtal",
@@ -81,6 +97,12 @@ const PLANS_SV: PricingPlan[] = [
       "Annonsbudget: 50 000+ kr/mån",
     ],
     notIncluded: [],
+    flipTitle: "Vad du får med Enterprise",
+    flipBullets: [
+      "Skräddarsytt team, SLA och rapportering som matchar er organisation och tempo.",
+      "Varumärke, webb och betalda kanaler i ett spår – lämpligt för höga budgetar och komplexa krav.",
+      "Strategisk partner på riktigt: gemensam roadmap, prioriterade initiativ och uppföljning.",
+    ],
   },
 ];
 
@@ -104,6 +126,12 @@ const PLANS_EN: PricingPlan[] = [
       "Recommended ad budget: 5,000–10,000 SEK/mo",
     ],
     notIncluded: ["Dedicated account manager", "Weekly reports", "Landing page included"],
+    flipTitle: "What you get with Starter",
+    flipBullets: [
+      "A focused start with one platform at a time—prove traction before you widen spend.",
+      "Ongoing optimisation and a monthly report so you see trends, not one-off good or bad days.",
+      "Free onboarding audit: we prioritise where budget and upside matter most for you.",
+    ],
   },
   {
     id: "growth",
@@ -126,6 +154,12 @@ const PLANS_EN: PricingPlan[] = [
       "Recommended ad budget: 20,000–50,000 SEK/mo",
     ],
     notIncluded: [],
+    flipTitle: "What you get with Growth",
+    flipBullets: [
+      "Meta, Google and TikTok in one coherent plan—scaling and budget allocation stay aligned.",
+      "Dedicated account manager, weekly cadence and strategy calls when the market shifts.",
+      "Optimised landing page and live dashboard: traffic, cost and conversions in one view.",
+    ],
   },
   {
     id: "enterprise",
@@ -140,7 +174,7 @@ const PLANS_EN: PricingPlan[] = [
     features: [
       "All ad platforms",
       "Web design + branding included",
-      "Dedicated full-funnel strategy",
+      "Dedicated full funnel strategy",
       "Team dedicated to you",
       "Daily reports + live dashboard",
       "Guaranteed SLA in contract",
@@ -148,6 +182,12 @@ const PLANS_EN: PricingPlan[] = [
       "Ad budget: 50,000+ SEK/mo",
     ],
     notIncluded: [],
+    flipTitle: "What you get with Enterprise",
+    flipBullets: [
+      "A bespoke team, SLA and reporting cadence matched to your organisation.",
+      "Brand, web and paid media in one motion—built for high budgets and complex needs.",
+      "True strategic partnership: shared roadmap, prioritised initiatives and follow-through.",
+    ],
   },
 ];
 
