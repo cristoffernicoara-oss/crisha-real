@@ -4,6 +4,7 @@ import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
 
 import "@/styles/globals.css";
 import CookieBanner from "@/components/layout/CookieBanner";
+import GoogleAnalytics from "@/components/layout/GoogleAnalytics";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import { CONTACT } from "@/lib/constants";
@@ -219,6 +220,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
         {children}
+        <GoogleAnalytics />
         <CookieBanner />
         <ScrollToTop />
         </LocaleProvider>
