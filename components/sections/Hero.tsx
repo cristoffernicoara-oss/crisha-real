@@ -213,38 +213,7 @@ export default function Hero() {
               </Link>
             </motion.div>
 
-            <motion.div custom={4} variants={fadeUp} initial="hidden" animate="visible" className="mt-10 space-y-4">
-              <div className="flex flex-wrap items-center gap-4 sm:gap-5">
-                <div className="flex items-center">
-                  <div className="flex -space-x-2.5">
-                    {[
-                      "from-violet-500 to-indigo-600",
-                      "from-emerald-500 to-teal-600",
-                      "from-amber-500 to-orange-600",
-                    ].map((gradient, i) => (
-                      <div
-                        key={i}
-                        className={cn(
-                          "size-9 rounded-full border-2 border-[var(--bg-primary)] bg-gradient-to-br shadow-inner",
-                          gradient
-                        )}
-                        aria-hidden
-                      />
-                    ))}
-                  </div>
-                  <p className="ml-3 text-sm font-medium text-[rgba(255,255,255,0.65)]">{t("hero.socialProof")}</p>
-                </div>
-                <span className="hidden text-[rgba(255,255,255,0.25)] sm:inline" aria-hidden>
-                  ·
-                </span>
-                <div className="flex items-center gap-1.5 text-sm text-[rgba(255,255,255,0.55)]">
-                  <span className="text-amber-400" aria-hidden>
-                    ★
-                  </span>
-                  <span className="font-heading text-base font-extrabold text-white">4,9/5</span>
-                  <span className="text-[rgba(255,255,255,0.45)]">{t("hero.reviewsLine")}</span>
-                </div>
-              </div>
+            <motion.div custom={4} variants={fadeUp} initial="hidden" animate="visible" className="mt-10">
               <div className="flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-[rgba(255,255,255,0.4)]">
                 <span>{t("hero.check1")}</span>
                 <span>{t("hero.check2")}</span>

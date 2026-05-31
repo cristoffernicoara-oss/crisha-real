@@ -68,8 +68,6 @@ export const svTree = {
     h1l3: "verkliga försäljningar.",
     lead:
       "Meta Ads, Google Ads, TikTok Ads och webbdesign för svenska företag som vill växa snabbt, lönsamt och förutsägbart, utan att bara hoppas att det fungerar.",
-    socialProof: "Tillsammans med 40+ svenska företag",
-    reviewsLine: "från 40+ recensioner",
     check1: "✓ Gratis revision",
     check2: "✓ Inget bindande avtal",
     check3: "✓ Resultat inom 30 dagar",
@@ -442,8 +440,6 @@ export const enTree = {
     h1l3: "real revenue.",
     lead:
       "Meta Ads, Google Ads, TikTok Ads, and web design for Swedish companies that want to grow fast, profitably, and predictably instead of hoping it works.",
-    socialProof: "Alongside 40+ Swedish companies",
-    reviewsLine: "from 40+ reviews",
     check1: "✓ Free audit",
     check2: "✓ No lock-in contract",
     check3: "✓ Results within 30 days",
