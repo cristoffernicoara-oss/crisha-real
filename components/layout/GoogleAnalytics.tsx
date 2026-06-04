@@ -3,7 +3,7 @@
 import Script from "next/script";
 import { useLayoutEffect, useState } from "react";
 
-import { GA_MEASUREMENT_ID } from "@/lib/analytics";
+import { GA_MEASUREMENT_ID, GOOGLE_ADS_ID } from "@/lib/analytics";
 import { hasOptionalCookieConsent } from "@/lib/cookie-consent";
 
 export default function GoogleAnalytics() {
@@ -30,6 +30,7 @@ export default function GoogleAnalytics() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${GA_MEASUREMENT_ID}');
+          gtag('config', '${GOOGLE_ADS_ID}');
         `}
       </Script>
     </>
