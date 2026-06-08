@@ -9,6 +9,7 @@ import ScrollToTop from "@/components/layout/ScrollToTop";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import { CONTACT } from "@/lib/constants";
 import { buildFaqPageJsonLd } from "@/lib/home-faq";
+import { SITE_URL } from "@/lib/site-url";
 import { cn } from "@/lib/utils";
 
 const bricolageGrotesque = Bricolage_Grotesque({
@@ -25,7 +26,7 @@ const instrumentSans = Instrument_Sans({
   display: "swap",
 });
 
-const siteUrl = "https://crishamarketing.se";
+const siteUrl = SITE_URL;
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
