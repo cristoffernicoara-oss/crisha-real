@@ -1,5 +1,7 @@
-import fs from "node:fs";
-import path from "node:path";
+import "server-only";
+
+import fs from "fs";
+import path from "path";
 
 import type { BlogArticleBody, BlogArticleSection } from "@/lib/i18n/content/blog-article-bodies";
 import type { BlogPostPreview } from "@/lib/i18n/content/blog-posts-i18n";
@@ -38,7 +40,7 @@ function markdownToBody(md: string): BlogArticleBody {
     const h2 = line.match(/^##\s+(.+)/);
     const h3 = line.match(/^###\s+(.+)/);
     const h1 = line.match(/^#\s+(.+)/);
-    if (h1) continue; // title already in post
+    if (h1) continue;
     if (h2 || h3) {
       flushPara();
       if (current) sections.push(current);
@@ -72,7 +74,7 @@ function markdownToBody(md: string): BlogArticleBody {
 
   const last = sections[sections.length - 1];
   return {
-    sections: sections.slice(0, -1).length ? sections.slice(0, -1) : sections,
+    sections: sections.length > 1 ? sections.slice(0, -1) : sections,
     summaryHeading: last?.heading ?? "Sammanfattning",
     summary: last?.paragraphs[0] ?? "",
     summaryBullets: last?.bullets,
@@ -90,7 +92,7 @@ export function loadPublishedFilePosts(): FileBlogPost[] {
       const raw = JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")) as FileBlogPost;
       if (raw.slug && raw.title && raw.bodyMarkdown) posts.push(raw);
     } catch {
-      /* skip bad files */
+      /* skip */
     }
   }
   return posts.sort((a, b) => (a.date < b.date ? 1 : -1));

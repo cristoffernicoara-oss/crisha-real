@@ -2,18 +2,19 @@
 
 import Link from "next/link";
 
-import { getBlogPosts } from "@/lib/i18n/content/blog-posts-i18n";
+import type { BlogPostPreview } from "@/lib/i18n/content/blog-posts-i18n";
 import { useLocale } from "@/lib/i18n/locale-context";
 import { ROUTES } from "@/lib/routes";
 
-export default function BlogIndex() {
-  const { locale, t } = useLocale();
-  const posts = getBlogPosts(locale);
+export default function BlogIndex({ posts }: { posts: BlogPostPreview[] }) {
+  const { t } = useLocale();
 
   return (
     <main className="min-h-screen px-[5%] pb-20 pt-page-nav-loose md:px-[6%]">
       <div className="mx-auto max-w-3xl">
-        <p className="text-xs font-medium uppercase tracking-[0.15em] text-[rgba(255,255,255,0.4)]">{t("blogPage.label")}</p>
+        <p className="text-xs font-medium uppercase tracking-[0.15em] text-[rgba(255,255,255,0.4)]">
+          {t("blogPage.label")}
+        </p>
         <h1 className="mt-2 font-heading text-4xl font-bold text-white">{t("blogPage.h1")}</h1>
         <p className="mt-4 text-[rgba(255,255,255,0.55)]">{t("blogPage.lead")}</p>
         <ul className="mt-10 space-y-6">

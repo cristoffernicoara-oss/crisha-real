@@ -2,19 +2,21 @@
 
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { useMemo } from "react";
 
-import { getBlogArticleBody } from "@/lib/i18n/content/blog-article-bodies";
-import { getBlogPostBySlug } from "@/lib/i18n/content/blog-posts-i18n";
+import type { BlogArticleBody } from "@/lib/i18n/content/blog-article-bodies";
+import type { BlogPostPreview } from "@/lib/i18n/content/blog-posts-i18n";
 import { useLocale } from "@/lib/i18n/locale-context";
 import { ROUTES } from "@/lib/routes";
 
 const prose = "text-base leading-relaxed text-[rgba(255,255,255,0.55)]";
 
-export default function BlogArticle({ slug }: { slug: string }) {
-  const { locale, t } = useLocale();
-  const post = useMemo(() => getBlogPostBySlug(slug, locale), [slug, locale]);
-  const body = useMemo(() => getBlogArticleBody(slug, locale), [slug, locale]);
+type Props = {
+  post: BlogPostPreview;
+  body: BlogArticleBody | null;
+};
+
+export default function BlogArticle({ post, body }: Props) {
+  const { t } = useLocale();
 
   if (!post) notFound();
 

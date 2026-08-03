@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { getCaseStudies } from "@/lib/case-studies";
-import { getBlogPosts } from "@/lib/i18n/content/blog-posts-i18n";
+import { getAllBlogPosts } from "@/lib/i18n/content/blog-all";
 import { ROUTES, fallstudiePath } from "@/lib/routes";
 import { SITE_URL } from "@/lib/site-url";
 
@@ -34,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absolute("/anvandarvillkor"), lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 
-  const blogPages: MetadataRoute.Sitemap = getBlogPosts("sv").map((post) => ({
+  const blogPages: MetadataRoute.Sitemap = getAllBlogPosts("sv").map((post) => ({
     url: absolute(`${ROUTES.blogg}/${post.slug}`),
     lastModified: blogLastModified(post.date),
     changeFrequency: "monthly",
