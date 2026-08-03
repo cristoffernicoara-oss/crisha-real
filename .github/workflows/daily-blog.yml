@@ -1,0 +1,65 @@
+# Genererar ett SEO-blogginlägg varje dag ~07:00 Europe/Stockholm
+# och commit:ar JSON till content/blog/ (Vercel deployar sedan automatiskt).
+#
+# Kräver repository secrets (Settings → Secrets and variables → Actions):
+#   ANTHROPIC_API_KEY  (eller OPENAI_API_KEY + sätt AI_PROVIDER=openai nedan)
+#   Optional: OPENAI_API_KEY
+#
+# Microsoft Graph behövs INTE för enbart blogggenerering.
+
+name: Daily SEO blog
+
+on:
+  schedule:
+    # 05:00 UTC ≈ 07:00 sommartid / 06:00 vintertid (Europe/Stockholm)
+    - cron: "0 5 * * *"
+  workflow_dispatch: # manuellt: Actions → Daily SEO blog → Run workflow
+
+permissions:
+  contents: write
+
+jobs:
+  generate-blog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: automation/package-lock.json
+
+      - name: Install automation deps
+        working-directory: automation
+        run: npm ci
+
+      - name: Generate article
+        working-directory: automation
+        env:
+          AI_PROVIDER: anthropic
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PUBLISH_MODE: auto
+          BLOG_ENABLED: "true"
+          SITE_URL: https://www.crisha.se
+          TIMEZONE: Europe/Stockholm
+          # Skip Graph/operator mail in CI if unset
+          OPERATOR_EMAIL: ""
+          DRY_RUN: "false"
+        run: npx tsx src/cli.ts blog:run
+
+      - name: Commit published post
+        run: |
+          git config user.name "crisha-blog-bot"
+          git config user.email "blog-bot@crisha.se"
+          git add content/blog/
+          if git diff --staged --quiet; then
+            echo "No new blog files to commit"
+            exit 0
+          fi
+          git commit -m "content: auto-publish SEO blog post"
+          git push

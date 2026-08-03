@@ -37,14 +37,17 @@ export async function publishArticle(article: BlogArticleDraft): Promise<string>
 
   logger.info({ filePath, mode, url }, "Blog article written");
 
-  await notifyOperator(
-    `[Blogg ${mode}] ${article.title}`,
-    `<p>Sökord: <strong>${article.keyword}</strong></p>
+  // Skip operator email in CI / when OPERATOR_EMAIL is unset (e.g. GitHub Actions)
+  if (config.OPERATOR_EMAIL) {
+    await notifyOperator(
+      `[Blogg ${mode}] ${article.title}`,
+      `<p>Sökord: <strong>${article.keyword}</strong></p>
      <p>Slug: ${article.slug}</p>
      <p>Fil: <code>${filePath}</code></p>
      <p>URL (efter deploy): <a href="${url}">${url}</a></p>
      <p>Meta: ${article.metaDescription}</p>`
-  ).catch(() => undefined);
+    ).catch(() => undefined);
+  }
 
   return filePath;
 }

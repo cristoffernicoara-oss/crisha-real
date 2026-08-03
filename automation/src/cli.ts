@@ -5,6 +5,7 @@ import { loginInteractive } from "./graph/auth.js";
 import { logger } from "./lib/logger.js";
 import { monthsAgoIso } from "./lib/time.js";
 import { runBlogJob } from "./blog/generate.js";
+import { startBlogLoop } from "./blog/scheduler.js";
 import { startInboxLoop } from "./inbox/poller.js";
 import { importHistory } from "./outreach/import-history.js";
 import { importProspects } from "./outreach/import-prospects.js";
@@ -50,6 +51,10 @@ async function main(): Promise<void> {
 
     case "blog:run":
       await runBlogJob();
+      break;
+
+    case "blog:start":
+      await startBlogLoop();
       break;
 
     case "status": {
@@ -142,7 +147,7 @@ Kommandon:
   import:prospects -- <fil.csv|xlsx>
   outreach:once | outreach:start | outreach:pause | outreach:resume
   inbox:start
-  blog:run | blog:pause | blog:resume
+  blog:run | blog:start | blog:pause | blog:resume
   status
   test:quarantine
 `);

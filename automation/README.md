@@ -81,11 +81,26 @@ Pollar var 5:e minut. Vid `oklart` får du mail — svara `BOKA`, `SVARA: …` e
 
 ### 6) Blogg
 
+**Manuellt (en gång):**
 ```bash
 npm run blog:run
 ```
 
+**Automatiskt i molnet (rekommenderas):** GitHub Actions  
+Workflow: [`.github/workflows/daily-blog.yml`](../.github/workflows/daily-blog.yml)  
+- Kör ~**07:00 Stockholm** (cron `0 5 * * *` UTC)  
+- Skriver till `content/blog/published/` och **pushar till main** → Vercel deployar  
+- Kräver secret: `ANTHROPIC_API_KEY` i GitHub → Settings → Secrets → Actions  
+- Datorn behöver **inte** vara på
+
+**Lokalt (valfritt backup):**
+```bash
+npm run blog:start   # kräver att denna process körs på en påslagen maskin
+```
+
 Skriver till `../content/blog/drafts/` eller `published/` beroende på `PUBLISH_MODE`.
+
+**Obs:** Cold email + inbox kan *inte* köras i GitHub Actions cron på samma sätt (behöver köra hela tiden). För dem: VPS/Railway/Render, eller behåll laptop/PM2.
 
 ## Status
 
