@@ -5,15 +5,18 @@ import { config } from "../config.js";
 import { getDb } from "../db/client.js";
 import { notifyOperator } from "../graph/mail.js";
 import { logger } from "../lib/logger.js";
+import { todayDateKey } from "../lib/time.js";
 
 export async function publishArticle(article: BlogArticleDraft): Promise<string> {
   const mode = config.PUBLISH_MODE;
   const dir = path.join(config.contentBlogDir, mode === "auto" ? "published" : "drafts");
   fs.mkdirSync(dir, { recursive: true });
 
+  // Always stamp publish day in Europe/Stockholm — never trust AI or UTC midnight edge cases.
+  const date = todayDateKey(config.TIMEZONE);
   const payload = {
     ...article,
-    date: new Date().toISOString().slice(0, 10),
+    date,
     locale: "sv",
     published: mode === "auto",
   };

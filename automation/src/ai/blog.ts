@@ -26,7 +26,8 @@ export async function generateBlogArticle(keyword: string): Promise<BlogArticleD
     `Skriv en SEO-artikel på svenska för Crisha Marketing (1000–1500 ord i bodyMarkdown).
 Struktur: H1 (title), H2/H3 i markdown. Naturlig sökordsanvändning.
 JSON-nycklar: slug (kebab-case), title, keyword, excerpt (max 160 tecken),
-metaTitle (max 60), metaDescription (max 155), imagePrompt, bodyMarkdown.`,
+metaTitle (max 60), metaDescription (max 155), imagePrompt, bodyMarkdown.
+Inkludera INTE något date-fält — publiceringsdatum sätts automatiskt till dagens datum.`,
     `Primärt sökord: ${keyword}`
   );
 }

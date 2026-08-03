@@ -5,6 +5,11 @@ export function nowInTz(timeZone = "Europe/Stockholm"): Date {
   return new Date();
 }
 
+/** Calendar date (YYYY-MM-DD) in the given timezone — use for publish stamps. */
+export function todayDateKey(timeZone = "Europe/Stockholm", date = new Date()): string {
+  return getZonedParts(date, timeZone).dateKey;
+}
+
 export function getZonedParts(
   date: Date,
   timeZone = "Europe/Stockholm"
