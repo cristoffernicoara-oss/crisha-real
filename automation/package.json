@@ -11,6 +11,7 @@
     "outreach:start": "tsx src/cli.ts outreach:start",
     "outreach:once": "tsx src/cli.ts outreach:once",
     "inbox:start": "tsx src/cli.ts inbox:start",
+    "cloud:start": "tsx src/cli.ts cloud:start",
     "blog:run": "tsx src/cli.ts blog:run",
     "blog:start": "tsx src/cli.ts blog:start",
     "status": "tsx src/cli.ts status",

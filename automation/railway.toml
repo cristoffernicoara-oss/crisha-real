@@ -1,0 +1,10 @@
+# https://railway.app — deploy automation/ as a service
+# Set root directory to "automation" in Railway UI if deploying from monorepo.
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10

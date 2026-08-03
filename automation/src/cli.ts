@@ -6,6 +6,7 @@ import { logger } from "./lib/logger.js";
 import { monthsAgoIso } from "./lib/time.js";
 import { runBlogJob } from "./blog/generate.js";
 import { startBlogLoop } from "./blog/scheduler.js";
+import { startCloudWorkers } from "./cloud.js";
 import { startInboxLoop } from "./inbox/poller.js";
 import { importHistory } from "./outreach/import-history.js";
 import { importProspects } from "./outreach/import-prospects.js";
@@ -47,6 +48,10 @@ async function main(): Promise<void> {
 
     case "inbox:start":
       await startInboxLoop();
+      break;
+
+    case "cloud:start":
+      await startCloudWorkers();
       break;
 
     case "blog:run":
@@ -147,6 +152,7 @@ Kommandon:
   import:prospects -- <fil.csv|xlsx>
   outreach:once | outreach:start | outreach:pause | outreach:resume
   inbox:start
+  cloud:start              # outreach + inbox (för Railway/VPS)
   blog:run | blog:start | blog:pause | blog:resume
   status
   test:quarantine

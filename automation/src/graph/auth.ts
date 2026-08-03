@@ -113,7 +113,25 @@ export async function loginInteractive(): Promise<void> {
   logger.info("Token cache sparad — Graph-auth klar");
 }
 
+/** App-only token — no browser, ideal for Railway/VPS. Requires Application permissions + admin consent. */
+async function getClientCredentialsToken(): Promise<string> {
+  const cca = createCca();
+  const result = await cca.acquireTokenByClientCredential({
+    scopes: ["https://graph.microsoft.com/.default"],
+  });
+  if (!result?.accessToken) {
+    throw new Error(
+      "Client credentials misslyckades. Lägg till Application permissions Mail.Send + Mail.Read och Grant admin consent."
+    );
+  }
+  return result.accessToken;
+}
+
 export async function getAccessToken(): Promise<string> {
+  if (config.GRAPH_AUTH_MODE === "client_credentials") {
+    return getClientCredentialsToken();
+  }
+
   const cca = createCca();
   const cached = loadCacheFile();
   const accounts = await cca.getTokenCache().getAllAccounts();
@@ -139,6 +157,6 @@ export async function getAccessToken(): Promise<string> {
   }
 
   throw new Error(
-    "Ingen giltig Graph-token. Kör: npm run auth:login (i automation/)"
+    "Ingen giltig Graph-token. Kör: npm run auth:login — eller sätt GRAPH_AUTH_MODE=client_credentials i molnet"
   );
 }

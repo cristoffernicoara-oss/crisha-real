@@ -100,7 +100,26 @@ npm run blog:start   # kräver att denna process körs på en påslagen maskin
 
 Skriver till `../content/blog/drafts/` eller `published/` beroende på `PUBLISH_MODE`.
 
-**Obs:** Cold email + inbox kan *inte* köras i GitHub Actions cron på samma sätt (behöver köra hela tiden). För dem: VPS/Railway/Render, eller behåll laptop/PM2.
+### 7) Cold email + inbox i molnet (utan dator)
+
+GitHub Actions passar **inte** (behöver köra 24/7). Använd t.ex. **[Railway](https://railway.app)** (eller Render/Fly):
+
+1. Azure-appen: lägg till **Application**-behörigheter (inte bara Delegated):
+   - `Mail.Send`
+   - `Mail.Read`
+   - **Grant admin consent**
+2. I `.env` / Railway variables: `GRAPH_AUTH_MODE=client_credentials` (+ övriga nycklar)
+3. Skapa Railway-projekt från GitHub-repot, root directory = `automation`
+4. Lägg till **Volume** mountad på `/app/data` (sparar SQLite)
+5. Start command / Dockerfile: `CMD` kör `cloud:start` (outreach + inbox)
+
+```bash
+# Lokalt samma sak:
+npm run cloud:start
+```
+
+**Blogg** = GitHub Actions (behöver ingen alltid-på-server).  
+**Mail** = Railway/VPS (alltid-på, ~några dollar/mån).
 
 ## Status
 

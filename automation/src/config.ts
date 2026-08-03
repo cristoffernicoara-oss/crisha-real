@@ -12,6 +12,11 @@ const envSchema = z.object({
   AZURE_CLIENT_ID: z.string().optional().default(""),
   AZURE_CLIENT_SECRET: z.string().optional().default(""),
   AZURE_TENANT_ID: z.string().optional().default(""),
+  /** interactive = browser login once; client_credentials = app-only (bäst i molnet) */
+  GRAPH_AUTH_MODE: z
+    .enum(["interactive", "client_credentials"])
+    .optional()
+    .default("interactive"),
   OUTLOOK_USER: z.string().optional().default(""),
   OPERATOR_EMAIL: z.string().optional().default(""),
   CALENDLY_URL: z.string().optional().default("https://calendly.com/"),
