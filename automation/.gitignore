@@ -1,0 +1,10 @@
+node_modules/
+dist/
+data/*.db
+data/*.db-*
+data/token-cache.json
+data/imports/*
+!data/imports/.gitkeep
+logs/*.log
+.env
+.env.local

@@ -1,3 +1,4 @@
+import { getFileBlogArticleBody } from "@/lib/i18n/content/blog-file-posts";
 import type { Locale } from "@/lib/i18n/types";
 
 export type BlogArticleSection = {
@@ -1298,6 +1299,6 @@ const BODIES: Record<string, { sv: BlogArticleBody; en: BlogArticleBody }> = {
 
 export function getBlogArticleBody(slug: string, locale: Locale): BlogArticleBody | undefined {
   const entry = BODIES[slug];
-  if (!entry) return undefined;
-  return locale === "en" ? entry.en : entry.sv;
+  if (entry) return locale === "en" ? entry.en : entry.sv;
+  return getFileBlogArticleBody(slug);
 }

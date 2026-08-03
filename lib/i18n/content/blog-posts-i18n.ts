@@ -1,3 +1,4 @@
+import { filePostsAsPreviews, getFileBlogPost } from "@/lib/i18n/content/blog-file-posts";
 import type { Locale } from "@/lib/i18n/types";
 
 export type BlogPostPreview = {
@@ -111,13 +112,27 @@ const BLOG_POSTS_EN: BlogPostPreview[] = [
   },
 ];
 
+function mergeUnique(base: BlogPostPreview[], extra: BlogPostPreview[]): BlogPostPreview[] {
+  const seen = new Set(base.map((p) => p.slug));
+  const merged = [...base];
+  for (const p of extra) {
+    if (!seen.has(p.slug)) {
+      merged.push(p);
+      seen.add(p.slug);
+    }
+  }
+  return merged.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
 export function getBlogPosts(locale: Locale): BlogPostPreview[] {
-  return locale === "en" ? BLOG_POSTS_EN : BLOG_POSTS_SV;
+  const base = locale === "en" ? BLOG_POSTS_EN : BLOG_POSTS_SV;
+  // File-based posts from automation (Swedish content; shown in both locales for now)
+  return mergeUnique(base, filePostsAsPreviews());
 }
 
 export function getBlogPostBySlug(slug: string, locale: Locale): BlogPostPreview | undefined {
-  return getBlogPosts(locale).find((p) => p.slug === slug);
+  return getBlogPosts(locale).find((p) => p.slug === slug) ?? getFileBlogPost(slug);
 }
 
 /** Default Swedish list for static params and backwards compatibility. */
-export const BLOG_POSTS = BLOG_POSTS_SV;
+export const BLOG_POSTS = mergeUnique(BLOG_POSTS_SV, filePostsAsPreviews());
