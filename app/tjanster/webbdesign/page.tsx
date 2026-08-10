@@ -12,6 +12,8 @@ import WebDesignPlatforms from "@/components/sections/web-design/WebDesignPlatfo
 import WebDesignPortfolio from "@/components/sections/web-design/WebDesignPortfolio";
 import WebDesignProcess from "@/components/sections/web-design/WebDesignProcess";
 import WebDesignWhat from "@/components/sections/web-design/WebDesignWhat";
+import { buildServiceJsonLd } from "@/lib/schema";
+import { SITE_URL } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "Webbdesign Sverige | Crisha Marketing | Webbplatser som konverterar",
@@ -19,30 +21,15 @@ export const metadata: Metadata = {
     "Webbdesignbyrå i Sverige. Skräddarsydda webbplatser som laddar under 2 sekunder och konverterar besökare till kunder. Next.js, Webflow & Shopify. +180% konvertering i snitt. Gratis offert.",
 };
 
-const serviceJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
+const serviceJsonLd = buildServiceJsonLd({
   name: "Webbdesign Sverige",
   alternateName: "Web Design Sverige",
-  provider: {
-    "@type": "Organization",
-    name: "Crisha Marketing",
-    url: "https://crishamarketing.se",
-  },
   serviceType: "Webbdesign",
-  areaServed: {
-    "@type": "Country",
-    name: "Sverige",
-  },
   description:
     "Professionell webbdesign för svenska företag. Landningssidor, presentationswebbplatser och e-handelslösningar med PageSpeed 95+ och +180% konverteringsökning i snitt.",
-  offers: {
-    "@type": "AggregateOffer",
-    priceCurrency: "SEK",
-    lowPrice: "8000",
-    offerCount: "3",
-  },
-};
+  url: `${SITE_URL}/tjanster/webbdesign`,
+  lowPrice: "8000",
+});
 
 export default function WebbdesignServicePage() {
   return (

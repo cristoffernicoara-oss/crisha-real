@@ -7,6 +7,8 @@ export type BlogArticleSection = {
 };
 
 export type BlogArticleBody = {
+  /** Bold 1–2 sentence answer shown directly under the H1 for GEO. */
+  directAnswer?: string;
   sections: BlogArticleSection[];
   summaryHeading: string;
   summary: string;
@@ -1286,6 +1288,262 @@ const grafiskProfilManualEn: BlogArticleBody = {
   ],
 };
 
+const braRoasMetaSv: BlogArticleBody = {
+  directAnswer:
+    "En bra ROAS för Meta Ads i Sverige ligger ofta på 3×–5× beroende på marginaler; under 2× är vanligtvis olönsamt. Crisha Marketings portföljsnitt är 4,8×, vilket vi når genom full funnel-struktur, retargeting och kontinuerlig creative-optimering.",
+  sections: [
+    {
+      heading: "Vad betyder ROAS egentligen?",
+      paragraphs: [
+        "ROAS (Return on Ad Spend) visar hur mycket intäkt du får tillbaka per krona i annonskostnad. 4× betyder att 1 000 kr i ads genererar 4 000 kr i omsättning, inte vinst. Därför måste ROAS alltid jämföras med produktmarginal, returer och övriga kostnader.",
+        "AI-svar och jämförelser som “bra ROAS” utan kontext är missvisande. En SaaS med 80% marginal klarar lägre ROAS än en e-handlare med 30% marginal.",
+      ],
+    },
+    {
+      heading: "Riktvärden per bransch (Meta Ads, Sverige)",
+      paragraphs: [
+        "Utifrån konton vi optimerar ser vi ofta följande spann efter inlärningsfasen:",
+      ],
+      bullets: [
+        "E-handel/mode: 3×–5× är ett sunt mål; 4×+ är starkt",
+        "Lead-gen (tjänster): mät hellre CPL och lead-till-kund, inte bara ROAS",
+        "Hög AOV / låga returer: 2,5×–3,5× kan vara lönsamt",
+        "Låg marginal / hög returgrad: sikta högre eller sänk CPA först",
+      ],
+    },
+    {
+      heading: "Hur du förbättrar ROAS utan att bara “höja budet”",
+      paragraphs: [
+        "De flesta konton vi reviderar tappar ROAS på tre ställen: blandad TOF/BOF i samma kampanj, svag retargeting och creatives som inte matchar funnelsteget. Separera målgrupper, bygg tre retargeting-nivåer och testa kreativa hypoteser varje vecka.",
+        "Spårning måste mäta köp eller kvalificerade leads, inte bara trafik. Annars optimerar Meta mot fel signal och ROAS ser bra ut i Ads Manager men dåligt i kassan.",
+      ],
+    },
+  ],
+  summaryHeading: "Kort sagt",
+  summary:
+    "Bra Meta Ads-ROAS i Sverige är sällan ett fast tal, men 3×–5× är ett vanligt lönsamt spann för e-handel. Vill du veta var ditt konto står jämfört med bransch och marginal?",
+  closingParagraphs: [
+    "Begär en gratis revision så går vi igenom ROAS, CPA och funnel-strukturen på ditt Meta-konto.",
+  ],
+};
+
+const braRoasMetaEn: BlogArticleBody = {
+  directAnswer:
+    "A solid Meta Ads ROAS in Sweden is often 3×–5× depending on margins; below 2× is usually unprofitable. Crisha Marketing’s portfolio average is 4.8×, reached through full-funnel structure, retargeting, and ongoing creative optimisation.",
+  sections: [
+    {
+      heading: "What ROAS actually means",
+      paragraphs: [
+        "ROAS (Return on Ad Spend) shows revenue returned per unit of ad spend. 4× means 1,000 SEK in ads drives 4,000 SEK in revenue—not profit. Always compare ROAS to margins, returns, and other costs.",
+        "“Good ROAS” without context misleads. A high-margin SaaS can live with lower ROAS than a 30% margin ecommerce brand.",
+      ],
+    },
+    {
+      heading: "Benchmarks by category (Meta Ads, Sweden)",
+      paragraphs: [
+        "Across accounts we optimise, these ranges are common after learning:",
+      ],
+      bullets: [
+        "Ecommerce/fashion: 3×–5× is healthy; 4×+ is strong",
+        "Lead-gen services: prioritise CPL and lead-to-customer, not ROAS alone",
+        "High AOV / low returns: 2.5×–3.5× can still be profitable",
+        "Low margin / high returns: aim higher or fix CPA first",
+      ],
+    },
+    {
+      heading: "How to improve ROAS without just raising bids",
+      paragraphs: [
+        "Most audits lose ROAS in three places: mixed TOF/BOF in one campaign, weak retargeting, and creatives that don’t match the funnel stage. Separate audiences, build three retargeting layers, and test creative hypotheses weekly.",
+        "Tracking must measure purchases or qualified leads—not vanity traffic—or Meta optimises the wrong signal.",
+      ],
+    },
+  ],
+  summaryHeading: "Bottom line",
+  summary:
+    "A “good” Meta Ads ROAS in Sweden is rarely one number, but 3×–5× is a common profitable band for ecommerce. Want a clear read on your account vs. margin reality?",
+  closingParagraphs: [
+    "Request a free audit and we’ll review ROAS, CPA, and funnel structure on your Meta account.",
+  ],
+};
+
+const fullFunnelStrategiSv: BlogArticleBody = {
+  directAnswer:
+    "En full funnel-strategi delar annonseringen i TOF (räckvidd), MOF (övervägande) och BOF (konvertering) med egna budskap, målgrupper och KPIer. Crisha Marketing bygger detta över Meta, Google och TikTok så att varje krona har ett tydligt jobb i kundresan.",
+  sections: [
+    {
+      heading: "Varför “en kampanj för allt” tappar pengar",
+      paragraphs: [
+        "När samma annons ska skapa kännedom, övertygelse och köp samtidigt blandas signalerna. Algoritmen får otydlig feedback, CPA stiger och ROAS sjunker. Full funnel löser det genom att varje steg har ett enda jobb.",
+      ],
+    },
+    {
+      heading: "TOF, MOF och BOF i praktiken",
+      paragraphs: ["Så här strukturerar vi vanligtvis svenska konton:"],
+      bullets: [
+        "TOF: breda lookalikes/intressen, video och hooks, KPI: CPM, ThruPlay, nya besökare",
+        "MOF: engagemang och social proof, KPI: add-to-cart, leads, tid på sida",
+        "BOF: retargeting 7/14/30 dagar, erbjudande och urgency, KPI: ROAS och CPA",
+      ],
+    },
+    {
+      heading: "Kanaler i samma funnel",
+      paragraphs: [
+        "Meta är ofta stark i TOF/MOF med UGC, Google Search fångar BOF-intent (“köp”, “pris”, varumärke) och TikTok kan fylla TOF billigt med native content. Webbdesign och landningssidor måste matcha steget, annars tappar du konvertering även med bra ads.",
+        "Rapportera per steg, inte bara total ROAS. Annars kan en stark BOF dölja att TOF har slutat mata pipen.",
+      ],
+    },
+  ],
+  summaryHeading: "Sammanfattning",
+  summary:
+    "Full funnel = rätt budskap till rätt steg, med mätetal som speglar jobbet. Vill du att vi kartlägger er funnel och pekar ut läckagen?",
+  closingParagraphs: [
+    "Boka en gratis revision så skissar vi TOF/MOF/BOF utifrån ert erbjudande och nuvarande konton.",
+  ],
+};
+
+const fullFunnelStrategiEn: BlogArticleBody = {
+  directAnswer:
+    "A full-funnel strategy splits advertising into TOF (awareness), MOF (consideration), and BOF (conversion) with distinct messages, audiences, and KPIs. Crisha Marketing builds this across Meta, Google, and TikTok so every krona has a clear job in the journey.",
+  sections: [
+    {
+      heading: "Why “one campaign for everything” wastes budget",
+      paragraphs: [
+        "When the same ad must create awareness, consideration, and purchase at once, signals blur. The algorithm gets muddy feedback, CPA rises, and ROAS falls. Full funnel fixes that by giving each stage one job.",
+      ],
+    },
+    {
+      heading: "TOF, MOF, and BOF in practice",
+      paragraphs: ["How we typically structure Swedish accounts:"],
+      bullets: [
+        "TOF: broad lookalikes/interests, video hooks; KPIs: CPM, ThruPlay, new visitors",
+        "MOF: engagement and social proof; KPIs: add-to-cart, leads, time on site",
+        "BOF: 7/14/30-day retargeting with offer/urgency; KPIs: ROAS and CPA",
+      ],
+    },
+    {
+      heading: "Channels inside one funnel",
+      paragraphs: [
+        "Meta often leads TOF/MOF with UGC, Google Search captures BOF intent (“buy”, “price”, brand), and TikTok can fill TOF cheaply with native content. Landing pages must match the stage or conversion drops even with strong ads.",
+        "Report by stage, not only blended ROAS—or a strong BOF can hide a TOF that stopped feeding the pipe.",
+      ],
+    },
+  ],
+  summaryHeading: "Summary",
+  summary:
+    "Full funnel means the right message for each stage, with metrics that match the job. Want us to map your funnel and find the leaks?",
+  closingParagraphs: [
+    "Book a free audit and we’ll sketch TOF/MOF/BOF from your offer and current accounts.",
+  ],
+};
+
+const geoChatgptSv: BlogArticleBody = {
+  directAnswer:
+    "GEO (Generative Engine Optimization) handlar om att optimera innehåll och digital närvaro så att AI modeller som ChatGPT och Perplexity citerar, nämner eller rekommenderar dig när de svarar. Syns du inte i AI svaret syns du ofta inte alls, oavsett hur bra din SEO är.",
+  sections: [
+    {
+      heading: "Vad är GEO?",
+      paragraphs: [
+        "Det har skett något stort med hur folk söker information, och de flesta svenska företag har inte märkt det än. Tidigare var frågan: rankar vi på Google? Idag räcker inte det. En växande andel av alla sökningar sker inte längre på Google alls. De sker i ChatGPT, Perplexity, Google Gemini och Bing Copilot. Och i de här verktygen får användaren ett direkt svar, utan att klicka sig vidare till en hemsida. Vilket innebär att om ditt företag inte nämns i det svaret syns du inte, oavsett hur bra din SEO är.",
+        "GEO står för Generative Engine Optimization. Begreppet introducerades av forskare vid Princeton University 2023 och handlar om att optimera ditt innehåll och din digitala närvaro så att AI modeller väljer att citera, nämna eller rekommendera dig när de svarar på frågor.",
+        "Det är alltså inte detsamma som SEO, men det ersätter det inte heller. GEO är ett komplement. Medan SEO handlar om att ranka högt i Googles sökresultat handlar GEO om att bli den källa som AI modellen väljer att luta sig mot när den formulerar sitt svar.",
+      ],
+    },
+    {
+      heading: "Varför spelar det roll just nu?",
+      paragraphs: [
+        "Siffrorna är tydliga. ChatGPT passerade 800 miljoner aktiva veckoanvändare i oktober 2025 enligt OpenAI. Perplexity hanterar över 500 miljoner sökningar per år. Och enligt en studie från Capgemini 2025 har 58 procent av användarna redan ersatt traditionella sökmotorer med AI verktyg när de letar efter produkter och tjänster.",
+        "Samtidigt visar forskning från Pew Research 2025 att Google numera visar en AI genererad sammanfattning vid ungefär var femte sökning, och att användare i bara 8 procent av fallen klickar vidare till en vanlig sökresultatsida när en sådan sammanfattning visas, jämfört med 15 procent utan.",
+        "Det innebär att om du inte syns i AI svaret syns du sannolikt inte alls. Gartner bedömer att upp till 25 procent av alla sökningar kommer att ha förflyttat sig till generativa AI motorer år 2028. Det är inte framtid. Det är en förändring som redan pågår.",
+      ],
+    },
+    {
+      heading: "Hur väljer en AI modell vad den citerar?",
+      paragraphs: [
+        "Det är en viktig fråga och svaret är mer konkret än de flesta tror. AI modeller som ChatGPT och Perplexity hämtar information från ett begränsat antal webbsidor när de svarar på en fråga. De prioriterar sidor som är tydligt skrivna, välstrukturerade och enkla att tolka. Rubriker som direkt svarar på en fråga, korta stycken och raka förklaringar gör innehållet lättare för modellen att använda.",
+        "Forskning från Princeton visar också att AI modeller tydligt favoriserar så kallad earned media, det vill säga omnämnanden och citat från tredjeparter och auktoritativa källor, framför varumärkesägt innehåll. Det betyder att om en branschsajt, en journalist eller en annan byrå nämner ditt företag i ett relevant sammanhang väger det tyngre än vad du skriver om dig själv på din egen hemsida.",
+        "Konkreta faktorer som påverkar om du syns i AI svar:",
+      ],
+      bullets: [
+        "Hur tydligt och strukturerat ditt innehåll är skrivet",
+        "Hur ofta ditt företagsnamn förekommer i relevanta sammanhang på webben",
+        "Hur välkänt ditt företag uppfattas vara inom ditt ämnesområde",
+        "Om du citeras eller länkas till från trovärdiga externa sajter",
+        "Om du har schema markup och teknisk grund som gör det enkelt för AI att förstå vem du är och vad du gör",
+      ],
+    },
+    {
+      heading: "GEO och SEO fungerar tillsammans",
+      paragraphs: [
+        "En vanlig missuppfattning är att GEO är något helt separat från SEO. Det stämmer inte. Sidor som rankar högt på Google syns i AI svar i ungefär 25 procent av fallen, vilket gör traditionell SEO till en viktig grund även för GEO.",
+        "Det som skiljer sig är att GEO kräver ett annorlunda sätt att tänka kring innehåll. Istället för att skriva för att ranka på ett sökord skriver du för att ge ett komplett och trovärdigt svar på en fråga. Istället för att hoppas att Google väljer dig hoppas du att AI modellen gör det.",
+        "Google har även officiellt dokumenterat detta under 2026 i sin guide för AI funktioner i söket, där de konstaterar att optimering för generativ AI sökning i grunden är optimering för sökupplevelsen och därmed fortfarande handlar om SEO. Men med ett fördjupat fokus på struktur, tydlighet och auktoritet.",
+      ],
+    },
+  ],
+  summaryHeading: "Vad innebär det för ditt företag?",
+  summary:
+    "Om dina potentiella kunder börjar sin köpresa i ChatGPT eller Perplexity istället för Google, och din konkurrent nämns i svaret men inte du, har du redan förlorat en kund utan att ens ha haft chansen att visa vad du kan. Det är det verkliga problemet med att ignorera GEO.",
+  closingParagraphs: [
+    "Vi på Crisha arbetar aktivt med GEO optimering för svenska företag, som ett komplement till Meta Ads, Google Ads, TikTok Ads och webbdesign. Vi kartlägger om ditt företag syns i de AI verktyg dina kunder använder, identifierar varför det ser ut som det gör och sätter upp en konkret plan för att förbättra din AI synlighet.",
+    "Vill du veta om ditt företag syns i ChatGPT idag? Hör av dig så kör vi en kostnadsfri koll åt dig.",
+    "Crisha Marketing är en digital marknadsföringsbyrå grundad i Malmö. Vi hjälper svenska och europeiska varumärken växa lönsamt med Meta Ads, Google Ads, TikTok Ads, webbdesign och GEO.",
+  ],
+};
+
+const geoChatgptEn: BlogArticleBody = {
+  directAnswer:
+    "GEO (Generative Engine Optimization) means optimising your content and digital presence so AI models like ChatGPT and Perplexity cite, mention, or recommend you when they answer. If you’re not in the AI answer, you’re often invisible, no matter how strong your SEO is.",
+  sections: [
+    {
+      heading: "What is GEO?",
+      paragraphs: [
+        "Something big has shifted in how people look up information, and most Swedish companies haven’t noticed yet. The old question was: do we rank on Google? That isn’t enough anymore. A growing share of searches no longer happen on Google at all. They happen in ChatGPT, Perplexity, Google Gemini, and Bing Copilot. In those tools users get a direct answer without clicking through to a website. If your company isn’t named in that answer, you don’t show up, regardless of how good your SEO is.",
+        "GEO stands for Generative Engine Optimization. The term was introduced by researchers at Princeton University in 2023 and is about optimising your content and digital presence so AI models choose to cite, mention, or recommend you when they answer questions.",
+        "It isn’t the same as SEO, and it doesn’t replace it either. GEO is a complement. While SEO is about ranking high in Google’s results, GEO is about becoming the source the AI model leans on when it forms its answer.",
+      ],
+    },
+    {
+      heading: "Why does it matter right now?",
+      paragraphs: [
+        "The numbers are clear. ChatGPT passed 800 million weekly active users in October 2025 according to OpenAI. Perplexity handles over 500 million searches per year. And according to a Capgemini 2025 study, 58 percent of users have already replaced traditional search engines with AI tools when looking for products and services.",
+        "At the same time, Pew Research 2025 finds that Google now shows an AI generated summary on roughly one in five searches, and users click through to a regular results page in only 8 percent of those cases, versus 15 percent without a summary.",
+        "That means if you don’t appear in the AI answer, you likely don’t appear at all. Gartner estimates that up to 25 percent of all searches will have moved to generative AI engines by 2028. This isn’t the future. It’s a shift already underway.",
+      ],
+    },
+    {
+      heading: "How does an AI model decide what to cite?",
+      paragraphs: [
+        "It’s an important question, and the answer is more concrete than most people think. Models like ChatGPT and Perplexity pull from a limited set of web pages when answering. They prioritise pages that are clearly written, well structured, and easy to parse. Headings that directly answer a question, short paragraphs, and straight explanations make content easier for the model to use.",
+        "Princeton research also shows that AI models clearly favour earned media, mentions and quotes from third parties and authoritative sources, over brand owned content. If an industry site, a journalist, or another agency mentions your company in a relevant context, that weighs more than what you write about yourself on your own site.",
+        "Concrete factors that affect whether you show up in AI answers:",
+      ],
+      bullets: [
+        "How clearly and structurally your content is written",
+        "How often your company name appears in relevant contexts across the web",
+        "How well known your company is perceived to be in your subject area",
+        "Whether you’re cited or linked from credible external sites",
+        "Whether you have schema markup and a technical foundation that makes it easy for AI to understand who you are and what you do",
+      ],
+    },
+    {
+      heading: "GEO and SEO work together",
+      paragraphs: [
+        "A common misconception is that GEO is completely separate from SEO. It isn’t. Pages that rank high on Google appear in AI answers in roughly 25 percent of cases, which makes traditional SEO an important foundation for GEO as well.",
+        "What differs is that GEO requires a different way of thinking about content. Instead of writing to rank for a keyword, you write to give a complete, credible answer to a question. Instead of hoping Google picks you, you hope the AI model does.",
+        "Google has also documented this officially in 2026 in its guide to AI features in Search, noting that optimisation for generative AI search is fundamentally optimisation for the search experience, and thus still SEO, but with a deeper focus on structure, clarity, and authority.",
+      ],
+    },
+  ],
+  summaryHeading: "What does this mean for your company?",
+  summary:
+    "If your potential customers start their buying journey in ChatGPT or Perplexity instead of Google, and your competitor is named in the answer but you aren’t, you’ve already lost a customer without a chance to show what you can do. That’s the real cost of ignoring GEO.",
+  closingParagraphs: [
+    "At Crisha we actively work with GEO optimisation for Swedish companies, as a complement to Meta Ads, Google Ads, TikTok Ads, and web design. We map whether your company shows up in the AI tools your customers use, identify why it looks that way, and set a concrete plan to improve your AI visibility.",
+    "Want to know if your company shows up in ChatGPT today? Get in touch and we’ll run a free check for you.",
+    "Crisha Marketing is a digital marketing agency founded in Malmö. We help Swedish and European brands grow profitably with Meta Ads, Google Ads, TikTok Ads, web design, and GEO.",
+  ],
+};
+
 const BODIES: Record<string, { sv: BlogArticleBody; en: BlogArticleBody }> = {
   "grafisk-profil-vad-ska-inga-i-manualen": { sv: grafiskProfilManualSv, en: grafiskProfilManualEn },
   "reels-eller-tiktok-2026-var-ska-foretaget-lagga-tiden": { sv: reelsTiktok2026Sv, en: reelsTiktok2026En },
@@ -1294,6 +1552,9 @@ const BODIES: Record<string, { sv: BlogArticleBody; en: BlogArticleBody }> = {
   "tiktok-ads-sverige": { sv: tiktokSv, en: tiktokEn },
   "google-ads-budget": { sv: googleAdsSv, en: googleAdsEn },
   "roas-modekund-meta": { sv: roasModeSv, en: roasModeEn },
+  "vad-ar-en-bra-roas-meta-ads": { sv: braRoasMetaSv, en: braRoasMetaEn },
+  "hur-satter-man-upp-full-funnel-strategi": { sv: fullFunnelStrategiSv, en: fullFunnelStrategiEn },
+  "vad-ar-geo-och-varfor-syns-ditt-foretag-inte-i-chatgpt": { sv: geoChatgptSv, en: geoChatgptEn },
 };
 
 export function getBlogArticleBody(slug: string, locale: Locale): BlogArticleBody | undefined {

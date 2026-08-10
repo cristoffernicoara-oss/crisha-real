@@ -6,6 +6,7 @@ export type {
   CaseStudy,
   CaseStudyMetric,
   CaseStudyTestimonial,
+  CaseStudyKeyTakeaways,
 } from "@/lib/case-study-types";
 
 /** Swedish (default) case study copy */
@@ -14,6 +15,7 @@ export const caseStudies: CaseStudy[] = [
     id: 1,
     slug: "fashionup-meta-ads",
     client: "FashionUp",
+    qaHeadline: "Hur ökade vi ROAS från 1,4× till 3,8× för en e-handelskund inom mode?",
     category: "E-handel · Mode",
     service: "Meta Ads",
     serviceColor: "#2563EB",
@@ -39,6 +41,11 @@ export const caseStudies: CaseStudy[] = [
       { label: "Intäktsökning", value: "+362%", desc: "under samarbetsperioden" },
       { label: "Snitt CTR", value: "3,4%", desc: "jämfört med branschsnitt" },
     ],
+    keyTakeaways: {
+      challenge: "ROAS 1,4× och hög CPA utan tydlig Meta-struktur eller retargeting.",
+      strategy: "TOF/MOF/BOF, lookalikes och tre nivåer retargeting med creative-tester.",
+      result: "ROAS 3,8× (+171%), CPA −60% och +362% intäkter på 4 månader.",
+    },
     testimonial: {
       text: "Jag förväntade mig inte att se så tydliga resultat på de första månaderna. ROAS nästan tredubblades och kostnaden per beställning sjönk dramatiskt.",
       author: "Andreea M.",
@@ -50,6 +57,7 @@ export const caseStudies: CaseStudy[] = [
     id: 2,
     slug: "dentalmed-google-ads",
     client: "DentalMed Klinik",
+    qaHeadline: "Hur ökade vi Google Ads-leads med +240% för en tandklinik?",
     category: "Medicinska tjänster · Tandvård",
     service: "Google Ads",
     serviceColor: "#0EA5E9",
@@ -75,6 +83,11 @@ export const caseStudies: CaseStudy[] = [
       { label: "Kvalificerade leads", value: "89%", desc: "andel relevanta samtal" },
       { label: "Samma budget", value: "Oförändrad", desc: "bättre resultat per krona" },
     ],
+    keyTakeaways: {
+      challenge: "Låg leadkvalitet och svag spårning trots aktiv Google Ads-budget.",
+      strategy: "Kampanjer per tjänst, negativa sökord, samtals-/formulärspårning och landningssidor.",
+      result: "+240% samtal, CPL −59% och 89% relevanta leads på samma budget.",
+    },
     testimonial: {
       text: "Vi spenderade samma budget som förut men fick tre gånger fler nya patienter per månad. Skillnaden var att Crisha visste exakt var pengarna försvann.",
       author: "Dr. Bogdan T.",
@@ -86,6 +99,7 @@ export const caseStudies: CaseStudy[] = [
     id: 3,
     slug: "craftbeer-tiktok-ads",
     client: "Craft Brewers Conference",
+    qaHeadline: "Hur fick vi 280K räckvidd på TikTok Ads med 400 €/mån?",
     category: "Mat & dryck · E-handel",
     service: "TikTok Ads",
     serviceColor: "#EC4899",
@@ -111,6 +125,11 @@ export const caseStudies: CaseStudy[] = [
       { label: "Nya följare", value: "4 200", desc: "parallell organisk tillväxt" },
       { label: "Snitt CPM", value: "1,2 €", desc: "jämfört med högre CPM på Meta" },
     ],
+    keyTakeaways: {
+      challenge: "Stark produkt men nästan noll synlighet och liten TikTok-budget.",
+      strategy: "Native UGC, Spark Ads på vinnande organiskt innehåll och datadriven skalning.",
+      result: "280K räckvidd på 6 veckor och +641% onlinebeställningar.",
+    },
     testimonial: {
       text: "Med 400 € i månaden nådde vi 280 000 personer på 6 veckor. Jag trodde inte det var möjligt med en så liten budget. Nu har vi kölista för vissa produkter.",
       author: "Mihai C.",
@@ -122,6 +141,7 @@ export const caseStudies: CaseStudy[] = [
     id: 4,
     slug: "casa-nostra-web-design",
     client: "Casa Nostra",
+    qaHeadline: "Hur ökade vi webbkonverteringen med +190% för en restaurang?",
     category: "Restaurang & pizzeria · Lomma",
     service: "Webbdesign",
     serviceColor: "#8B5CF6",
@@ -147,6 +167,11 @@ export const caseStudies: CaseStudy[] = [
       { label: "Cateringförfrågningar", value: "+62%", desc: "flere ser catering via kontakt" },
       { label: "PageSpeed-poäng", value: "96", desc: "mobilfokus & optimering" },
     ],
+    keyTakeaways: {
+      challenge: "Långsam, rörig mobilwebb där meny och bokning var svåra att hitta.",
+      strategy: "Mobilförst webbdesign med tydliga CTA, menystruktur och prestandaoptimering.",
+      result: "+190% konvertering, −74% laddningstid och PageSpeed 96.",
+    },
     testimonial: {
       text: "Gästerna hittar menyn och dagens lunch direkt på telefonen, och det märks i lokalen. Vi får fler tydliga förfrågningar om catering och sajten känns lika proffsig som maten vi serverar.",
       author: "Liviu Nicoara",
@@ -178,13 +203,14 @@ export function buildResultsNarrative(study: CaseStudy, locale: Locale): string 
     locale === "en"
       ? `After ${study.duration} of working together, the numbers show clear progress: `
       : `Efter ${study.duration} av samarbete visar siffrorna tydligt framsteg: `;
-  return `${intro}${lines.join(". ")}.`;
+  return intro + lines.join("; ") + ".";
 }
 
-export function authorInitials(author: string): string {
-  const parts = author.replace(/^Dr\.\s*/i, "").split(/\s+/).filter(Boolean);
-  if (parts.length >= 2) {
-    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
-  }
-  return author.slice(0, 2).toUpperCase();
+export function authorInitials(name: string): string {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((p) => p[0]?.toUpperCase() ?? "")
+    .join("");
 }

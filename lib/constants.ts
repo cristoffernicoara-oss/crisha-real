@@ -5,7 +5,10 @@ export const CONTACT = {
   email: "info@crisha.se",
   city: "Malmö",
   country: "Sverige",
+  streetAddress: "Marietorps Allé 3B",
+  postalCode: "217 75",
   addressLine: "Malmö, Sverige",
+  fullAddress: "Marietorps Allé 3B, 217 75 Malmö",
   shang: {
     name: "Shang",
     telHref: "tel:+46731474731",

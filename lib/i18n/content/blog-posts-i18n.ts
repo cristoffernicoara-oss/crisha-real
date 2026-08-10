@@ -9,6 +9,27 @@ export type BlogPostPreview = {
 
 const BLOG_POSTS_SV: BlogPostPreview[] = [
   {
+    slug: "vad-ar-geo-och-varfor-syns-ditt-foretag-inte-i-chatgpt",
+    title: "Vad är GEO och varför syns ditt företag inte i ChatGPT?",
+    excerpt:
+      "GEO (Generative Engine Optimization) handlar om att synas när ChatGPT, Perplexity och andra AI verktyg svarar. Här förklarar vi vad GEO är, varför det spelar roll nu och hur du blir den källa AI väljer.",
+    date: "2026-08-10",
+  },
+  {
+    slug: "vad-ar-en-bra-roas-meta-ads",
+    title: "Vad är en bra ROAS för Meta Ads?",
+    excerpt:
+      "En bra ROAS för Meta Ads i Sverige ligger ofta på 3×–5× beroende på marginaler. Här förklarar vi riktvärden, fallgropar och hur Crisha Marketing når 4,8× i snitt.",
+    date: "2026-08-09",
+  },
+  {
+    slug: "hur-satter-man-upp-full-funnel-strategi",
+    title: "Hur sätter man upp en full funnel-strategi?",
+    excerpt:
+      "Full funnel betyder TOF, MOF och BOF med egna budskap och KPIer. Så här bygger Crisha Marketing en mätbar funnel över Meta, Google och TikTok.",
+    date: "2026-08-09",
+  },
+  {
     slug: "grafisk-profil-vad-ska-inga-i-manualen",
     title: "Grafisk profil 2026: vad ska egentligen ingå i manualen?",
     excerpt:
@@ -60,6 +81,27 @@ const BLOG_POSTS_SV: BlogPostPreview[] = [
 ];
 
 const BLOG_POSTS_EN: BlogPostPreview[] = [
+  {
+    slug: "vad-ar-geo-och-varfor-syns-ditt-foretag-inte-i-chatgpt",
+    title: "What is GEO and why isn’t your company showing up in ChatGPT?",
+    excerpt:
+      "GEO (Generative Engine Optimization) is about being cited when ChatGPT, Perplexity, and other AI tools answer. Here’s what GEO is, why it matters now, and how you become the source AI chooses.",
+    date: "2026-08-10",
+  },
+  {
+    slug: "vad-ar-en-bra-roas-meta-ads",
+    title: "What is a good ROAS for Meta Ads?",
+    excerpt:
+      "A solid Meta Ads ROAS in Sweden is often 3×–5× depending on margins. Here are benchmarks, pitfalls, and how Crisha Marketing averages 4.8×.",
+    date: "2026-08-09",
+  },
+  {
+    slug: "hur-satter-man-upp-full-funnel-strategi",
+    title: "How do you set up a full-funnel strategy?",
+    excerpt:
+      "Full funnel means TOF, MOF, and BOF with distinct messages and KPIs. Here’s how Crisha Marketing builds a measurable funnel across Meta, Google, and TikTok.",
+    date: "2026-08-09",
+  },
   {
     slug: "grafisk-profil-vad-ska-inga-i-manualen",
     title: "Brand design system 2026: what should actually go in the manual?",

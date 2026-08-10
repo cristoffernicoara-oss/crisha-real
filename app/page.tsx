@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import Blog from "@/components/sections/Blog";
@@ -10,10 +12,20 @@ import Services from "@/components/sections/Services";
 import Stats from "@/components/sections/Stats";
 import Testimonials from "@/components/sections/Testimonials";
 import WhyUs from "@/components/sections/WhyUs";
+import { homeFAQs } from "@/lib/home-faq";
+import { buildFaqPageJsonLd } from "@/lib/schema";
+
+const faqJsonLd = buildFaqPageJsonLd(homeFAQs);
 
 export default function HomePage() {
   return (
     <main className="min-h-screen pt-page-nav">
+      <Script
+        id="jsonld-faqpage"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Navbar />
       <Hero />
       <Stats />

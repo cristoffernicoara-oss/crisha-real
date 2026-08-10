@@ -28,7 +28,11 @@ export default function BlogArticle({ post, body }: Props) {
         </Link>
         <p className="mt-6 text-xs text-[rgba(255,255,255,0.35)]">{post.date}</p>
         <h1 className="mt-2 font-heading text-3xl font-bold text-white md:text-4xl">{post.title}</h1>
-        <p className={`mt-6 text-lg ${prose}`}>{post.excerpt}</p>
+        {body?.directAnswer ? (
+          <p className="mt-6 text-lg font-semibold leading-relaxed text-white">{body.directAnswer}</p>
+        ) : (
+          <p className={`mt-6 text-lg ${prose}`}>{post.excerpt}</p>
+        )}
 
         {body ? (
           <div className="mt-10 space-y-12">

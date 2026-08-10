@@ -7,8 +7,7 @@ import CookieBanner from "@/components/layout/CookieBanner";
 import GoogleAnalytics from "@/components/layout/GoogleAnalytics";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
-import { CONTACT } from "@/lib/constants";
-import { buildFaqPageJsonLd } from "@/lib/home-faq";
+import { buildOrganizationJsonLd, buildWebsiteJsonLd } from "@/lib/schema";
 import { SITE_URL } from "@/lib/site-url";
 import { cn } from "@/lib/utils";
 
@@ -27,78 +26,8 @@ const instrumentSans = Instrument_Sans({
 });
 
 const siteUrl = SITE_URL;
-
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "MarketingAgency",
-  "@id": siteUrl,
-  name: "Crisha Marketing",
-  url: siteUrl,
-  description:
-    "Digital marknadsföringsbyrå i Sverige specialiserad på Meta Ads, Google Ads, TikTok Ads och webbdesign.",
-  foundingDate: "2020",
-  founders: [
-    {
-      "@type": "Person",
-      name: "Shang",
-      jobTitle: "Medgrundare & Performance Marketing Specialist",
-      telephone: "+46731474731",
-    },
-    {
-      "@type": "Person",
-      name: "Cristoffer",
-      jobTitle: "Medgrundare & Creative Director",
-      telephone: "+46723307113",
-    },
-  ],
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: CONTACT.city,
-    addressCountry: "SE",
-  },
-  email: CONTACT.email,
-  telephone: "+46723307113",
-  areaServed: {
-    "@type": "Country",
-    name: "Sverige",
-  },
-  serviceType: [
-    "Meta Ads",
-    "Google Ads",
-    "TikTok Ads",
-    "Webbdesign",
-    "Performance Marketing",
-    "Digital Marknadsföring",
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "40",
-    bestRating: "5",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "sales",
-    email: CONTACT.email,
-    telephone: "+46723307113",
-    availableLanguage: ["Swedish", "English"],
-    areaServed: "SE",
-  },
-  sameAs: [
-    "https://facebook.com/crishamarketing",
-    "https://instagram.com/crishamarketing",
-    "https://tiktok.com/@crishamarketing",
-    "https://linkedin.com/company/crishamarketing",
-  ],
-};
-
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Crisha Marketing",
-  url: siteUrl,
-  inLanguage: "sv-SE",
-};
+const organizationJsonLd = buildOrganizationJsonLd();
+const websiteJsonLd = buildWebsiteJsonLd();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -187,8 +116,6 @@ export const viewport: Viewport = {
   ],
 };
 
-const faqJsonLd = buildFaqPageJsonLd();
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -213,12 +140,6 @@ export default function RootLayout({
           type="application/ld+json"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
-        <Script
-          id="jsonld-faqpage"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
         {children}
         <GoogleAnalytics />

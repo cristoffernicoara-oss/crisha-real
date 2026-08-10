@@ -58,8 +58,19 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
 
   const color = study.serviceColor;
   const others = allStudies.filter((c) => c.slug !== study.slug).slice(0, 2);
-  const headlineMetric = study.metrics[0];
   const quoteTint = hexToRgba(color, 0.2);
+  const takeawayItems =
+    locale === "en"
+      ? [
+          { label: "Challenge", text: study.keyTakeaways.challenge },
+          { label: "Strategy", text: study.keyTakeaways.strategy },
+          { label: "Result", text: study.keyTakeaways.result },
+        ]
+      : [
+          { label: "Utmaning", text: study.keyTakeaways.challenge },
+          { label: "Strategi", text: study.keyTakeaways.strategy },
+          { label: "Resultat", text: study.keyTakeaways.result },
+        ];
 
   return (
     <>
@@ -107,18 +118,34 @@ export default function CaseStudyDetail({ slug }: { slug: string }) {
           <FadeUp delay={0.08}>
             <h1
               id="case-study-title"
-              className="mt-8 max-w-[700px] font-heading text-[clamp(36px,5vw,60px)] font-extrabold leading-[1.08] text-white"
+              className="mt-8 max-w-[760px] font-heading text-[clamp(32px,4.5vw,52px)] font-extrabold leading-[1.12] text-white"
             >
-              <span className="block">
-                {t("caseStudyDetail.howWeGrew")} {study.client}
-              </span>
-              <span className="block">
-                {headlineMetric.value} {headlineMetric.label} {t("caseStudyDetail.metricInDuration")} {study.duration}
-              </span>
+              {study.qaHeadline}
             </h1>
           </FadeUp>
 
-          <FadeUp delay={0.14}>
+          <FadeUp delay={0.12}>
+            <aside
+              className="mt-8 rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.03)] p-5 md:p-6"
+              aria-label={t("caseStudyDetail.keyTakeawaysLabel")}
+            >
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-[rgba(255,255,255,0.35)]">
+                {t("caseStudyDetail.keyTakeawaysLabel")}
+              </p>
+              <ul className="space-y-2.5">
+                {takeawayItems.map((item) => (
+                  <li
+                    key={item.label}
+                    className="text-[15px] leading-relaxed text-[rgba(255,255,255,0.7)]"
+                  >
+                    <span className="font-semibold text-white">{item.label}:</span> {item.text}
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          </FadeUp>
+
+          <FadeUp delay={0.16}>
             <div className="mt-5 flex flex-wrap gap-2">
               {study.tags.map((tag) => (
                 <span

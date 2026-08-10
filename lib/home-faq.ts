@@ -46,17 +46,3 @@ export const homeFAQs: HomeFAQItem[] = [
   },
 ];
 
-export function buildFaqPageJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: homeFAQs.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
-}

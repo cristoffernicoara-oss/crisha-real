@@ -6,6 +6,7 @@ export const caseStudiesEn: CaseStudy[] = [
     id: 1,
     slug: "fashionup-meta-ads",
     client: "FashionUp",
+    qaHeadline: "How did we lift ROAS from 1.4× to 3.8× for a fashion ecommerce brand?",
     category: "E-commerce · Fashion",
     service: "Meta Ads",
     serviceColor: "#2563EB",
@@ -31,6 +32,11 @@ export const caseStudiesEn: CaseStudy[] = [
       { label: "Revenue growth", value: "+362%", desc: "during the engagement" },
       { label: "Avg. CTR", value: "3.4%", desc: "vs. industry benchmark" },
     ],
+    keyTakeaways: {
+      challenge: "1.4× ROAS and high CPA with no clear Meta structure or retargeting.",
+      strategy: "TOF/MOF/BOF, lookalikes, three-tier retargeting, and creative testing.",
+      result: "3.8× ROAS (+171%), CPA −60%, and +362% revenue in 4 months.",
+    },
     testimonial: {
       text: "I didn’t expect such clear results in the first few months. ROAS nearly tripled and cost per order dropped dramatically.",
       author: "Andreea M.",
@@ -42,6 +48,7 @@ export const caseStudiesEn: CaseStudy[] = [
     id: 2,
     slug: "dentalmed-google-ads",
     client: "DentalMed Clinic",
+    qaHeadline: "How did we grow Google Ads leads by +240% for a dental clinic?",
     category: "Healthcare · Dentistry",
     service: "Google Ads",
     serviceColor: "#0EA5E9",
@@ -67,6 +74,11 @@ export const caseStudiesEn: CaseStudy[] = [
       { label: "Qualified leads", value: "89%", desc: "share of relevant calls" },
       { label: "Same budget", value: "Unchanged", desc: "better results per krona" },
     ],
+    keyTakeaways: {
+      challenge: "Low lead quality and weak tracking despite active Google Ads spend.",
+      strategy: "Service-level campaigns, negatives, call/form tracking, and landing pages.",
+      result: "+240% calls, CPL −59%, and 89% relevant leads on the same budget.",
+    },
     testimonial: {
       text: "We spent the same budget as before but got three times as many new patients per month. The difference was that Crisha knew exactly where the money was going.",
       author: "Dr. Bogdan T.",
@@ -78,6 +90,7 @@ export const caseStudiesEn: CaseStudy[] = [
     id: 3,
     slug: "craftbeer-tiktok-ads",
     client: "Craft Brewers Conference",
+    qaHeadline: "How did we reach 280K people on TikTok Ads with €400/month?",
     category: "Food & beverage · E-commerce",
     service: "TikTok Ads",
     serviceColor: "#EC4899",
@@ -103,6 +116,11 @@ export const caseStudiesEn: CaseStudy[] = [
       { label: "New followers", value: "4,200", desc: "parallel organic growth" },
       { label: "Avg. CPM", value: "€1.2", desc: "vs. higher CPM on Meta" },
     ],
+    keyTakeaways: {
+      challenge: "Strong product but almost no visibility and a tiny TikTok budget.",
+      strategy: "Native UGC, Spark Ads on winning organic, and selective data-led scaling.",
+      result: "280K reach in 6 weeks and +641% online orders.",
+    },
     testimonial: {
       text: "With €400 a month we reached 280,000 people in 6 weeks. I didn’t think that was possible on such a small budget. Now we have waitlists for some products.",
       author: "Mihai C.",
@@ -114,6 +132,7 @@ export const caseStudiesEn: CaseStudy[] = [
     id: 4,
     slug: "casa-nostra-web-design",
     client: "Casa Nostra",
+    qaHeadline: "How did we lift web conversion by +190% for a restaurant?",
     category: "Restaurant & pizzeria · Lomma",
     service: "Web design",
     serviceColor: "#8B5CF6",
@@ -139,6 +158,11 @@ export const caseStudiesEn: CaseStudy[] = [
       { label: "Catering enquiries", value: "+62%", desc: "more contacts via catering path" },
       { label: "PageSpeed score", value: "96", desc: "mobile-first optimisation" },
     ],
+    keyTakeaways: {
+      challenge: "Slow, cluttered mobile site where menu and booking were hard to find.",
+      strategy: "Mobile-first redesign with clear CTAs, menu structure, and performance work.",
+      result: "+190% conversion, −74% load time, and PageSpeed 96.",
+    },
     testimonial: {
       text: "Guests find the menu and today’s lunch right on their phones, and we feel it at the venue. More clear catering requests, and the site finally matches how we want the brand to come across.",
       author: "Liviu Nicoara",
