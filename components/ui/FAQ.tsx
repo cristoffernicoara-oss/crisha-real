@@ -40,7 +40,7 @@ export default function FAQ({ items, accentColor = "#2563EB", className }: FAQPr
           </Accordion.Header>
           <Accordion.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
             <div
-              className="border-t border-[rgba(255,255,255,0.06)] px-5 pb-5 pt-3 text-[15px] font-normal leading-relaxed text-[rgba(255,255,255,0.55)]"
+              className="whitespace-pre-line border-t border-[rgba(255,255,255,0.06)] px-5 pb-5 pt-3 text-[15px] font-normal leading-relaxed text-[rgba(255,255,255,0.55)]"
               style={{ borderTopColor: `${accentColor}20` }}
             >
               {item.answer}

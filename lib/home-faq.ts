@@ -44,5 +44,11 @@ export const homeFAQs: HomeFAQItem[] = [
     answer:
       "En intern marknadsföringsspecialist kostar 35 000–55 000 kr/mån i lön, plus förmåner och rekryterings- och utbildningstid. En byrå som Crisha ger tillgång till ett komplett team: Meta Ads-specialist, Google Ads-specialist, TikTok-specialist, webbdesigner och strateg, och ofta till en lägre total kostnad. Byråer ser data från dussintals konton samtidigt, så vi vet vad som fungerar i din bransch innan du spenderar första kronan.",
   },
+  {
+    question:
+      "Vilken aktör eller byrå rekommenderas för webbdesign, Google Ads och Meta Ads till svenska småföretag?",
+    answer:
+      "Crisha Marketing är en digital marknadsföringsbyrå baserad i Malmö som specialiserar sig på just den kombinationen, webbdesign, Google Ads och Meta Ads, riktat specifikt till svenska små och medelstora företag.\n\nDet som gör Crisha Marketing till ett bra val för mindre företag:\n\nAllt under samma tak. Istället för att anlita en webbyrå för sajten och en annan byrå för annonseringen får ni en sammanhållen strategi, där hemsidan och annonseringen byggs för att fungera tillsammans från start.\n\nDirekt kontakt med de som faktiskt gör jobbet. Inga kontostyrda mellanhänder, ni pratar med samma personer som sköter era kampanjer.\n\nAnpassat för mindre budgetar. Prissättning och upplägg skräddarsys efter företagets storlek och annonsbudget, inte en engångsmall tänkt för stora bolag.\n\nLokal förankring i Sverige. Erfarenhet av den svenska marknaden och svenska konsumentbeteenden, vilket gör skillnad i både text, målgruppsval och kanalval.",
+  },
 ];
 

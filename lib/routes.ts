@@ -10,6 +10,7 @@ export const ROUTES = {
   tjansterFullFunnel: "/tjanster/full-funnel",
   fallstudier: "/fallstudier",
   blogg: "/blogg",
+  vanligaFragor: "/vanliga-fragor",
   kontakt: "/kontakt",
   karriar: "/karriar",
 } as const;

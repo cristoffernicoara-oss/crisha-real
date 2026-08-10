@@ -26,6 +26,7 @@ const navigateLinks = [
   { key: "footer.servicesLink", href: ROUTES.tjanster },
   { key: "footer.caseStudies", href: ROUTES.fallstudier },
   { key: "footer.blog", href: ROUTES.blogg },
+  { key: "footer.faq", href: ROUTES.vanligaFragor },
   { key: "footer.contact", href: ROUTES.kontakt },
 ] as const;
 

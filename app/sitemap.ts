@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absolute(ROUTES.tjansterFullFunnel), lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: absolute(ROUTES.fallstudier), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: absolute(ROUTES.blogg), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: absolute(ROUTES.vanligaFragor), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: absolute(ROUTES.kontakt), lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: absolute(ROUTES.karriar), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: absolute("/cookies"), lastModified: now, changeFrequency: "yearly", priority: 0.3 },

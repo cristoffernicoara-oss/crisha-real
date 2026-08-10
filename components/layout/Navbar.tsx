@@ -105,6 +105,7 @@ function Navbar() {
   const rezultateActive = pathname === ROUTES.fallstudier;
   const despreActive = pathname === ROUTES.omOss;
   const blogActive = pathname === ROUTES.blogg || pathname.startsWith(`${ROUTES.blogg}/`);
+  const faqActive = pathname === ROUTES.vanligaFragor;
   const contactActive = pathname === ROUTES.kontakt;
 
   useEffect(() => {
@@ -276,6 +277,9 @@ function Navbar() {
             <NavTextLink href={ROUTES.blogg} active={blogActive} onClick={() => setServicesOpen(false)}>
               {t("nav.blog")}
             </NavTextLink>
+            <NavTextLink href={ROUTES.vanligaFragor} active={faqActive} onClick={() => setServicesOpen(false)}>
+              {t("nav.faq")}
+            </NavTextLink>
             <NavTextLink href={ROUTES.kontakt} active={contactActive} onClick={() => setServicesOpen(false)}>
               {t("nav.contact")}
             </NavTextLink>
@@ -391,6 +395,13 @@ function Navbar() {
                 onClick={() => setMobileOpen(false)}
               >
                 {t("nav.blog")}
+              </Link>
+              <Link
+                href={ROUTES.vanligaFragor}
+                className="border-b border-[rgba(255,255,255,0.04)] py-3 text-base text-white no-underline"
+                onClick={() => setMobileOpen(false)}
+              >
+                {t("nav.faq")}
               </Link>
               <Link
                 href={ROUTES.kontakt}

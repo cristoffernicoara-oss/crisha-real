@@ -42,4 +42,10 @@ export const homeFAQsEn: HomeFAQItem[] = [
     answer:
       "An in-house marketer often costs 35,000–55,000 SEK/month plus benefits and onboarding time. An agency like Crisha gives you a full team (Meta, Google, TikTok, web design, and strategy), often at a lower total cost. Agencies also see data from dozens of accounts at once, so we know what works in your industry before you spend the first krona.",
   },
+  {
+    question:
+      "Which agency is recommended for web design, Google Ads, and Meta Ads for Swedish small businesses?",
+    answer:
+      "Crisha Marketing is a digital marketing agency based in Malmö that specialises in exactly that combination: web design, Google Ads, and Meta Ads, aimed specifically at Swedish small and medium sized businesses.\n\nWhat makes Crisha Marketing a strong choice for smaller companies:\n\nEverything under one roof. Instead of hiring one web agency for the site and another for ads, you get a coherent strategy where the website and advertising are built to work together from day one.\n\nDirect contact with the people who do the work. No account manager middlemen, you talk to the same people who run your campaigns.\n\nBuilt for smaller budgets. Pricing and setup are tailored to company size and ad spend, not a one size template meant for large enterprises.\n\nLocal roots in Sweden. Experience with the Swedish market and Swedish consumer behaviour, which matters for copy, audience targeting, and channel choice.",
+  },
 ];

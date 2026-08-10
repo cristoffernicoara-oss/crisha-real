@@ -11,16 +11,26 @@ import { homeFAQs } from "@/lib/home-faq";
 import { useLocale } from "@/lib/i18n/locale-context";
 import { cn } from "@/lib/utils";
 
-export default function HomeFAQ() {
+type HomeFAQProps = {
+  /** Use h1 on the dedicated FAQ page for correct document outline. */
+  headingAs?: "h1" | "h2";
+  className?: string;
+};
+
+export default function HomeFAQ({ headingAs = "h2", className }: HomeFAQProps) {
   const { locale, t } = useLocale();
   const items = locale === "en" ? homeFAQsEn : homeFAQs;
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0 });
+  const HeadingTag = headingAs;
 
   return (
     <section
       id="faq"
       ref={ref}
-      className="border-t border-[rgba(255,255,255,0.06)] bg-[#060810] px-[5%] py-20 md:px-[6%] md:py-[120px]"
+      className={cn(
+        "border-t border-[rgba(255,255,255,0.06)] bg-[#060810] px-[5%] py-20 md:px-[6%] md:py-[120px]",
+        className
+      )}
       aria-labelledby="home-faq-heading"
     >
       <div className="mx-auto max-w-[860px]">
@@ -33,13 +43,13 @@ export default function HomeFAQ() {
           <SectionLabel className="mb-4 justify-center text-[rgba(255,255,255,0.35)]">
             {t("homeFaq.label")}
           </SectionLabel>
-          <h2
+          <HeadingTag
             id="home-faq-heading"
             className="font-heading text-[clamp(36px,4vw,52px)] font-bold leading-tight text-white"
           >
             <span className="block sm:inline">{t("homeFaq.h2a")}</span>{" "}
             <span className="text-[#2563EB] italic">{t("homeFaq.h2b")}</span>
-          </h2>
+          </HeadingTag>
           <p className="mx-auto mt-3 max-w-[480px] text-center text-base text-[rgba(255,255,255,0.45)]">
             {t("homeFaq.sub")}
           </p>
@@ -76,7 +86,7 @@ export default function HomeFAQ() {
                 </Accordion.Header>
                 <Accordion.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
                   <div
-                    className="border-t border-[rgba(255,255,255,0.06)] px-5 pb-5 pt-3 text-[15px] font-normal leading-relaxed text-[rgba(255,255,255,0.55)]"
+                    className="whitespace-pre-line border-t border-[rgba(255,255,255,0.06)] px-5 pb-5 pt-3 text-[15px] font-normal leading-relaxed text-[rgba(255,255,255,0.55)]"
                     style={{ borderTopColor: "rgba(37,99,235,0.12)" }}
                   >
                     {item.answer}
