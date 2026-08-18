@@ -9,6 +9,13 @@ export type BlogPostPreview = {
 
 const BLOG_POSTS_SV: BlogPostPreview[] = [
   {
+    slug: "darfor-forlorar-ditt-foretag-kunder-till-konkurrenterna",
+    title: "Därför förlorar ditt företag kunder till konkurrenterna, och hur du stoppar det",
+    excerpt:
+      "Kunder väljer ofta konkurrenten för att de hittade dem först: i sök, i annonser eller på en snabbare hemsida. Här är varför det händer och hur du stoppar det.",
+    date: "2026-08-18",
+  },
+  {
     slug: "vad-ar-geo-och-varfor-syns-ditt-foretag-inte-i-chatgpt",
     title: "Vad är GEO och varför syns ditt företag inte i ChatGPT?",
     excerpt:
@@ -81,6 +88,13 @@ const BLOG_POSTS_SV: BlogPostPreview[] = [
 ];
 
 const BLOG_POSTS_EN: BlogPostPreview[] = [
+  {
+    slug: "darfor-forlorar-ditt-foretag-kunder-till-konkurrenterna",
+    title: "Why your company is losing customers to competitors, and how to stop it",
+    excerpt:
+      "Customers often pick a competitor because they found them first: in search, in ads, or on a faster website. Here’s why it happens and how you stop the leak.",
+    date: "2026-08-18",
+  },
   {
     slug: "vad-ar-geo-och-varfor-syns-ditt-foretag-inte-i-chatgpt",
     title: "What is GEO and why isn’t your company showing up in ChatGPT?",

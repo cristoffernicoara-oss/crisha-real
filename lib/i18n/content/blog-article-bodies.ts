@@ -1544,6 +1544,96 @@ const geoChatgptEn: BlogArticleBody = {
   ],
 };
 
+const kunderTillKonkurrenternaSv: BlogArticleBody = {
+  directAnswer:
+    "Ditt företag förlorar kunder till konkurrenter när du inte syns där köpresan börjar: i sök, i annonser och på en hemsida som gör det enkelt att välja dig. Det stoppas med synlighet vid rätt tidpunkt, en snabb tydlig sajt och förtroendesignaler nära beslutsögonblicket.",
+  sections: [
+    {
+      heading: "Du syns inte där kunderna letar",
+      paragraphs: [
+        "Det händer tyst. Inga varningssignaler, inga missnöjda mejl. Bara en kund som väljer att gå till konkurrenten istället för dig.",
+        "Det kan bero på att konkurrenten syntes och du inte gjorde det. Att de hade en bättre annons på rätt plattform vid rätt tidpunkt. Att deras hemsida svarade på frågan snabbare. Att de fanns i Googles sökresultat när kunden var redo att köpa.",
+        "Du kanske hade en bättre produkt, ett bättre pris och ett bättre erbjudande. Det spelade ingen roll, för kunden hittade aldrig dig.",
+        "Det är det verkliga problemet för de flesta svenska företag idag.",
+        "93 procent av Sveriges befolkning surfar på nätet dagligen. Kundresan börjar nästan alltid framför en skärm, oavsett om det gäller enkla konsumentköp eller komplexa företagstjänster. Det innebär att om ditt företag inte är synligt digitalt när kunden befinner sig i köpresan är du i praktiken osynlig.",
+        "Din konkurrent vet det. Och de agerar på det.",
+        "Varumärken som investerar i betald annonsering och organisk synlighet medan andra inte gör det vinner marknadsandelar kontinuerligt. Forskning visar att företag som under tuffare perioder behöll sina marknadsföringsinvesteringar ökade sin försäljning med i snitt 17 procent, medan de som drog ner förlorade upp till 15 procent av sin affär till konkurrenter med mer närvaro.",
+        "Det är inte en slump. Det är ett direkt resultat av att synas när kunden är redo att fatta ett beslut.",
+      ],
+    },
+    {
+      heading: "De tre vanligaste anledningarna till att kunder väljer konkurrenten",
+      paragraphs: [
+        "Den första anledningen är att konkurrenten syns på rätt plattform vid rätt tidpunkt. En Google Ads-kampanj mot rätt sökord fångar kunden precis när de aktivt letar efter det du säljer. Meta Ads mot rätt målgrupp når kunden när de är som mest mottagliga. Om du inte finns där syns någon annan istället.",
+        "Den andra anledningen är att konkurrentens hemsida är snabbare, tydligare och enklare att använda. Din hemsida har 0,05 sekunder på sig att göra ett första intryck. Om besökaren inte omedelbart förstår vad du erbjuder eller hur de ska ta kontakt, lämnar de. Den kunden är borta och du betalar fortfarande för klicket.",
+        "Den tredje anledningen handlar om förtroende. Konkurrenten har recensioner, riktiga kundberättelser och konkreta resultat synliga på sin hemsida. Du kanske har det också, men det syns inte tillräckligt tydligt, inte nära nog beslutsögonblicket. Och i ett läge där kunden inte känner dig sedan tidigare är det sociala beviset det som avgör valet.",
+      ],
+    },
+    {
+      heading: "Varför det förvärras med tiden",
+      paragraphs: [
+        "Varje kund du förlorar till konkurrenten stärker dem. De får mer budget att annonsera för, fler recensioner att visa upp och en starkare position i sökresultaten. Det är en självförstärkande process, och det börjar med ett enda köpbeslut som gick åt fel håll.",
+        "Att vänta kostar mer än att agera. Det är inte en känsla, det är matematik.",
+      ],
+    },
+  ],
+  summaryHeading: "Så löser vi det åt dig",
+  summary:
+    "På Crisha arbetar vi med hela kedjan från synlighet till beslut. Vi sätter upp Meta Ads och Google Ads-kampanjer som placerar dig framför rätt målgrupp vid rätt tidpunkt. Vi bygger hemsidor som är designade för att konvertera besökare till kunder, inte bara för att se bra ut. Och vi arbetar med SEO och innehåll som ger dig organisk synlighet som bygger upp sig över tid.",
+  closingParagraphs: [
+    "Vi börjar alltid med att förstå var kunderna faktiskt försvinner idag. Är det i annonseringen? På hemsidan? Handlar det om att du inte syns alls på rätt sökord? Svaret är olika för varje företag, och det är därför vi inte erbjuder standardlösningar.",
+    "Det vi däremot alltid erbjuder är en gratis revision utan förpliktelser. Vi går igenom ditt nuvarande läge, berättar ärligt vad som fungerar och vad som kostar dig kunder varje dag, och ger dig en tydlig bild av vad som behöver förändras.",
+    "Du behöver inte anlita oss för att få ut något av det mötet. Men de flesta som ser resultaten väljer att fortsätta.",
+    "Boka din gratis revision på crisha.se/kontakt",
+    "Crisha Marketing är en digital marknadsföringsbyrå grundad i Malmö. Vi hjälper svenska och europeiska varumärken växa lönsamt med Meta Ads, Google Ads, TikTok Ads och webbdesign.",
+  ],
+};
+
+const kunderTillKonkurrenternaEn: BlogArticleBody = {
+  directAnswer:
+    "Your company loses customers to competitors when you are not visible where the buying journey starts: in search, in ads, and on a site that makes you easy to choose. You stop it with presence at the right moment, a fast clear website, and trust signals close to the decision.",
+  sections: [
+    {
+      heading: "You are not showing up where customers look",
+      paragraphs: [
+        "It happens quietly. No warning signs, no angry emails. Just a customer who chooses the competitor instead of you.",
+        "It may be because the competitor was visible and you were not. Because they had a better ad on the right platform at the right time. Because their website answered the question faster. Because they were in Google’s results when the customer was ready to buy.",
+        "You may have had a better product, a better price, and a better offer. It did not matter, because the customer never found you.",
+        "That is the real problem for most Swedish companies today.",
+        "93 percent of Sweden’s population is online every day. The customer journey almost always starts in front of a screen, whether it is a simple consumer purchase or a complex B2B service. If your company is not digitally visible when the customer is in that journey, you are effectively invisible.",
+        "Your competitor knows this. And they act on it.",
+        "Brands that invest in paid ads and organic visibility while others do not keep winning market share. Research shows that companies that kept their marketing investment during tougher periods increased sales by 17 percent on average, while those that cut back lost up to 15 percent of their business to competitors with more presence.",
+        "That is not luck. It is the direct result of showing up when the customer is ready to decide.",
+      ],
+    },
+    {
+      heading: "The three most common reasons customers choose the competitor",
+      paragraphs: [
+        "The first reason is that the competitor shows up on the right platform at the right time. A Google Ads campaign on the right keywords catches the customer while they are actively looking for what you sell. Meta Ads to the right audience reaches them when they are most receptive. If you are not there, someone else is.",
+        "The second reason is that the competitor’s website is faster, clearer, and easier to use. Your site has 0.05 seconds to make a first impression. If the visitor does not immediately understand what you offer or how to get in touch, they leave. That customer is gone, and you are still paying for the click.",
+        "The third reason is trust. The competitor has reviews, real customer stories, and concrete results visible on their site. You may have those too, but they are not clear enough, not close enough to the decision. When the customer does not already know you, social proof is what decides the choice.",
+      ],
+    },
+    {
+      heading: "Why it gets worse over time",
+      paragraphs: [
+        "Every customer you lose to a competitor makes them stronger. They get more budget to advertise with, more reviews to show, and a stronger position in search results. It is a self-reinforcing loop, and it starts with a single buying decision that went the wrong way.",
+        "Waiting costs more than acting. That is not a feeling, it is math.",
+      ],
+    },
+  ],
+  summaryHeading: "How we solve it for you",
+  summary:
+    "At Crisha we work the full chain from visibility to decision. We set up Meta Ads and Google Ads campaigns that put you in front of the right audience at the right time. We build websites designed to convert visitors into customers, not just to look good. And we work with SEO and content that builds organic visibility over time.",
+  closingParagraphs: [
+    "We always start by understanding where customers actually disappear today. Is it in the ads? On the website? Is it that you do not show up on the right keywords at all? The answer is different for every company, which is why we do not offer one-size-fits-all solutions.",
+    "What we always offer is a free audit with no obligation. We go through your current setup, tell you honestly what is working and what is costing you customers every day, and give you a clear picture of what needs to change.",
+    "You do not have to hire us to get value from that meeting. But most people who see the results choose to continue.",
+    "Book your free audit at crisha.se/kontakt",
+    "Crisha Marketing is a digital marketing agency founded in Malmö. We help Swedish and European brands grow profitably with Meta Ads, Google Ads, TikTok Ads, and web design.",
+  ],
+};
+
 const BODIES: Record<string, { sv: BlogArticleBody; en: BlogArticleBody }> = {
   "grafisk-profil-vad-ska-inga-i-manualen": { sv: grafiskProfilManualSv, en: grafiskProfilManualEn },
   "reels-eller-tiktok-2026-var-ska-foretaget-lagga-tiden": { sv: reelsTiktok2026Sv, en: reelsTiktok2026En },
@@ -1555,6 +1645,10 @@ const BODIES: Record<string, { sv: BlogArticleBody; en: BlogArticleBody }> = {
   "vad-ar-en-bra-roas-meta-ads": { sv: braRoasMetaSv, en: braRoasMetaEn },
   "hur-satter-man-upp-full-funnel-strategi": { sv: fullFunnelStrategiSv, en: fullFunnelStrategiEn },
   "vad-ar-geo-och-varfor-syns-ditt-foretag-inte-i-chatgpt": { sv: geoChatgptSv, en: geoChatgptEn },
+  "darfor-forlorar-ditt-foretag-kunder-till-konkurrenterna": {
+    sv: kunderTillKonkurrenternaSv,
+    en: kunderTillKonkurrenternaEn,
+  },
 };
 
 export function getBlogArticleBody(slug: string, locale: Locale): BlogArticleBody | undefined {
