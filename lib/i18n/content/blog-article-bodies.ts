@@ -1634,7 +1634,108 @@ const kunderTillKonkurrenternaEn: BlogArticleBody = {
   ],
 };
 
+const synasGoogleChatgptMalmoSv: BlogArticleBody = {
+  directAnswer:
+    "Ja. 2026 syns företag i Malmö både i Googles organiska sökresultat och i AI-svar från ChatGPT, Perplexity och Google AI Overviews. SEO är fortfarande grunden, men utan GEO missar du en växande del av målgruppen.",
+  sections: [
+    {
+      heading: "Det räcker inte längre att ranka på Google",
+      paragraphs: [
+        "Spelreglerna för hur svenska företag hittar sina kunder online har förändrats på kort tid. Det räcker inte längre att ranka på Google. I dag ställer sig allt fler potentiella kunder sina frågor direkt i ChatGPT, Perplexity eller Google AI Overviews, och får ett svar utan att klicka sig vidare till en enda hemsida.",
+        "Det innebär att ett företag kan ligga på sida ett på Google och ändå vara helt osynligt för hälften av sin målgrupp. Och ett företag som inte ens rankar på Google kan vara det enda som nämns i ett AI-svar.",
+        "Det är här 2026 skiljer sig från allt som kom innan.",
+      ],
+    },
+    {
+      heading: "Vad är SEO och varför är det fortfarande grunden?",
+      paragraphs: [
+        "SEO, alltså sökmotoroptimering, handlar om att göra din hemsida synlig i Googles organiska sökresultat utan att betala per klick. Det är ett av de mest lönsamma digitala investeringarna ett företag kan göra, men det kräver tålamod. Resultaten brukar visa sig efter 3 till 6 månader och fortsätter sedan att leverera trafik utan löpande annonskostnad.",
+        "För företag i Malmö och södra Sverige handlar lokal SEO om att synas när potentiella kunder söker på fraser som digital marknadsföringsbyrå Malmö, Meta Ads byrå Sverige eller webbyrå Malmö. Google prioriterar relevans och auktoritet. Det innebär välstrukturerat innehåll, snabb laddningstid, mobiloptimering och trovärdiga externa länkar som pekar till din sajt.",
+        "53 procent av all spårbar webbtrafik globalt kommer från organisk sökning. Det är mer än betald annonsering, sociala medier och direkttrafik sammantaget. SEO är inte valfritt, det är grunden som allt annat vilar på.",
+      ],
+    },
+    {
+      heading: "Vad är GEO och varför spelar det roll nu?",
+      paragraphs: [
+        "GEO, eller Generative Engine Optimization, är något relativt nytt. Begreppet introducerades av forskare vid Princeton University 2023 och handlar om att optimera ditt innehåll och din digitala närvaro så att AI-modeller väljer att citera eller nämna dig när de svarar på frågor.",
+        "ChatGPT passerade 800 miljoner aktiva veckoanvändare i slutet av 2025. Perplexity hanterar över 500 miljoner sökningar per år. Och enligt Capgemini har 58 procent av användarna redan börjat ersätta traditionella sökmotorer med AI-verktyg när de letar efter produkter och tjänster.",
+        "Om din potentiella kund frågar ChatGPT vilken digital marknadsföringsbyrå i Malmö de ska anlita och du inte nämns i svaret har du förlorat den kunden utan att ens ha haft chansen att presentera dig.",
+        "AI-modeller prioriterar tydligt och strukturerat innehåll, externa omnämnanden från trovärdiga tredjeparter och varumärken med en etablerad digital närvaro. Det innebär att GEO och SEO arbetar mot samma mål, men med delvis olika medel.",
+      ],
+    },
+    {
+      heading: "Hur SEO och GEO hänger ihop i praktiken",
+      paragraphs: [
+        "Det finns en direkt koppling. Sidor som rankar högt på Google syns i AI-svar i ungefär 25 procent av fallen. En stark SEO-grund ger alltså ett försprång även i GEO.",
+        "Men GEO kräver ett komplement: innehåll som är skrivet för att svara på exakta frågor snarare än att bara träffa sökord. Rubriker i frågeformat, konkreta och faktabaserade svar direkt under rubriken, och en digital närvaro som bekräftas av externa källor som bloggar, medier och samarbetspartners.",
+        "För lokala svenska företag är detta ett tidigt fönster av möjlighet. De flesta konkurrenter befinner sig fortfarande i ett renodlat SEO-tänk. De som börjar arbeta med GEO nu bygger ett försprång som är svårt att ta igen.",
+      ],
+    },
+  ],
+  summaryHeading: "Vad gör Crisha?",
+  summary:
+    "Vi är en digital marknadsföringsbyrå med bas i Malmö. Vi arbetar med Meta Ads, Google Ads, TikTok Ads, webbdesign och SEO för svenska och europeiska företag som vill växa lönsamt. GEO är en naturlig del av det arbetet eftersom synlighet i AI-svar är en direkt förlängning av synlighet i sökresultaten.",
+  closingParagraphs: [
+    "Det vi gör annorlunda är att vi ser helheten. En väloptimerad annons som driver trafik till en hemsida som inte konverterar är bortkastade pengar. En hemsida som rankar på Google men inte syns i AI-svar missar en växande andel av sin målgrupp. Och en byrå som bara optimerar en kanal i taget ger dig alltid ett ofullständigt resultat.",
+    "Vi börjar med att kartlägga hur ditt företag ser ut idag, i sökresultaten, i AI-svar och i betald annonsering. Sedan bygger vi en strategi som adresserar alla tre.",
+    "Är du nyfiken på om ditt företag syns i ChatGPT och Google AI Overviews idag? Boka en kostnadsfri genomgång på crisha.se/kontakt.",
+    "Vi berättar vad vi hittar, utan förpliktelser.",
+    "Crisha Marketing är en digital marknadsföringsbyrå grundad i Malmö. Vi hjälper svenska och europeiska varumärken växa lönsamt med Meta Ads, Google Ads, TikTok Ads, webbdesign, SEO och GEO.",
+  ],
+};
+
+const synasGoogleChatgptMalmoEn: BlogArticleBody = {
+  directAnswer:
+    "Yes. In 2026, companies in Malmö need to show up both in Google’s organic results and in AI answers from ChatGPT, Perplexity, and Google AI Overviews. SEO is still the foundation, but without GEO you miss a growing share of your audience.",
+  sections: [
+    {
+      heading: "Ranking on Google is no longer enough",
+      paragraphs: [
+        "The rules for how Swedish companies find customers online have changed in a short time. Ranking on Google is no longer enough. Today, more and more potential customers ask their questions directly in ChatGPT, Perplexity, or Google AI Overviews, and get an answer without clicking through to a single website.",
+        "That means a company can sit on page one of Google and still be completely invisible to half of its audience. And a company that does not even rank on Google can be the only one named in an AI answer.",
+        "This is where 2026 differs from everything that came before.",
+      ],
+    },
+    {
+      heading: "What is SEO, and why is it still the foundation?",
+      paragraphs: [
+        "SEO, search engine optimisation, is about making your website visible in Google’s organic results without paying per click. It is one of the most profitable digital investments a company can make, but it takes patience. Results usually show after 3 to 6 months, and then keep delivering traffic without ongoing ad spend.",
+        "For companies in Malmö and southern Sweden, local SEO is about showing up when potential customers search phrases like digital marketing agency Malmö, Meta Ads agency Sweden, or web agency Malmö. Google prioritises relevance and authority. That means well-structured content, fast load times, mobile optimisation, and credible external links pointing to your site.",
+        "53 percent of all trackable web traffic globally comes from organic search. That is more than paid advertising, social media, and direct traffic combined. SEO is not optional. It is the foundation everything else rests on.",
+      ],
+    },
+    {
+      heading: "What is GEO, and why does it matter now?",
+      paragraphs: [
+        "GEO, or Generative Engine Optimization, is relatively new. The term was introduced by researchers at Princeton University in 2023 and is about optimising your content and digital presence so AI models choose to cite or mention you when they answer questions.",
+        "ChatGPT passed 800 million weekly active users at the end of 2025. Perplexity handles more than 500 million searches per year. And according to Capgemini, 58 percent of users have already started replacing traditional search engines with AI tools when looking for products and services.",
+        "If a potential customer asks ChatGPT which digital marketing agency in Malmö they should hire, and you are not named in the answer, you have lost that customer without even getting a chance to introduce yourself.",
+        "AI models prioritise clear, structured content, external mentions from credible third parties, and brands with an established digital presence. That means GEO and SEO work toward the same goal, but with partly different means.",
+      ],
+    },
+    {
+      heading: "How SEO and GEO connect in practice",
+      paragraphs: [
+        "There is a direct link. Pages that rank high on Google show up in AI answers in about 25 percent of cases. A strong SEO foundation therefore gives you a head start in GEO as well.",
+        "But GEO needs a complement: content written to answer exact questions rather than just hit keywords. Question-style headings, concrete, fact-based answers directly under the heading, and a digital presence confirmed by external sources such as blogs, media, and partners.",
+        "For local Swedish companies this is an early window of opportunity. Most competitors are still in a purely SEO mindset. Those who start working with GEO now build a lead that is hard to catch up.",
+      ],
+    },
+  ],
+  summaryHeading: "What does Crisha do?",
+  summary:
+    "We are a digital marketing agency based in Malmö. We work with Meta Ads, Google Ads, TikTok Ads, web design, and SEO for Swedish and European companies that want to grow profitably. GEO is a natural part of that work, because visibility in AI answers is a direct extension of visibility in search results.",
+  closingParagraphs: [
+    "What we do differently is look at the whole picture. A well-optimised ad that drives traffic to a site that does not convert is wasted money. A site that ranks on Google but does not show up in AI answers misses a growing share of its audience. And an agency that only optimises one channel at a time always gives you an incomplete result.",
+    "We start by mapping how your company looks today: in search results, in AI answers, and in paid advertising. Then we build a strategy that addresses all three.",
+    "Curious whether your company shows up in ChatGPT and Google AI Overviews today? Book a free review at crisha.se/kontakt.",
+    "We tell you what we find, with no obligation.",
+    "Crisha Marketing is a digital marketing agency founded in Malmö. We help Swedish and European brands grow profitably with Meta Ads, Google Ads, TikTok Ads, web design, SEO, and GEO.",
+  ],
+};
+
 const BODIES: Record<string, { sv: BlogArticleBody; en: BlogArticleBody }> = {
+  "synas-pa-google-och-chatgpt-malmo-2026": { sv: synasGoogleChatgptMalmoSv, en: synasGoogleChatgptMalmoEn },
   "grafisk-profil-vad-ska-inga-i-manualen": { sv: grafiskProfilManualSv, en: grafiskProfilManualEn },
   "reels-eller-tiktok-2026-var-ska-foretaget-lagga-tiden": { sv: reelsTiktok2026Sv, en: reelsTiktok2026En },
   "google-ai-finance-europa-seo-content": { sv: googleAiFinanceSv, en: googleAiFinanceEn },

@@ -5,9 +5,22 @@ export type BlogPostPreview = {
   title: string;
   excerpt: string;
   date: string;
+  readTime?: string;
+  category?: string;
+  author?: string;
 };
 
 const BLOG_POSTS_SV: BlogPostPreview[] = [
+  {
+    slug: "synas-pa-google-och-chatgpt-malmo-2026",
+    title: "Vill du synas på Google och i ChatGPT? Så fungerar digital marknadsföring i Malmö 2026",
+    excerpt:
+      "Det räcker inte längre att ranka på Google. I dag ställer sig allt fler potentiella kunder sina frågor i ChatGPT, Perplexity och Google AI Overviews — och får ett svar utan att klicka vidare.",
+    date: "2026-09-17",
+    readTime: "7 min läsning",
+    category: "Digital marknadsföring",
+    author: "Crisha Marketing",
+  },
   {
     slug: "darfor-forlorar-ditt-foretag-kunder-till-konkurrenterna",
     title: "Därför förlorar ditt företag kunder till konkurrenterna, och hur du stoppar det",
@@ -88,6 +101,16 @@ const BLOG_POSTS_SV: BlogPostPreview[] = [
 ];
 
 const BLOG_POSTS_EN: BlogPostPreview[] = [
+  {
+    slug: "synas-pa-google-och-chatgpt-malmo-2026",
+    title: "Want to show up on Google and in ChatGPT? How digital marketing works in Malmö in 2026",
+    excerpt:
+      "Ranking on Google is no longer enough. More potential customers now ask ChatGPT, Perplexity, and Google AI Overviews — and get an answer without clicking through to a single website.",
+    date: "2026-09-17",
+    readTime: "7 min read",
+    category: "Digital marketing",
+    author: "Crisha Marketing",
+  },
   {
     slug: "darfor-forlorar-ditt-foretag-kunder-till-konkurrenterna",
     title: "Why your company is losing customers to competitors, and how to stop it",

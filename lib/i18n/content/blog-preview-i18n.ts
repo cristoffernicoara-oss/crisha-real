@@ -15,6 +15,18 @@ export type BlogPreviewPost = {
 
 const SV: BlogPreviewPost[] = [
   {
+    id: 8,
+    tag: "Digital marknadsföring",
+    tagColor: "#2563EB",
+    brandMark: "google",
+    title: "Vill du synas på Google och i ChatGPT? Så fungerar digital marknadsföring i Malmö 2026",
+    excerpt:
+      "Det räcker inte längre att ranka på Google. I dag ställer sig allt fler potentiella kunder sina frågor i ChatGPT, Perplexity och Google AI Overviews.",
+    date: "2026-09-17",
+    readTime: "7 min läsning",
+    slug: "synas-pa-google-och-chatgpt-malmo-2026",
+  },
+  {
     id: 7,
     tag: "Design",
     tagColor: "#0F766E",
@@ -101,6 +113,18 @@ const SV: BlogPreviewPost[] = [
 ];
 
 const EN: BlogPreviewPost[] = [
+  {
+    id: 8,
+    tag: "Digital marketing",
+    tagColor: "#2563EB",
+    brandMark: "google",
+    title: "Want to show up on Google and in ChatGPT? How digital marketing works in Malmö in 2026",
+    excerpt:
+      "Ranking on Google is no longer enough. More potential customers now ask ChatGPT, Perplexity, and Google AI Overviews.",
+    date: "2026-09-17",
+    readTime: "7 min read",
+    slug: "synas-pa-google-och-chatgpt-malmo-2026",
+  },
   {
     id: 7,
     tag: "Design",

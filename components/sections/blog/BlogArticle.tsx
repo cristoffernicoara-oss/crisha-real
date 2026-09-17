@@ -28,6 +28,11 @@ export default function BlogArticle({ post, body }: Props) {
         </Link>
         <p className="mt-6 text-xs text-[rgba(255,255,255,0.35)]">{post.date}</p>
         <h1 className="mt-2 font-heading text-3xl font-bold text-white md:text-4xl">{post.title}</h1>
+        {post.readTime || post.category || post.author ? (
+          <p className="mt-3 text-sm text-[rgba(255,255,255,0.4)]">
+            {[post.readTime, post.category, post.author].filter(Boolean).join(" · ")}
+          </p>
+        ) : null}
         {body?.directAnswer ? (
           <p className="mt-6 text-lg font-semibold leading-relaxed text-white">{body.directAnswer}</p>
         ) : (
