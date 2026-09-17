@@ -366,6 +366,7 @@ export const svTree = {
       "Fullständig artikel kommer snart. Vill du prata om samma ämne i ditt företag? ",
     wantHelp: "Vill du diskutera detta för ert företag? ",
     ctaAudit: "Begär gratis revision",
+    faqHeading: "Vanliga frågor",
   },
   contactFaqPage: {
     label: "VANLIGA FRÅGOR",
@@ -740,6 +741,7 @@ export const enTree = {
     comingSoon: "Full article coming soon. Want to talk about the same topic for your business? ",
     wantHelp: "Want to discuss this for your business? ",
     ctaAudit: "Request a free audit",
+    faqHeading: "Frequently asked questions",
   },
   contactFaqPage: {
     label: "FAQ",

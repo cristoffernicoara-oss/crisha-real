@@ -10,7 +10,7 @@ import {
   getAllBlogPostBySlug,
   getAllBlogPosts,
 } from "@/lib/i18n/content/blog-all";
-import { buildBlogPostingJsonLd } from "@/lib/schema";
+import { buildBlogPostingJsonLd, buildFaqPageJsonLd } from "@/lib/schema";
 
 type Props = { params: { slug: string } };
 
@@ -47,6 +47,14 @@ export default function BlogPostPage({ params }: Props) {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {body?.faqs && body.faqs.length > 0 ? (
+        <Script
+          id={`jsonld-faqpage-${post.slug}`}
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqPageJsonLd(body.faqs)) }}
+        />
+      ) : null}
       <Navbar />
       <BlogArticle post={post} body={body} />
       <Footer />

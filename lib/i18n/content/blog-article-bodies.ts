@@ -1,4 +1,7 @@
+import { getBlogArticleFaqs, type BlogFaqItem } from "@/lib/i18n/content/blog-faqs-i18n";
 import type { Locale } from "@/lib/i18n/types";
+
+export type { BlogFaqItem };
 
 export type BlogArticleSection = {
   heading: string;
@@ -14,6 +17,7 @@ export type BlogArticleBody = {
   summary: string;
   summaryBullets?: string[];
   closingParagraphs?: string[];
+  faqs?: BlogFaqItem[];
 };
 
 const tiktokSv: BlogArticleBody = {
@@ -61,7 +65,7 @@ const tiktokSv: BlogArticleBody = {
   ],
   summaryHeading: "Sammanfattning",
   summary:
-    "TikTok Ads i Sverige 2026 handlar inte om att vara perfekt utan det handlar om att vara relevant, snabb och äkta. Företag som vågar släppa kontrollen lite, testa mycket och anpassa sig till plattformens stil är de som vinner.",
+    "TikTok Ads i Sverige 2026 handlar inte om att vara perfekt utan det handlar om att vara relevant, snabb och äkta. Företag som vågar släppa kontrollen lite, testa mycket och anpassa sig till plattformens stil är de som vinner. Bäst effekt får ni när TikTok ingår i en [full funnel-strategi](/blogg/hur-satter-man-upp-full-funnel-strategi) tillsammans med [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg) och [Google Ads](/blogg/google-ads-budget).",
 };
 
 const tiktokEn: BlogArticleBody = {
@@ -109,7 +113,7 @@ const tiktokEn: BlogArticleBody = {
   ],
   summaryHeading: "Summary",
   summary:
-    "TikTok Ads in Sweden in 2026 isn’t about being perfect, it’s about being relevant, fast, and real. Brands willing to loosen the grip a little, test aggressively, and match the platform’s style are the ones that win.",
+    "TikTok Ads in Sweden in 2026 isn’t about being perfect, it’s about being relevant, fast, and real. Brands willing to loosen the grip a little, test aggressively, and match the platform’s style are the ones that win. It works best inside a [full-funnel strategy](/blogg/hur-satter-man-upp-full-funnel-strategi) together with [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg) and [Google Ads](/blogg/google-ads-budget).",
 };
 
 const googleAdsSv: BlogArticleBody = {
@@ -118,7 +122,7 @@ const googleAdsSv: BlogArticleBody = {
       heading: "Inledning",
       paragraphs: [
         "Problemet är sällan att Google Ads \"inte fungerar\", utan att kontot är fel uppsatt från början eller saknar rätt optimering.",
-        "I den här artikeln går vi igenom de vanligaste misstagen – och hur du kan undvika dem.",
+        "I den här artikeln går vi igenom de vanligaste misstagen – och hur du kan undvika dem. Google Ads ger bäst effekt när det sitter i en [full funnel-strategi](/blogg/hur-satter-man-upp-full-funnel-strategi), kompletteras med [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg) mot samma kundresa och backas av [SEO](/blogg/google-ai-finance-europa-seo-content) som bygger organisk synlighet utan klickkostnad.",
       ],
     },
     {
@@ -200,7 +204,7 @@ const googleAdsEn: BlogArticleBody = {
       heading: "Introduction",
       paragraphs: [
         "The problem is rarely that Google Ads “doesn’t work”, but that the account was set up wrong from the start or lacks proper optimisation.",
-        "In this article we walk through the most common mistakes and how you can avoid them.",
+        "In this article we walk through the most common mistakes and how you can avoid them. Google Ads works best inside a [full-funnel strategy](/blogg/hur-satter-man-upp-full-funnel-strategi), paired with [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg) on the same journey and backed by [SEO](/blogg/google-ai-finance-europa-seo-content) that builds organic visibility without paying per click.",
       ],
     },
     {
@@ -302,7 +306,7 @@ const roasModeSv: BlogArticleBody = {
     {
       heading: "Steg 1: Ny kampanjstruktur",
       paragraphs: [
-        "Vi började med att bygga om hela kontot.\n\nIstället för att ha allt blandat skapade vi en tydlig struktur:",
+        "Vi började med att bygga om hela kontot.\n\nIstället för att ha allt blandat skapade vi en tydlig [full funnel-strategi](/blogg/hur-satter-man-upp-full-funnel-strategi):",
         "Resultat: Bättre kontroll och tydligare data att optimera på.",
       ],
       bullets: ["Prospecting (nya kunder)", "Retargeting (varma målgrupper)", "Scaling-kampanjer (det som redan fungerar)"],
@@ -378,7 +382,7 @@ const roasModeSv: BlogArticleBody = {
     },
   ],
   summaryHeading: "Vill du ha samma resultat?",
-  summary: "Vi hjälper företag att skala sin annonsering på Meta varje dag.",
+  summary: "Vi hjälper företag att skala sin [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg)-annonsering varje dag.",
   closingParagraphs: [
     "Vill du veta vad som håller tillbaka ditt konto?",
     "Vi erbjuder en gratis analys där vi visar exakt vad du kan förbättra.",
@@ -412,7 +416,7 @@ const roasModeEn: BlogArticleBody = {
     {
       heading: "Step 1: New campaign structure",
       paragraphs: [
-        "We started by rebuilding the whole account.\n\nInstead of mixing everything together we created a clear structure:",
+        "We started by rebuilding the whole account.\n\nInstead of mixing everything together we created a clear [full-funnel strategy](/blogg/hur-satter-man-upp-full-funnel-strategi):",
         "Result: Better control and cleaner data to optimise from.",
       ],
       bullets: ["Prospecting (new customers)", "Retargeting (warm audiences)", "Scaling campaigns (what already works)"],
@@ -484,7 +488,7 @@ const roasModeEn: BlogArticleBody = {
     },
   ],
   summaryHeading: "Want similar results?",
-  summary: "We help brands scale Meta advertising every day.",
+  summary: "We help brands scale [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg) every day.",
   closingParagraphs: [
     "Curious what’s holding your account back?",
     "We offer a free analysis that shows exactly what you can improve.",
@@ -514,7 +518,7 @@ const metaBoost2026Sv: BlogArticleBody = {
     {
       heading: "Misstag 1: Ingen full-funnel-struktur",
       paragraphs: [
-        "Det första och vanligaste misstaget är att det saknas en full-funnel-struktur. De flesta som annonserar på Facebook och Instagram kör bara mot kalla målgrupper och hoppas att det räcker. Det gör det sällan. En lönsam struktur för Meta annonsering arbetar på tre nivåer samtidigt: bred räckvidd mot nya ögon, ett mellanlager som bearbetar engagerade användare som inte konverterat ännu, och ett bottenplan med retargeting mot varma leads och övergivna varukorgar. Utan de två sista nivåerna lämnar du pengar på bordet varje dag.",
+        "Det första och vanligaste misstaget är att det saknas en [full funnel-strategi](/blogg/hur-satter-man-upp-full-funnel-strategi). De flesta som annonserar på Facebook och Instagram kör bara mot kalla målgrupper och hoppas att det räcker. Det gör det sällan. En lönsam struktur för Meta annonsering arbetar på tre nivåer samtidigt: bred räckvidd mot nya ögon, ett mellanlager som bearbetar engagerade användare som inte konverterat ännu, och ett bottenplan med retargeting mot varma leads och övergivna varukorgar. Utan de två sista nivåerna lämnar du pengar på bordet varje dag.",
       ],
     },
     {
@@ -542,7 +546,7 @@ const metaBoost2026Sv: BlogArticleBody = {
   ],
   summaryHeading: "Vad kan du förvänta dig av en seriös Meta Ads byrå?",
   summary:
-    "Som digital marknadsföringsbyrå i Sverige jobbar vi på Crisha med den här strukturen för alla våra kunder, oavsett budget. Det är därför vår genomsnittliga portfölj-ROAS ligger på 4,8 mot branschsnittet på 2,1. Det handlar inte om magi, det handlar om rätt setup, rätt creatives och rätt optimering vecka efter vecka. Vi hjälper svenska och europeiska företag att växa lönsamt med Meta Ads, Google Ads, TikTok Ads och webbdesign. Oavsett om du letar efter hjälp med Facebook annonsering, Instagram annonsering eller en komplett strategi för betald annonsering, börjar vi alltid med att förstå ditt företag på riktigt.",
+    "Som digital marknadsföringsbyrå i Sverige jobbar vi på Crisha med den här strukturen för alla våra kunder, oavsett budget. Det är därför vår genomsnittliga portfölj-ROAS ligger på 4,8 mot branschsnittet på 2,1. Det handlar inte om magi, det handlar om rätt setup, rätt creatives och rätt optimering vecka efter vecka. Vi hjälper svenska och europeiska företag att växa lönsamt med Meta Ads, [Google Ads](/blogg/google-ads-budget), [TikTok Ads](/blogg/tiktok-ads-sverige) och webbdesign. Oavsett om du letar efter hjälp med Facebook annonsering, Instagram annonsering eller en komplett strategi för betald annonsering, börjar vi alltid med att förstå ditt företag på riktigt.",
   closingParagraphs: [
     "Är du nyfiken på hur ditt konto faktiskt presterar? Vi erbjuder en gratis revision utan förpliktelser där vi går igenom din nuvarande struktur och berättar ärligt vad som fungerar och vad som kostar dig pengar i onödan.",
     "Boka din gratis revision på crisha.se/kontakt",
@@ -572,7 +576,7 @@ const metaBoost2026En: BlogArticleBody = {
     {
       heading: "Mistake #1 — Missing full-funnel structure",
       paragraphs: [
-        "Nine out of ten accounts we inspect only chase cold prospects. Profitability rarely comes from isolated top-of-feed spend. Winning Meta setups layer broad prospecting with mid-funnel nurture for engaged non-buyers and bottom-funnel remarketing—including abandoned carts. Skip the nurture or remarketing layers and you willingly leak budget every single day.",
+        "Nine out of ten accounts we inspect only chase cold prospects. Profitability rarely comes from isolated top-of-feed spend. Winning Meta setups layer broad prospecting with mid-funnel nurture for engaged non-buyers and bottom-funnel remarketing—including abandoned carts—inside a [full-funnel strategy](/blogg/hur-satter-man-upp-full-funnel-strategi). Skip the nurture or remarketing layers and you willingly leak budget every single day.",
       ],
     },
     {
@@ -600,7 +604,7 @@ const metaBoost2026En: BlogArticleBody = {
   ],
   summaryHeading: "What to demand from a serious Meta Ads agency",
   summary:
-    "As a Swedish digital growth partner we mandate this architecture for each client irrespective of MoM spend—portfolio ROAS sits around 4.8× versus industry baselines (~2.1×) because setups, creatives and ruthless weekly iteration compound. Regardless if you seek Facebook Ads help, Instagram growth or omnichannel paid media, we onboard by deeply diagnosing your economics before touching campaigns.",
+    "As a Swedish digital growth partner we mandate this architecture for each client irrespective of MoM spend—portfolio ROAS sits around 4.8× versus industry baselines (~2.1×) because setups, creatives and ruthless weekly iteration compound. Regardless if you seek Facebook Ads help, Instagram growth or omnichannel paid media with [Google Ads](/blogg/google-ads-budget) and [TikTok Ads](/blogg/tiktok-ads-sverige), we onboard by deeply diagnosing your economics before touching campaigns.",
   closingParagraphs: [
     "Curious whether your dashboards tell the truth? Book a free audit — no fluff, just candid insight about what wastes budget and where upside hides.",
     "Start at crisha.se/kontakt",
@@ -613,7 +617,7 @@ const googleAiFinanceSv: BlogArticleBody = {
     {
       heading: "Inledning",
       paragraphs: [
-        "Google AI Finance har nyligen lanserats i Europa, och det är en av de största förändringarna i sökresultaten på länge. Men vad innebär det egentligen för företag som arbetar med SEO och content marketing? I det här inlägget går vi igenom vad Google AI Finance är, hur det påverkar sökresultaten och vad du behöver göra för att anpassa din strategi.",
+        "Google AI Finance har nyligen lanserats i Europa, och det är en av de största förändringarna i sökresultaten på länge. Men vad innebär det egentligen för företag som arbetar med SEO och content marketing? I det här inlägget går vi igenom vad Google AI Finance är, hur det påverkar sökresultaten och vad du behöver göra för att anpassa din strategi. Det kompletterar [GEO](/blogg/vad-ar-geo-och-varfor-syns-ditt-foretag-inte-i-chatgpt), [Google Ads](/blogg/google-ads-budget) och en [grafisk profil](/blogg/grafisk-profil-vad-ska-inga-i-manualen) som gör sajten trovärdig.",
         "Den digitala världen förändras snabbt, och med introduktionen av sökresultat som styrs av AI står vi inför ett nytt kapitel i hur vi konsumerar information på nätet.",
       ],
     },
@@ -729,7 +733,7 @@ const googleAiFinanceEn: BlogArticleBody = {
     {
       heading: "Introduction",
       paragraphs: [
-        "Google AI Finance recently launched in Europe, marking one of the biggest changes to search results in a long time. What does that actually mean for teams working on SEO and content marketing? In this article we explain what Google AI Finance is, how it affects search results, and what you should do to adapt your strategy.",
+        "Google AI Finance recently launched in Europe, marking one of the biggest changes to search results in a long time. What does that actually mean for teams working on SEO and content marketing? In this article we explain what Google AI Finance is, how it affects search results, and what you should do to adapt your strategy. It complements [GEO](/blogg/vad-ar-geo-och-varfor-syns-ditt-foretag-inte-i-chatgpt), [Google Ads](/blogg/google-ads-budget), and a [graphic profile](/blogg/grafisk-profil-vad-ska-inga-i-manualen) that makes the site credible.",
         "The digital world moves fast, and with AI driven answers in search we are entering a new chapter in how people consume information online.",
       ],
     },
@@ -877,7 +881,7 @@ const reelsTiktok2026Sv: BlogArticleBody = {
     {
       heading: "Osäker på vilken kanal som passar er?",
       paragraphs: [
-        "Om ni står mellan TikTok och Reels är nästa steg ofta ett strategisamtal: vilken målgrupp ska ni äga om tolv månader, och vilka interna resurser finns för att producera innehåll och svara i kommentarsfält med jämna mellanrum? På Crisha Marketing hjälper vi er prioritera utifrån affärsmål, spårning, och vad organisationen faktiskt orkar hålla vid liv, inte bara utifrån rådande trender.",
+        "Om ni står mellan TikTok och Reels är nästa steg ofta ett strategisamtal: vilken målgrupp ska ni äga om tolv månader, och vilka interna resurser finns för att producera innehåll och svara i kommentarsfält med jämna mellanrum? På Crisha Marketing hjälper vi er prioritera utifrån affärsmål, spårning, och vad organisationen faktiskt orkar hålla vid liv, inte bara utifrån rådande trender. Organiskt content kan sedan skalas med [TikTok Ads](/blogg/tiktok-ads-sverige) och [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg).",
         "Boka gärna ett kostnadsfritt strategisamtal via crisha.se/kontakt. Då går vi igenom er nuläge inom organiska kanaler och betalmedia och föreslår en konkret väg som matchar er tempo och er budget.",
       ],
     },
@@ -991,7 +995,7 @@ const reelsTiktok2026En: BlogArticleBody = {
     {
       heading: "Not sure which channel fits you?",
       paragraphs: [
-        "If you are torn between TikTok and Reels, start with strategy: which audience must you win in twelve months, and which internal capacity exists to produce clips and moderate comments every week? At Crisha Marketing we prioritise around commercial goals, tracking, and what the team can sustain, not just hype cycles.",
+        "If you are torn between TikTok and Reels, start with strategy: which audience must you win in twelve months, and which internal capacity exists to produce clips and moderate comments every week? At Crisha Marketing we prioritise around commercial goals, tracking, and what the team can sustain, not just hype cycles. Organic clips can then be scaled with [TikTok Ads](/blogg/tiktok-ads-sverige) and [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg).",
         "Book a free strategy session at crisha.se/kontakt and we will review your organic and paid baseline with a concrete plan that fits your pace and budget.",
       ],
     },
@@ -1071,7 +1075,7 @@ const grafiskProfilManualSv: BlogArticleBody = {
     {
       heading: "Inledning",
       paragraphs: [
-        "När man säger \"vi behöver en ny grafisk profil\" menar många bara en uppdaterad logotyp. Men en riktigt användbar profil är ett helt ekosystem: färger som fungerar i tryck och på skärm, typsnitt som håller i längden och ett bildspråk som känns igen på Instagram lika väl som på er landningssida. Manualen är verktyget som gör att hela teamet, och externa partners, kan jobba likadant.",
+        "När man säger \"vi behöver en ny grafisk profil\" menar många bara en uppdaterad logotyp. Men en riktigt användbar profil är ett helt ekosystem: färger som fungerar i tryck och på skärm, typsnitt som håller i längden och ett bildspråk som känns igen på Instagram lika väl som på er landningssida. Manualen är verktyget som gör att hela teamet, och externa partners, kan jobba likadant. En tydlig profil på sajten påverkar både [SEO](/blogg/google-ai-finance-europa-seo-content) och hur väl [Google Ads](/blogg/google-ads-budget) konverterar. Om hemsidan är långsam eller otydlig [förlorar du kunder till konkurrenterna](/blogg/darfor-forlorar-ditt-foretag-kunder-till-konkurrenterna).",
       ],
     },
     {
@@ -1185,7 +1189,7 @@ const grafiskProfilManualEn: BlogArticleBody = {
     {
       heading: "Introduction",
       paragraphs: [
-        "When teams say “we need a new visual identity”, many people picture a refreshed logo. A useful brand system is broader: colours that work on screen and in print, type that scales, and imagery that feels consistent on Instagram as well as on your landing pages. The manual is what lets marketing, sales, and agencies execute the same story.",
+        "When teams say “we need a new visual identity”, many people picture a refreshed logo. A useful brand system is broader: colours that work on screen and in print, type that scales, and imagery that feels consistent on Instagram as well as on your landing pages. The manual is what lets marketing, sales, and agencies execute the same story. A clear system on the site also supports [SEO](/blogg/google-ai-finance-europa-seo-content) and how well [Google Ads](/blogg/google-ads-budget) convert. If the website is slow or unclear, you [lose customers to competitors](/blogg/darfor-forlorar-ditt-foretag-kunder-till-konkurrenterna).",
       ],
     },
     {
@@ -1290,7 +1294,7 @@ const grafiskProfilManualEn: BlogArticleBody = {
 
 const braRoasMetaSv: BlogArticleBody = {
   directAnswer:
-    "En bra ROAS för Meta Ads i Sverige ligger ofta på 3×–5× beroende på marginaler; under 2× är vanligtvis olönsamt. Crisha Marketings portföljsnitt är 4,8×, vilket vi når genom full funnel-struktur, retargeting och kontinuerlig creative-optimering.",
+    "En bra ROAS för Meta Ads i Sverige ligger ofta på 3×–5× beroende på marginaler; under 2× är vanligtvis olönsamt. Crisha Marketings portföljsnitt är 4,8×, vilket vi når genom [full funnel-struktur](/blogg/hur-satter-man-upp-full-funnel-strategi), retargeting och kontinuerlig creative-optimering, inte genom att [boosta inlägg](/blogg/meta-ads-2026-slutboosta-inlagg).",
   sections: [
     {
       heading: "Vad betyder ROAS egentligen?",
@@ -1329,7 +1333,7 @@ const braRoasMetaSv: BlogArticleBody = {
 
 const braRoasMetaEn: BlogArticleBody = {
   directAnswer:
-    "A solid Meta Ads ROAS in Sweden is often 3×–5× depending on margins; below 2× is usually unprofitable. Crisha Marketing’s portfolio average is 4.8×, reached through full-funnel structure, retargeting, and ongoing creative optimisation.",
+    "A solid Meta Ads ROAS in Sweden is often 3×–5× depending on margins; below 2× is usually unprofitable. Crisha Marketing’s portfolio average is 4.8×, reached through [full-funnel structure](/blogg/hur-satter-man-upp-full-funnel-strategi), retargeting, and ongoing creative optimisation—not by [boosting posts](/blogg/meta-ads-2026-slutboosta-inlagg).",
   sections: [
     {
       heading: "What ROAS actually means",
@@ -1388,7 +1392,7 @@ const fullFunnelStrategiSv: BlogArticleBody = {
     {
       heading: "Kanaler i samma funnel",
       paragraphs: [
-        "Meta är ofta stark i TOF/MOF med UGC, Google Search fångar BOF-intent (“köp”, “pris”, varumärke) och TikTok kan fylla TOF billigt med native content. Webbdesign och landningssidor måste matcha steget, annars tappar du konvertering även med bra ads.",
+        "[Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg) är ofta stark i TOF/MOF med UGC, [Google Ads](/blogg/google-ads-budget) fångar BOF-intent (“köp”, “pris”, varumärke) och [TikTok Ads](/blogg/tiktok-ads-sverige) kan fylla TOF billigt med native content. Webbdesign och landningssidor måste matcha steget, annars tappar du konvertering även med bra ads.",
         "Rapportera per steg, inte bara total ROAS. Annars kan en stark BOF dölja att TOF har slutat mata pipen.",
       ],
     },
@@ -1423,7 +1427,7 @@ const fullFunnelStrategiEn: BlogArticleBody = {
     {
       heading: "Channels inside one funnel",
       paragraphs: [
-        "Meta often leads TOF/MOF with UGC, Google Search captures BOF intent (“buy”, “price”, brand), and TikTok can fill TOF cheaply with native content. Landing pages must match the stage or conversion drops even with strong ads.",
+        "[Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg) often leads TOF/MOF with UGC, [Google Ads](/blogg/google-ads-budget) captures BOF intent (“buy”, “price”, brand), and [TikTok Ads](/blogg/tiktok-ads-sverige) can fill TOF cheaply with native content. Landing pages must match the stage or conversion drops even with strong ads.",
         "Report by stage, not only blended ROAS—or a strong BOF can hide a TOF that stopped feeding the pipe.",
       ],
     },
@@ -1443,7 +1447,7 @@ const geoChatgptSv: BlogArticleBody = {
     {
       heading: "Vad är GEO?",
       paragraphs: [
-        "Det har skett något stort med hur folk söker information, och de flesta svenska företag har inte märkt det än. Tidigare var frågan: rankar vi på Google? Idag räcker inte det. En växande andel av alla sökningar sker inte längre på Google alls. De sker i ChatGPT, Perplexity, Google Gemini och Bing Copilot. Och i de här verktygen får användaren ett direkt svar, utan att klicka sig vidare till en hemsida. Vilket innebär att om ditt företag inte nämns i det svaret syns du inte, oavsett hur bra din SEO är.",
+        "Det har skett något stort med hur folk söker information, och de flesta svenska företag har inte märkt det än. Tidigare var frågan: rankar vi på Google? Idag räcker inte det. En växande andel av alla sökningar sker inte längre på Google alls. De sker i ChatGPT, Perplexity, Google Gemini och Bing Copilot. Och i de här verktygen får användaren ett direkt svar, utan att klicka sig vidare till en hemsida. Vilket innebär att om ditt företag inte nämns i det svaret syns du inte, oavsett hur bra din [SEO](/blogg/google-ai-finance-europa-seo-content) är.",
         "GEO står för Generative Engine Optimization. Begreppet introducerades av forskare vid Princeton University 2023 och handlar om att optimera ditt innehåll och din digitala närvaro så att AI modeller väljer att citera, nämna eller rekommendera dig när de svarar på frågor.",
         "Det är alltså inte detsamma som SEO, men det ersätter det inte heller. GEO är ett komplement. Medan SEO handlar om att ranka högt i Googles sökresultat handlar GEO om att bli den källa som AI modellen väljer att luta sig mot när den formulerar sitt svar.",
       ],
@@ -1482,9 +1486,9 @@ const geoChatgptSv: BlogArticleBody = {
   ],
   summaryHeading: "Vad innebär det för ditt företag?",
   summary:
-    "Om dina potentiella kunder börjar sin köpresa i ChatGPT eller Perplexity istället för Google, och din konkurrent nämns i svaret men inte du, har du redan förlorat en kund utan att ens ha haft chansen att visa vad du kan. Det är det verkliga problemet med att ignorera GEO.",
+    "Om dina potentiella kunder börjar sin köpresa i ChatGPT eller Perplexity istället för Google, och din konkurrent nämns i svaret men inte du, har du redan [förlorat en kund till konkurrenten](/blogg/darfor-forlorar-ditt-foretag-kunder-till-konkurrenterna) utan att ens ha haft chansen att visa vad du kan. Det är det verkliga problemet med att ignorera GEO.",
   closingParagraphs: [
-    "Vi på Crisha arbetar aktivt med GEO optimering för svenska företag, som ett komplement till Meta Ads, Google Ads, TikTok Ads och webbdesign. Vi kartlägger om ditt företag syns i de AI verktyg dina kunder använder, identifierar varför det ser ut som det gör och sätter upp en konkret plan för att förbättra din AI synlighet.",
+    "Vi på Crisha arbetar aktivt med GEO optimering för svenska företag, som ett komplement till [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg), Google Ads, TikTok Ads och webbdesign. Vi kartlägger om ditt företag syns i de AI verktyg dina kunder använder, identifierar varför det ser ut som det gör och sätter upp en konkret plan för att förbättra din AI synlighet.",
     "Vill du veta om ditt företag syns i ChatGPT idag? Hör av dig så kör vi en kostnadsfri koll åt dig.",
     "Crisha Marketing är en digital marknadsföringsbyrå grundad i Malmö. Vi hjälper svenska och europeiska varumärken växa lönsamt med Meta Ads, Google Ads, TikTok Ads, webbdesign och GEO.",
   ],
@@ -1497,7 +1501,7 @@ const geoChatgptEn: BlogArticleBody = {
     {
       heading: "What is GEO?",
       paragraphs: [
-        "Something big has shifted in how people look up information, and most Swedish companies haven’t noticed yet. The old question was: do we rank on Google? That isn’t enough anymore. A growing share of searches no longer happen on Google at all. They happen in ChatGPT, Perplexity, Google Gemini, and Bing Copilot. In those tools users get a direct answer without clicking through to a website. If your company isn’t named in that answer, you don’t show up, regardless of how good your SEO is.",
+        "Something big has shifted in how people look up information, and most Swedish companies haven’t noticed yet. The old question was: do we rank on Google? That isn’t enough anymore. A growing share of searches no longer happen on Google at all. They happen in ChatGPT, Perplexity, Google Gemini, and Bing Copilot. In those tools users get a direct answer without clicking through to a website. If your company isn’t named in that answer, you don’t show up, regardless of how good your [SEO](/blogg/google-ai-finance-europa-seo-content) is.",
         "GEO stands for Generative Engine Optimization. The term was introduced by researchers at Princeton University in 2023 and is about optimising your content and digital presence so AI models choose to cite, mention, or recommend you when they answer questions.",
         "It isn’t the same as SEO, and it doesn’t replace it either. GEO is a complement. While SEO is about ranking high in Google’s results, GEO is about becoming the source the AI model leans on when it forms its answer.",
       ],
@@ -1536,9 +1540,9 @@ const geoChatgptEn: BlogArticleBody = {
   ],
   summaryHeading: "What does this mean for your company?",
   summary:
-    "If your potential customers start their buying journey in ChatGPT or Perplexity instead of Google, and your competitor is named in the answer but you aren’t, you’ve already lost a customer without a chance to show what you can do. That’s the real cost of ignoring GEO.",
+    "If your potential customers start their buying journey in ChatGPT or Perplexity instead of Google, and your competitor is named in the answer but you aren’t, you’ve already [lost a customer to a competitor](/blogg/darfor-forlorar-ditt-foretag-kunder-till-konkurrenterna) without a chance to show what you can do. That’s the real cost of ignoring GEO.",
   closingParagraphs: [
-    "At Crisha we actively work with GEO optimisation for Swedish companies, as a complement to Meta Ads, Google Ads, TikTok Ads, and web design. We map whether your company shows up in the AI tools your customers use, identify why it looks that way, and set a concrete plan to improve your AI visibility.",
+    "At Crisha we actively work with GEO optimisation for Swedish companies, as a complement to [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg), Google Ads, TikTok Ads, and web design. We map whether your company shows up in the AI tools your customers use, identify why it looks that way, and set a concrete plan to improve your AI visibility.",
     "Want to know if your company shows up in ChatGPT today? Get in touch and we’ll run a free check for you.",
     "Crisha Marketing is a digital marketing agency founded in Malmö. We help Swedish and European brands grow profitably with Meta Ads, Google Ads, TikTok Ads, web design, and GEO.",
   ],
@@ -1564,8 +1568,8 @@ const kunderTillKonkurrenternaSv: BlogArticleBody = {
     {
       heading: "De tre vanligaste anledningarna till att kunder väljer konkurrenten",
       paragraphs: [
-        "Den första anledningen är att konkurrenten syns på rätt plattform vid rätt tidpunkt. En Google Ads-kampanj mot rätt sökord fångar kunden precis när de aktivt letar efter det du säljer. Meta Ads mot rätt målgrupp når kunden när de är som mest mottagliga. Om du inte finns där syns någon annan istället.",
-        "Den andra anledningen är att konkurrentens hemsida är snabbare, tydligare och enklare att använda. Din hemsida har 0,05 sekunder på sig att göra ett första intryck. Om besökaren inte omedelbart förstår vad du erbjuder eller hur de ska ta kontakt, lämnar de. Den kunden är borta och du betalar fortfarande för klicket.",
+        "Den första anledningen är att konkurrenten syns på rätt plattform vid rätt tidpunkt. En Google Ads-kampanj mot rätt sökord fångar kunden precis när de aktivt letar efter det du säljer. [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg) mot rätt målgrupp når kunden när de är som mest mottagliga. Om du inte finns där syns någon annan istället. Det är därför en [full funnel-strategi](/blogg/hur-satter-man-upp-full-funnel-strategi) täcker sök, sociala medier och sajten samtidigt.",
+        "Den andra anledningen är att konkurrentens [hemsida är snabbare, tydligare och enklare att använda](/blogg/grafisk-profil-vad-ska-inga-i-manualen). Din hemsida har 0,05 sekunder på sig att göra ett första intryck. Om besökaren inte omedelbart förstår vad du erbjuder eller hur de ska ta kontakt, lämnar de. Den kunden är borta och du betalar fortfarande för klicket.",
         "Den tredje anledningen handlar om förtroende. Konkurrenten har recensioner, riktiga kundberättelser och konkreta resultat synliga på sin hemsida. Du kanske har det också, men det syns inte tillräckligt tydligt, inte nära nog beslutsögonblicket. Och i ett läge där kunden inte känner dig sedan tidigare är det sociala beviset det som avgör valet.",
       ],
     },
@@ -1609,8 +1613,8 @@ const kunderTillKonkurrenternaEn: BlogArticleBody = {
     {
       heading: "The three most common reasons customers choose the competitor",
       paragraphs: [
-        "The first reason is that the competitor shows up on the right platform at the right time. A Google Ads campaign on the right keywords catches the customer while they are actively looking for what you sell. Meta Ads to the right audience reaches them when they are most receptive. If you are not there, someone else is.",
-        "The second reason is that the competitor’s website is faster, clearer, and easier to use. Your site has 0.05 seconds to make a first impression. If the visitor does not immediately understand what you offer or how to get in touch, they leave. That customer is gone, and you are still paying for the click.",
+        "The first reason is that the competitor shows up on the right platform at the right time. A Google Ads campaign on the right keywords catches the customer while they are actively looking for what you sell. [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg) to the right audience reaches them when they are most receptive. If you are not there, someone else is. That is why a [full-funnel strategy](/blogg/hur-satter-man-upp-full-funnel-strategi) covers search, social, and the site at once.",
+        "The second reason is that the competitor’s [website is faster, clearer, and easier to use](/blogg/grafisk-profil-vad-ska-inga-i-manualen). Your site has 0.05 seconds to make a first impression. If the visitor does not immediately understand what you offer or how to get in touch, they leave. That customer is gone, and you are still paying for the click.",
         "The third reason is trust. The competitor has reviews, real customer stories, and concrete results visible on their site. You may have those too, but they are not clear enough, not close enough to the decision. When the customer does not already know you, social proof is what decides the choice.",
       ],
     },
@@ -1649,7 +1653,7 @@ const synasGoogleChatgptMalmoSv: BlogArticleBody = {
     {
       heading: "Vad är SEO och varför är det fortfarande grunden?",
       paragraphs: [
-        "SEO, alltså sökmotoroptimering, handlar om att göra din hemsida synlig i Googles organiska sökresultat utan att betala per klick. Det är ett av de mest lönsamma digitala investeringarna ett företag kan göra, men det kräver tålamod. Resultaten brukar visa sig efter 3 till 6 månader och fortsätter sedan att leverera trafik utan löpande annonskostnad.",
+        "[SEO](/blogg/google-ai-finance-europa-seo-content), alltså sökmotoroptimering, handlar om att göra din hemsida synlig i Googles organiska sökresultat utan att betala per klick. Det är ett av de mest lönsamma digitala investeringarna ett företag kan göra, men det kräver tålamod. Resultaten brukar visa sig efter 3 till 6 månader och fortsätter sedan att leverera trafik utan löpande annonskostnad.",
         "För företag i Malmö och södra Sverige handlar lokal SEO om att synas när potentiella kunder söker på fraser som digital marknadsföringsbyrå Malmö, Meta Ads byrå Sverige eller webbyrå Malmö. Google prioriterar relevans och auktoritet. Det innebär välstrukturerat innehåll, snabb laddningstid, mobiloptimering och trovärdiga externa länkar som pekar till din sajt.",
         "53 procent av all spårbar webbtrafik globalt kommer från organisk sökning. Det är mer än betald annonsering, sociala medier och direkttrafik sammantaget. SEO är inte valfritt, det är grunden som allt annat vilar på.",
       ],
@@ -1657,7 +1661,7 @@ const synasGoogleChatgptMalmoSv: BlogArticleBody = {
     {
       heading: "Vad är GEO och varför spelar det roll nu?",
       paragraphs: [
-        "GEO, eller Generative Engine Optimization, är något relativt nytt. Begreppet introducerades av forskare vid Princeton University 2023 och handlar om att optimera ditt innehåll och din digitala närvaro så att AI-modeller väljer att citera eller nämna dig när de svarar på frågor.",
+        "[GEO](/blogg/vad-ar-geo-och-varfor-syns-ditt-foretag-inte-i-chatgpt), eller Generative Engine Optimization, är något relativt nytt. Begreppet introducerades av forskare vid Princeton University 2023 och handlar om att optimera ditt innehåll och din digitala närvaro så att AI-modeller väljer att citera eller nämna dig när de svarar på frågor.",
         "ChatGPT passerade 800 miljoner aktiva veckoanvändare i slutet av 2025. Perplexity hanterar över 500 miljoner sökningar per år. Och enligt Capgemini har 58 procent av användarna redan börjat ersätta traditionella sökmotorer med AI-verktyg när de letar efter produkter och tjänster.",
         "Om din potentiella kund frågar ChatGPT vilken digital marknadsföringsbyrå i Malmö de ska anlita och du inte nämns i svaret har du förlorat den kunden utan att ens ha haft chansen att presentera dig.",
         "AI-modeller prioriterar tydligt och strukturerat innehåll, externa omnämnanden från trovärdiga tredjeparter och varumärken med en etablerad digital närvaro. Det innebär att GEO och SEO arbetar mot samma mål, men med delvis olika medel.",
@@ -1674,7 +1678,7 @@ const synasGoogleChatgptMalmoSv: BlogArticleBody = {
   ],
   summaryHeading: "Vad gör Crisha?",
   summary:
-    "Vi är en digital marknadsföringsbyrå med bas i Malmö. Vi arbetar med Meta Ads, Google Ads, TikTok Ads, webbdesign och SEO för svenska och europeiska företag som vill växa lönsamt. GEO är en naturlig del av det arbetet eftersom synlighet i AI-svar är en direkt förlängning av synlighet i sökresultaten.",
+    "Vi är en digital marknadsföringsbyrå med bas i Malmö. Vi arbetar med [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg), Google Ads, TikTok Ads, webbdesign och SEO för svenska och europeiska företag som vill växa lönsamt. GEO är en naturlig del av det arbetet eftersom synlighet i AI-svar är en direkt förlängning av synlighet i sökresultaten.",
   closingParagraphs: [
     "Det vi gör annorlunda är att vi ser helheten. En väloptimerad annons som driver trafik till en hemsida som inte konverterar är bortkastade pengar. En hemsida som rankar på Google men inte syns i AI-svar missar en växande andel av sin målgrupp. Och en byrå som bara optimerar en kanal i taget ger dig alltid ett ofullständigt resultat.",
     "Vi börjar med att kartlägga hur ditt företag ser ut idag, i sökresultaten, i AI-svar och i betald annonsering. Sedan bygger vi en strategi som adresserar alla tre.",
@@ -1699,7 +1703,7 @@ const synasGoogleChatgptMalmoEn: BlogArticleBody = {
     {
       heading: "What is SEO, and why is it still the foundation?",
       paragraphs: [
-        "SEO, search engine optimisation, is about making your website visible in Google’s organic results without paying per click. It is one of the most profitable digital investments a company can make, but it takes patience. Results usually show after 3 to 6 months, and then keep delivering traffic without ongoing ad spend.",
+        "[SEO](/blogg/google-ai-finance-europa-seo-content), search engine optimisation, is about making your website visible in Google’s organic results without paying per click. It is one of the most profitable digital investments a company can make, but it takes patience. Results usually show after 3 to 6 months, and then keep delivering traffic without ongoing ad spend.",
         "For companies in Malmö and southern Sweden, local SEO is about showing up when potential customers search phrases like digital marketing agency Malmö, Meta Ads agency Sweden, or web agency Malmö. Google prioritises relevance and authority. That means well-structured content, fast load times, mobile optimisation, and credible external links pointing to your site.",
         "53 percent of all trackable web traffic globally comes from organic search. That is more than paid advertising, social media, and direct traffic combined. SEO is not optional. It is the foundation everything else rests on.",
       ],
@@ -1707,7 +1711,7 @@ const synasGoogleChatgptMalmoEn: BlogArticleBody = {
     {
       heading: "What is GEO, and why does it matter now?",
       paragraphs: [
-        "GEO, or Generative Engine Optimization, is relatively new. The term was introduced by researchers at Princeton University in 2023 and is about optimising your content and digital presence so AI models choose to cite or mention you when they answer questions.",
+        "[GEO](/blogg/vad-ar-geo-och-varfor-syns-ditt-foretag-inte-i-chatgpt), or Generative Engine Optimization, is relatively new. The term was introduced by researchers at Princeton University in 2023 and is about optimising your content and digital presence so AI models choose to cite or mention you when they answer questions.",
         "ChatGPT passed 800 million weekly active users at the end of 2025. Perplexity handles more than 500 million searches per year. And according to Capgemini, 58 percent of users have already started replacing traditional search engines with AI tools when looking for products and services.",
         "If a potential customer asks ChatGPT which digital marketing agency in Malmö they should hire, and you are not named in the answer, you have lost that customer without even getting a chance to introduce yourself.",
         "AI models prioritise clear, structured content, external mentions from credible third parties, and brands with an established digital presence. That means GEO and SEO work toward the same goal, but with partly different means.",
@@ -1724,7 +1728,7 @@ const synasGoogleChatgptMalmoEn: BlogArticleBody = {
   ],
   summaryHeading: "What does Crisha do?",
   summary:
-    "We are a digital marketing agency based in Malmö. We work with Meta Ads, Google Ads, TikTok Ads, web design, and SEO for Swedish and European companies that want to grow profitably. GEO is a natural part of that work, because visibility in AI answers is a direct extension of visibility in search results.",
+    "We are a digital marketing agency based in Malmö. We work with [Meta Ads](/blogg/meta-ads-2026-slutboosta-inlagg), Google Ads, TikTok Ads, web design, and SEO for Swedish and European companies that want to grow profitably. GEO is a natural part of that work, because visibility in AI answers is a direct extension of visibility in search results.",
   closingParagraphs: [
     "What we do differently is look at the whole picture. A well-optimised ad that drives traffic to a site that does not convert is wasted money. A site that ranks on Google but does not show up in AI answers misses a growing share of its audience. And an agency that only optimises one channel at a time always gives you an incomplete result.",
     "We start by mapping how your company looks today: in search results, in AI answers, and in paid advertising. Then we build a strategy that addresses all three.",
@@ -1755,5 +1759,7 @@ const BODIES: Record<string, { sv: BlogArticleBody; en: BlogArticleBody }> = {
 export function getBlogArticleBody(slug: string, locale: Locale): BlogArticleBody | undefined {
   const entry = BODIES[slug];
   if (!entry) return undefined;
-  return locale === "en" ? entry.en : entry.sv;
+  const body = locale === "en" ? entry.en : entry.sv;
+  const faqs = getBlogArticleFaqs(slug, locale);
+  return faqs.length ? { ...body, faqs } : body;
 }

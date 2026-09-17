@@ -1,6 +1,5 @@
 import type { CaseStudy } from "@/lib/case-study-types";
 import { CONTACT } from "@/lib/constants";
-import type { HomeFAQItem } from "@/lib/home-faq";
 import { SITE_URL } from "@/lib/site-url";
 
 const siteUrl = SITE_URL;
@@ -124,7 +123,7 @@ export function buildWebsiteJsonLd() {
   };
 }
 
-export function buildFaqPageJsonLd(items: HomeFAQItem[]) {
+export function buildFaqPageJsonLd(items: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",

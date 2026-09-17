@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { BlogRichParagraph, blogRichNodes } from "@/components/sections/blog/BlogRichText";
 import type { BlogArticleBody } from "@/lib/i18n/content/blog-article-bodies";
 import type { BlogPostPreview } from "@/lib/i18n/content/blog-posts-i18n";
 import { useLocale } from "@/lib/i18n/locale-context";
@@ -34,7 +35,9 @@ export default function BlogArticle({ post, body }: Props) {
           </p>
         ) : null}
         {body?.directAnswer ? (
-          <p className="mt-6 text-lg font-semibold leading-relaxed text-white">{body.directAnswer}</p>
+          <p className="mt-6 text-lg font-semibold leading-relaxed text-white">
+            {blogRichNodes(body.directAnswer)}
+          </p>
         ) : (
           <p className={`mt-6 text-lg ${prose}`}>{post.excerpt}</p>
         )}
@@ -44,42 +47,54 @@ export default function BlogArticle({ post, body }: Props) {
             {body.sections.map((section, si) => (
               <section key={`${section.heading}-${si}`} className="space-y-4">
                 <h2 className="font-heading text-xl font-bold text-white md:text-2xl">{section.heading}</h2>
-                {section.paragraphs[0] ? <p className={prose}>{section.paragraphs[0]}</p> : null}
+                {section.paragraphs[0] ? (
+                  <BlogRichParagraph text={section.paragraphs[0]} className={prose} />
+                ) : null}
                 {section.bullets && section.bullets.length > 0 ? (
                   <ul className="list-disc space-y-2 pl-5 text-[rgba(255,255,255,0.55)]">
                     {section.bullets.map((item) => (
                       <li key={item} className="leading-relaxed">
-                        {item}
+                        {blogRichNodes(item)}
                       </li>
                     ))}
                   </ul>
                 ) : null}
                 {section.paragraphs.slice(1).map((p, i) => (
-                  <p key={`${section.heading}-p-${i + 1}`} className={prose}>
-                    {p}
-                  </p>
+                  <BlogRichParagraph key={`${section.heading}-p-${i + 1}`} text={p} className={prose} />
                 ))}
               </section>
             ))}
 
             <section className="space-y-4 border-t border-[rgba(255,255,255,0.08)] pt-10">
               <h2 className="font-heading text-xl font-bold text-white md:text-2xl">{body.summaryHeading}</h2>
-              <p className={prose}>{body.summary}</p>
+              <BlogRichParagraph text={body.summary} className={prose} />
               {body.summaryBullets && body.summaryBullets.length > 0 ? (
                 <ul className="list-disc space-y-2 pl-5 text-[rgba(255,255,255,0.55)]">
                   {body.summaryBullets.map((item) => (
                     <li key={item} className="leading-relaxed">
-                      {item}
+                      {blogRichNodes(item)}
                     </li>
                   ))}
                 </ul>
               ) : null}
               {body.closingParagraphs?.map((p, i) => (
-                <p key={`closing-${i}`} className={prose}>
-                  {p}
-                </p>
+                <BlogRichParagraph key={`closing-${i}`} text={p} className={prose} />
               ))}
             </section>
+
+            {body.faqs && body.faqs.length > 0 ? (
+              <section className="space-y-8 border-t border-[rgba(255,255,255,0.08)] pt-10">
+                <h2 className="font-heading text-xl font-bold text-white md:text-2xl">
+                  {t("blogPost.faqHeading")}
+                </h2>
+                {body.faqs.map((faq) => (
+                  <div key={faq.question} className="space-y-3">
+                    <h3 className="font-heading text-lg font-semibold text-white">{faq.question}</h3>
+                    <p className={prose}>{faq.answer}</p>
+                  </div>
+                ))}
+              </section>
+            ) : null}
           </div>
         ) : null}
 
